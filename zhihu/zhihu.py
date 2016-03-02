@@ -62,6 +62,12 @@ class zhihu():
     def url_matched_user(self, html):
         #获取用户url
 
+    def question(self, html):
+        #获取问题的具体数据：id， 题目，内容，最近活动时间,关注人数，浏览次数,回答数量
+
+    def answer(self, html):
+        #获取问题的答案，问题id，答题人， 回答内容，时间，赞同数量
+
 '''
 
 #一些设置

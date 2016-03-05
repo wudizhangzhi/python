@@ -1,5 +1,5 @@
 #!/usr/bin/python
-#coding=utf8
+# coding=utf8
 
 import Queue
 import os
@@ -9,6 +9,7 @@ from controller.login_controller import LoginController
 from controller.bye_controller import ByeController
 from controller.process_controller import ProcessController
 from view.base_view import BaseView
+from discovery_log_file import *
 import sqlite3
 import subprocess
 import threading
@@ -22,23 +23,25 @@ import time
 输出界面：显示进度条
 '''
 
+
 class QQ(object):
     '''
     '''
+
     def __init__(self):
         self.quit_quit = False
         self.switch_queue = Queue.Queue(0)
         self.view_control_map = {
             'login': LoginController(),
-            'bye':ByeController(),
-            'process':ProcessController(),
+            'bye': ByeController(),
+            'process': ProcessController(),
         }
         self._init_db()
 
         Thread(target=self._watchdog_switch).start()
 
     def _init_db(self):
-    	db = sqlite3.connect('loginfo.db')
+        db = sqlite3.connect('loginfo.db')
         cur = db.cursor()
         # cur.execte('drop table if exists discover_log')
         # cur.execute('create table if not exists discover_log(id integer primary key autoincrement,name varchar(10))')
@@ -47,11 +50,10 @@ class QQ(object):
         # cur.executemany(sql, keys)
         # cur.execute('drop table if exists discover_logfile')
         # cur.execute('create table if not exists discover_logfile(id integer primary key autoincrement,filename text,type integer)')
-        cur.execute('drop table if exists log_select')
-        cur.execute('create table if not exists log_select(name text)')
+        cur.execute('DROP TABLE IF EXISTS log_select')
+        cur.execute('CREATE TABLE IF NOT EXISTS log_select(name TEXT)')
         cur.close()
         db.close()
-
 
     def _watchdog_switch(self):
         '''
@@ -76,13 +78,14 @@ class QQ(object):
                 screen_height, screen_width = base.linesnum()
                 content = ['']
                 per = 0
-
+                # 进度条线程
                 def thread_display():
                     while True:
                         display_lines = ['\r']
                         display_lines.append('正在复制' + '\r')
                         display_lines.append('')
-                        length = len(content)
+                        # length = len(content)
+                        # 显示正在复制的内容
                         c = content
                         half = screen_height / 2
                         if len(c) > half:
@@ -107,19 +110,18 @@ class QQ(object):
                             break
                         time.sleep(0.5)
 
-
                 threading.Thread(target=thread_display).start()
                 db = sqlite3.connect('loginfo.db')
                 cur = db.cursor()
-                cur.execute('select * from log_select')
+                cur.execute('SELECT * FROM log_select')
                 all_log = cur.fetchall()
 
                 total = len(all_log)
                 num = 0
                 for filelog in all_log:
                     copyfile(filelog[0], backdir)
-                    basename = os.path.basename(filelog)
-                    dirname = os.path.dirname(filelog)
+                    basename = os.path.basename(filelog[0])
+                    dirname = os.path.dirname(filelog[0])
                     targetname = backdir + dirname + '/' + basename
                     content.append('复制' + str(filelog) + '-->' + str(targetname))
                     num += 1
@@ -128,13 +130,14 @@ class QQ(object):
                 break
             else:
                 self.view_control_map[key].run(self.switch_queue)
-        # self.quit()
-        # os._exit(0)
+                # self.quit()
+                # os._exit(0)
 
     def quit(self):
         '''
         退出
         '''
         subprocess.call('echo -e "\033[?25h";clear', shell=True)
+
 
 qq = QQ()

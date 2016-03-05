@@ -74,7 +74,9 @@ class LoginController(object):
                 # self.select -=1
                 self.view.move(1)
             elif k == 'm':# 标记
-                self.view.marking()
+                # 如果在主界面
+                if not self.view.logshow:
+                    self.view.marking()
             elif k == 'b':# 返回主页面
                 self.view.logshow = False
                 self.select = 0

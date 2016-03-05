@@ -12,7 +12,6 @@ from view.base_view import BaseView
 from discovery_log_file import *
 import sqlite3
 import subprocess
-import threading
 import time
 
 '''
@@ -52,6 +51,7 @@ class QQ(object):
         # cur.execute('create table if not exists discover_logfile(id integer primary key autoincrement,filename text,type integer)')
         cur.execute('DROP TABLE IF EXISTS log_select')
         cur.execute('CREATE TABLE IF NOT EXISTS log_select(name TEXT)')
+        db.commit()
         cur.close()
         db.close()
 
@@ -110,12 +110,13 @@ class QQ(object):
                             break
                         time.sleep(0.5)
 
-                threading.Thread(target=thread_display).start()
+                Thread(target=thread_display).start()
                 db = sqlite3.connect('loginfo.db')
                 cur = db.cursor()
                 cur.execute('SELECT * FROM log_select')
                 all_log = cur.fetchall()
 
+                #测试代码
                 total = len(all_log)
                 num = 0
                 for filelog in all_log:

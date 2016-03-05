@@ -9,8 +9,6 @@ import Queue
 from threading import Thread
 from view.process_view import Process
 from controller.base_controller import BaseController
-from view.base_view import BaseView
-import sqlite3
 
 class ProcessController(BaseController):
     '''
@@ -74,26 +72,11 @@ class ProcessController(BaseController):
                     break
                 time.sleep(0.5)
 
-        Thread(target=thread_display).start()
-        db = sqlite3.connect('../loginfo.db')
+        threading.Thread(target=thread_display).start()
+        db = sqlite3.connect('loginfo.db')
         cur = db.cursor()
         cur.execute('SELECT * FROM log_select')
         all_log = cur.fetchall()
-	
-	#测试代码
-        print '开始'
-        total = len(all_log)
-        num = 0
-        for filelog in all_log:
-            print filelog
-            copyfile(filelog[0], backdir)
-            basename = os.path.basename(filelog[0])
-            dirname = os.path.dirname(filelog[0])
-            targetname = backdir + dirname + '/' + basename
-            content.append('复制' + str(filelog) + '-->' + str(targetname))
-            num += 1
-            per = num * 100 / total
-            time.sleep(0.1)
 
     def _controller(self):
         '''

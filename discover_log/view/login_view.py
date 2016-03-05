@@ -112,6 +112,7 @@ class Login(BaseView):
         cur = db.cursor()
         if self.logshow:
             filename = self.logfile[self.select]
+            print filename
             if self.select in self.mark[self.log_name]:
                 self.mark[self.log_name].remove(self.select)
                 cur.execute('delete from log_select where name=%s' % filename)
@@ -133,6 +134,7 @@ class Login(BaseView):
             else:
                 self.mark_main.append(self.select)
                 cur.executemany('INSERT INTO log_select(name) VALUES(?)', r)
+        db.commit()
         cur.close()
         db.close()
 

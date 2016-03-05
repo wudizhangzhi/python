@@ -45,12 +45,14 @@ def copyfile(filename, backdir):
         if os.path.exists(backdir + dirname):
             try:
                 shutil.copyfile(filename, targetname)
-            except:
-                pass
+            except Exception, e:
+               print e 
+               pass
         else:
             os.makedirs(backdir + dirname)
-    except KeyboardInterrupt:
-        print
+    #except KeyboardInterrupt:
+    except Excepiton, e:
+        print e
         print "\t\033[41m 程序终止! \033[m\n"
         sys.exit(-1)
 

@@ -21,6 +21,34 @@ import time
 输入目录界面：输入目录
 输出界面：显示进度条
 '''
+welcome = [
+    '     #####   #     #  #######  #######  ######    #####   ######      #',
+    '    #     #  #     #  #        #        #     #  #     #  #     #    # #',
+    '    #        #     #  #        #        #     #  #        #     #   #   #',
+    '    #        #######  #####    #####    ######    #####   #     #  #     #',
+    '    #        #     #  #        #        #   #          #  #     #  #######',
+    '    #     #  #     #  #        #        #    #   #     #  #     #  #     #',
+    '     #####   #     #  #######  #######  #     #   #####   ######   #     #',
+    '\n',
+    '                            #        #######   #####',
+    '                            #        #     #  #     #',
+    '                            #        #     #  #',
+    '                            #        #     #  #  ####',
+    '                            #        #     #  #     #',
+    '                            #        #     #  #     #',
+    '                            #######  #######   #####',
+    '\n',
+    '    #######  #######  ######   #######  #     #   #####   ###   #####    #####',
+    '    #        #     #  #     #  #        ##    #  #     #   #   #     #  #     #',
+    '    #        #     #  #     #  #        # #   #  #         #   #        #',
+    '    #####    #     #  ######   #####    #  #  #   #####    #   #         #####',
+    '    #        #     #  #   #    #        #   # #        #   #   #              #',
+    '    #        #     #  #    #   #        #    ##  #     #   #   #     #  #     #',
+    '    #        #######  #     #  #######  #     #   #####   ###   #####    #####',
+]
+# 欢迎界面显示时间
+time_welcome = 3
+
 
 
 class QQ(object):
@@ -28,6 +56,7 @@ class QQ(object):
     '''
 
     def __init__(self):
+	self.welcome()
         self.quit_quit = False
         self.switch_queue = Queue.Queue(0)
         self.view_control_map = {
@@ -38,6 +67,19 @@ class QQ(object):
         self._init_db()
 
         Thread(target=self._watchdog_switch).start()
+
+    def welcome(self):
+	# 欢迎界面
+        height, width = BaseView().linesnum()
+        print '\r'
+        top_margin = (height - len(welcome)) / 2
+        left_margin = (width - len(welcome[-2])) / 2
+        print '\n' * top_margin
+        for i in welcome:
+	    print ' ' * left_margin + i
+        print '\n' * (height - top_margin - len(welcome))
+        # 欢迎界面结束
+        time.sleep(time_welcome)
 
     def _init_db(self):
         db = sqlite3.connect('loginfo.db')
@@ -124,7 +166,7 @@ class QQ(object):
                     basename = os.path.basename(filelog[0])
                     dirname = os.path.dirname(filelog[0])
                     targetname = backdir + dirname + '/' + basename
-                    content.append('复制' + str(filelog) + '-->' + str(targetname))
+                    content.append('复制' + str(filelog[0]) + '-->' + str(targetname))
                     num += 1
                     per = num * 100 / total
                     time.sleep(0.1)

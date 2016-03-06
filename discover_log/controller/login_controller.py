@@ -40,26 +40,33 @@ class LoginController(object):
         '''
         按键监控
         '''
-        print 'login _controller start'
         while not self.quit:
             k = getch.getch()
             self.queue.put(k)
             #
-            if k == 'q' or k == 'o':
+            # if k == 'q' or k == 'o':
+            #    break
+            if k == 'o':
                 break
-        print 'login _controller end'
+            if k == 'q':
+                if self.view.logshow == False:
+                    break
 
     def _watchdog_queue(self):
         '''
         从queue里取出字符执行命令
         '''
-        print 'login _watchdog_queue start'
         while not self.quit:
             k = self.queue.get()
             if k == 'q':
-                self.quit = True
-                # self.switch_queue.put('quit_quit')
-                self.switch_queue.put('bye')
+                if self.view.logshow == True:# 返回主菜单
+                    self.view.logshow = False
+                    self.select = 0
+                    self.view.select = 0
+                else:# 退出界面
+                    self.quit = True
+                    # self.switch_queue.put('quit_quit')
+                    self.switch_queue.put('bye')
             elif k == ' ':# 确定
                 self.view.log_name = log_list[self.view.select]
                 self.view.changelogfile(get_all_log()[log_list[self.view.select]])
@@ -74,23 +81,20 @@ class LoginController(object):
                 # self.select -=1
                 self.view.move(1)
             elif k == 'm':# 标记
-                # 如果在主界面
                 self.view.marking()
-            elif k == 'b':# 返回主页面
-                self.view.logshow = False
-                self.select = 0
-                self.view.select = 0
+            #elif k == 'b':# 返回主页面
+            #    self.view.logshow = False
+            #    self.select = 0
+            #    self.view.select = 0
             elif k =='o':#输入输出地址，然后输出
                 self.quit = True
                 self.switch_queue.put('rawinput')
-        print 'login _wacthdog_time end'
 
 
     def _wacthdog_time(self):
         '''
         页面时间的变化
         '''
-        print 'login _wacthdog_time start'
         while not self.quit:
             self.view.display()
             # if self.select < 0:
@@ -99,7 +103,6 @@ class LoginController(object):
             #     self.select = 3
             # self.view.select = self.select
             time.sleep(1)
-        print 'login _wacthdog_time end'
 
     def _show_logfile(self, index):
         log_list = ['nginx','httpd','mysqld','sys']

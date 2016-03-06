@@ -14,6 +14,7 @@ import sqlite3
 line_show = 15
 log_list = ['nginx', 'httpd', 'mysqld', 'sys']
 
+line_help = 'q--返回上一页  退出o--输出  空格--进入  m--标记'
 
 class Login(BaseView):
     '''
@@ -44,7 +45,7 @@ class Login(BaseView):
         display_lines = ['\r']
         display_lines.append(self.title + ' ' * 10 + self.log_name + '\r')
         display_lines.append('')
-        display_lines.append(self.content + '\r')
+        display_lines.append(self.content + str(self.select) + '\r')
         if not self.logshow:
             # 重置指针范围
             self.select_range = len(log_list) - 1
@@ -83,11 +84,13 @@ class Login(BaseView):
                     line += colored("   ♡ ", 'red')
                 line += '\r'
                 display_lines.append(line)
-        display_lines.append(' ' * 12 + str(self.select) + '\r')
+        #display_lines.append(' ' * 12 + str(self.select) + '\r')
 
         display_lines.append('')
         for i in range(self.screen_height - len(display_lines) - 2):
             display_lines.append('')
+        # 帮助信息
+        display_lines.append(line_help)
         display_lines.append('\r')
         self.display_lines = display_lines
 

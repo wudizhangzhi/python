@@ -82,6 +82,7 @@ def copyfile(filename, backdir):
             try:
                 shutil.copyfile(filename, targetname)
             except Exception, e:
+                print e
                 if '[Errno 13] Permission denied' in e:
                     subprocess.Popen('sudo chmod 644 %s' % filename)
                     shutil.copyfile(filename, targetname)

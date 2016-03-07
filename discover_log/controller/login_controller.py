@@ -102,7 +102,7 @@ class LoginController(object):
             # elif self.select>3:
             #     self.select = 3
             # self.view.select = self.select
-            time.sleep(1)
+            time.sleep(0.3)
 
     def _show_logfile(self, index):
         log_list = ['nginx','httpd','mysqld','sys']

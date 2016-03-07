@@ -8,6 +8,7 @@ from threading import Thread
 from controller.login_controller import LoginController
 from controller.bye_controller import ByeController
 from controller.process_controller import ProcessController
+from controller.main_controller import MainController
 from view.base_view import BaseView
 from discovery_log_file import *
 import sqlite3
@@ -45,6 +46,8 @@ welcome = [
     '    #        #     #  #   #    #        #   # #        #   #   #              #',
     '    #        #     #  #    #   #        #    ##  #     #   #   #     #  #     #',
     '    #        #######  #     #  #######  #     #   #####   ###   #####    #####',
+    '\n',
+    '                           http://www.cheersdata.com/'
 ]
 # 欢迎界面显示时间
 time_welcome = 3
@@ -56,27 +59,31 @@ class QQ(object):
     '''
 
     def __init__(self):
-	self.welcome()
+        uid = os.getuid()
+        if uid != 0:
+            print '请使用root用户操作'
+            sys.exit(-1)
+        self.welcome()
         self.quit_quit = False
         self.switch_queue = Queue.Queue(0)
         self.view_control_map = {
             'login': LoginController(),
             'bye': ByeController(),
-            'process': ProcessController(),
+            'main': MainController(),
         }
         self._init_db()
 
         Thread(target=self._watchdog_switch).start()
 
     def welcome(self):
-	# 欢迎界面
+        # 欢迎界面
         height, width = BaseView().linesnum()
         print '\r'
         top_margin = (height - len(welcome)) / 2
-        left_margin = (width - len(welcome[-2])) / 2
+        left_margin = (width - len(welcome[-4])) / 2
         print '\n' * top_margin
         for i in welcome:
-	    print ' ' * left_margin + i
+            print ' ' * left_margin + i
         print '\n' * (height - top_margin - len(welcome))
         # 欢迎界面结束
         time.sleep(time_welcome)
@@ -84,13 +91,6 @@ class QQ(object):
     def _init_db(self):
         db = sqlite3.connect('loginfo.db')
         cur = db.cursor()
-        # cur.execte('drop table if exists discover_log')
-        # cur.execute('create table if not exists discover_log(id integer primary key autoincrement,name varchar(10))')
-        # keys = [(1,'nginx'),(2,'httpd'),(3,'mysqld'),(4,'sys')]
-        # sql = 'insert into discover_log values(?,?)'
-        # cur.executemany(sql, keys)
-        # cur.execute('drop table if exists discover_logfile')
-        # cur.execute('create table if not exists discover_logfile(id integer primary key autoincrement,filename text,type integer)')
         cur.execute('DROP TABLE IF EXISTS log_select')
         cur.execute('CREATE TABLE IF NOT EXISTS log_select(name TEXT)')
         db.commit()
@@ -101,7 +101,7 @@ class QQ(object):
         '''
         切换页面线程
         '''
-        self.view_control_map['login'].run(self.switch_queue)
+        self.view_control_map['main'].run(self.switch_queue)
 
         while not self.quit_quit:
             key = self.switch_queue.get()
@@ -109,7 +109,9 @@ class QQ(object):
                 self.quit_quit = True
             elif key == 'rawinput':
                 try:
-                    backdir = raw_input('请输入要保存的路径: ')
+                    # backdir = raw_input('请输入要保存的路径: ')
+                    backdir = raw_input('\033[41m请输入要保存的路径:\033[m    ')
+                    
                 except KeyboardInterrupt:
                     print "\t\033[41m 程序终止! \033[m\n"
                 if backdir.endswith('/'):
@@ -169,12 +171,13 @@ class QQ(object):
                     content.append('复制' + str(filelog[0]) + '-->' + str(targetname))
                     num += 1
                     per = num * 100 / total
+                    #TODO delete
                     time.sleep(0.1)
                 break
             else:
                 self.view_control_map[key].run(self.switch_queue)
-                # self.quit()
-                # os._exit(0)
+        self.quit()
+        os._exit(0)
 
     def quit(self):
         '''

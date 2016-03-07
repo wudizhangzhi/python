@@ -34,5 +34,5 @@ class ByeController(BaseController):
         if k == 'q':
             self.switch_queue.put('quit_quit')
         else:
-            self.switch_queue.put('login')
+            self.switch_queue.put('main')
         self.quit = True

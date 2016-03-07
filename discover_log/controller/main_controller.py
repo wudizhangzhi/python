@@ -9,13 +9,13 @@ import getch
 import Queue
 import sqlite3
 from threading import Thread
-from view.login_view import Login
+from view.main_view import Main
 from discovery_log_file import *
 
 log_list = ['nginx','httpd','mysqld','sys']
 
 
-class LoginController(object):
+class MainController(object):
     '''
     '''
     def __init__(self):
@@ -25,7 +25,7 @@ class LoginController(object):
         self.select = 0
 
     def _bind_view(self):
-        self.view = Login()
+        self.view = Main()
 
     def run(self, switch_queue):
         #用于控制切换界面
@@ -46,11 +46,10 @@ class LoginController(object):
             #
             # if k == 'q' or k == 'o':
             #    break
-            if k == 'o':
+            if k == ' ':
                 break
             if k == 'q':
-                if self.view.logshow == False:
-                    break
+                break
 
     def _watchdog_queue(self):
         '''
@@ -59,36 +58,40 @@ class LoginController(object):
         while not self.quit:
             k = self.queue.get()
             if k == 'q':
-                if self.view.logshow == True:# 返回主菜单
-                    self.view.logshow = False
-                    self.select = 0
-                    self.view.select = 0
-                else:# 退出界面
-                    self.quit = True
-                    # self.switch_queue.put('quit_quit')
-                    self.switch_queue.put('bye')
+                self.quit = True
+                self.switch_queue.put('bye')
             elif k == ' ':# 确定
-                self.view.log_name = log_list[self.view.select]
-                self.view.changelogfile(get_all_log()[log_list[self.view.select]])
-                self.view.logshow = True
-                self.view.select = 0
-                # self.quit = True
-                # self.switch_queue.put('process')
+                if self.view.select == 0:# 全部选择,进入输出界面
+                    db = sqlite3.connect('loginfo.db')
+                    cur = db.cursor()
+                    data = get_all_log()
+                    r = []
+                    for key in log_list:
+                        if data[key][0]!='无':
+                            for i in data[key]:
+                                t = []
+                                t.append(i)
+                                r.append(t)
+                    cur.executemany('INSERT INTO log_select(name) VALUES(?)', r)
+                    db.commit()
+                    cur.close()
+                    db.close()
+                    self.quit = True
+                    self.switch_queue.put('rawinput')
+                elif self.view.select ==1:# 进入具体界面
+                    self.quit = True
+                    self.switch_queue.put('login')
             elif k == 'j':#下
                 self.view.move(-1)
                 # self.select +=1
             elif k == 'k':#上
                 # self.select -=1
                 self.view.move(1)
-            elif k == 'm':# 标记
-                self.view.marking()
-            #elif k == 'b':# 返回主页面
-            #    self.view.logshow = False
-            #    self.select = 0
-            #    self.view.select = 0
-            elif k =='o':#输入输出地址，然后输出
-                self.quit = True
-                self.switch_queue.put('rawinput')
+            # elif k == 'm':# 标记
+            #     self.view.marking()
+            # elif k =='o':#输入输出地址，然后输出
+            #     self.quit = True
+            #     self.switch_queue.put('rawinput')
 
 
     def _wacthdog_time(self):
@@ -97,17 +100,7 @@ class LoginController(object):
         '''
         while not self.quit:
             self.view.display()
-            # if self.select < 0:
-            #     selk.select = 0
-            # elif self.select>3:
-            #     self.select = 3
-            # self.view.select = self.select
             time.sleep(0.3)
-
-    def _show_logfile(self, index):
-        log_list = ['nginx','httpd','mysqld','sys']
-
-
 
 
 
@@ -117,4 +110,4 @@ class LoginController(object):
 
 if __name__=='__main__':
     q = Queue.Queue(0)
-    LoginController().run(q)
+    MainController().run(q)

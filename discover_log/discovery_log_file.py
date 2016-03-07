@@ -10,8 +10,45 @@ import time
 import threading
 
 
+def readMemInfo():
+    res = {
+    'total':0, 'free':0, 'buffers':0, 'cached':0
+    }
+    f = open('/proc/meminfo')
+    lines = f.readlines()
+    f.close()
+    i = 0
+    for line in lines:
+        if i == 4:
+            break
+        line = line.lstrip()
+        memItem = line.lower().split()
+        if memItem[0] == 'memtotal:':
+            res['total'] = long(memItem[1])
+            i = i +1
+            continue
+        elif memItem[0] == 'memfree:':
+            res['free'] = long(memItem[1])
+            i = i +1
+            continue
+        elif memItem[0] == 'buffers:':
+            res['buffers'] = long(memItem[1])
+            i = i +1
+            continue
+        elif memItem[0] == 'cached:':
+            res['cached'] = long(memItem[1])
+            i = i +1
+            continue
+    return res
+ 
+def calcMemUsage():
+    counters = readMemInfo()
+    used = counters['total'] - counters['free'] - counters['buffers'] - counters['cached']
+    total = counters['total']
+    return used, total
+
 def getlogdir(prefx, pid):
-    print '%s日志文件:' % prefx
+    # print '%s日志文件:' % prefx
     p = subprocess.Popen("ls -l /proc/%s/fd | grep '.log$' | awk -F '->' '{print $2}'" % pid, stdout=subprocess.PIPE,
                          shell=True)
     ret = p.communicate()
@@ -19,7 +56,6 @@ def getlogdir(prefx, pid):
         logfiles = []
         for logfile in set(re.sub(r' ', '', ret[0]).split('\n')):
             if logfile:
-                print logfile
                 logfiles.append(logfile)
         return logfiles
 
@@ -46,13 +82,14 @@ def copyfile(filename, backdir):
             try:
                 shutil.copyfile(filename, targetname)
             except Exception, e:
-               print e 
-               pass
+                if '[Errno 13] Permission denied' in e:
+                    subprocess.Popen('sudo chmod 644 %s' % filename)
+                    shutil.copyfile(filename, targetname)
+                # print e 
         else:
             os.makedirs(backdir + dirname)
     #except KeyboardInterrupt:
     except Excepiton, e:
-        print e
         print "\t\033[41m 程序终止! \033[m\n"
         sys.exit(-1)
 

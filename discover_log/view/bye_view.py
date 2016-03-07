@@ -1,7 +1,7 @@
 #!/usr/bin/python
 #coding=utf-8
 from view.base_view import BaseView
-from termcolor import colored
+# from termcolor import colored
 
 
 class Bye(BaseView):
@@ -11,7 +11,7 @@ class Bye(BaseView):
     def __init__(self):
         super(Bye, self).__init__()
         self.title = '退出界面'
-        self.info = colored("  (╭￣3￣)╭♡ ", 'red') + colored("Quit(q)?", 'green')
+        self.info = '\033[31m (╭￣3￣)╭♡ \033[0m' + ' \033[32m退出(q)?\033[0m'
 
     def make_displaylines(self):
         self.screen_height, self.screen_width = self.linesnum()

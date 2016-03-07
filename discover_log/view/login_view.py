@@ -71,7 +71,7 @@ class Login(BaseView):
         display_lines.append(self.content + str(self.select) + '\r')
         if not self.logshow:
             # 重置指针范围
-            self.select_range = len(log_list) - 1
+            self.select_range = len(log_list)
             for i in range(len(log_list)):
                 if i == self.select:
                     line = '->' + ' ' * 10 + '\033[42;37m' + log_list[i] + '\033[0m'
@@ -97,7 +97,6 @@ class Login(BaseView):
                 logshow_end = self.select_range
             else:
                 logshow_end = self.logshow_start + line_show
-
             for i in range(self.logshow_start, logshow_end):
                 if i == self.select:
                     line = '->' + ' ' * 10 + self.logfile[i]
@@ -125,8 +124,8 @@ class Login(BaseView):
         num = self.select + step
         if num < 0:
             self.select = 0
-        elif num > self.select_range:
-            self.select = self.select_range
+        elif num > self.select_range -1:
+            self.select = self.select_range - 1
         else:
             self.select = num
 

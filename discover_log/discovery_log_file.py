@@ -159,8 +159,8 @@ def get_all_log():
     p = subprocess.Popen("ps -C mysqld -o cmd | grep -o 'log-error=.*.log'", stdout=subprocess.PIPE, shell=True)
     ret = p.communicate()
     if ret[0]:
-        ret = ret[0].replace('log-error=', '')
-        all_log['mysqld'] = ret
+        ret = ret[0].replace('log-error=', '').replace('\n', '')
+        all_log['mysqld'] = [ret]
     else:
         all_log['mysqld'] = ['无']
 

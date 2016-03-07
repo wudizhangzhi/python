@@ -21,9 +21,16 @@ soup = BeautifulSoup(f.read(), 'lxml')
 
 # 找出所有符合的url
 # 例如/question/000000;/people/name
+#a = soup.find_all('a')
+#for i in a:
+#    href = i.get('href')
+#    m = re.search(r'/question/(\d+)', str(href))
+#    if m:
+#        print m.group()[-8:]
+
 a = soup.find_all('a')
 for i in a:
     href = i.get('href')
-    m = re.search(r'/question/(\d+)', str(href))
+    m = re.search(r'/people/[^/]*', str(href))
     if m:
-        print m.group()[-8:]
+        print m.group().split('/')[2]

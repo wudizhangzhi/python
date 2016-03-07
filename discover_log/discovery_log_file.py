@@ -157,13 +157,26 @@ def get_all_log():
         all_log['httpd'] = ['无']
 
     # MySQL日志文件
-    p = subprocess.Popen("ps -C mysqld -o cmd | grep -o 'log-error=.*.log'", stdout=subprocess.PIPE, shell=True)
+    # p = subprocess.Popen("ps -C mysqld -o cmd | grep -o 'log-error=.*.log'", stdout=subprocess.PIPE, shell=True)
+    # ret = p.communicate()
+    # if ret[0]:
+    #     ret = ret[0].replace('log-error=', '').replace('\n', '')
+    #     all_log['mysqld'] = [ret]
+    # else:
+    #     all_log['mysqld'] = ['无']
+    p = subprocess.Popen("ps -C mysqld -o pid,user --no-header | head -1 | awk '{print $1}'", stdout=subprocess.PIPE,
+                         shell=True)
     ret = p.communicate()
     if ret[0]:
-        ret = ret[0].replace('log-error=', '').replace('\n', '')
-        all_log['mysqld'] = [ret]
+        mysql_pid = ret[0]
+        ret = getlogdir('MySQL', mysql_pid.strip())
+        if ret:
+            all_log['mysqld'] = ret
+        else:
+            all_log['mysqld'] = ['无']
     else:
         all_log['mysqld'] = ['无']
+
 
     # 系统日志文件
     # for logfile in listsyslogs():

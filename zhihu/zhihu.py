@@ -1,9 +1,22 @@
 #!/usr/bin/python3
 # coding=utf-8
+
+import sys
+reload(sys)
+sys.setdefaultencoding( "utf-8" )
 import re
 import requests
 from bs4 import BeautifulSoup
+import torndb
+import time
 
+
+mysql_host = 'localhost'
+mysql_db = 'zhihu'
+mysql_user = 'root'
+mysql_pass = 'admin'
+
+db = torndb.Connection(mysql_host, mysql_db, user=mysql_user, password=mysql_pass)
 # url_target = 'https://www.zhihu.com/#signin'
 # url_login = 'https://www.zhihu.com/login/email'
 # s = requests.Session()
@@ -163,6 +176,9 @@ class ZhiHu():
             follow, watch = self._question_unsign(soup)
         # TODO 删除
         param = [title, content, num_answer, follow, watch]
+        t = int(time.time())
+        sql = 'insert into zhihu_question(question_id, title, content, time, num_answer, num_follow, num_watch) values(%s, %s, %s, %s, %s, %s, %s)'
+        db.execute(sql, question_id, title, content, t, num_answer, follow, watch)
         for i in param:
             print i
 
@@ -183,13 +199,77 @@ class ZhiHu():
             # TODO 保存数据
         pass
 
-    def user(self, url):
+    def _user(self, soup):
         # 登录 or 未登录
+        part = soup.find('div', class_='ellipsis')
+        name = part.find('span', class_='name').get_text()
+        sign = part.find('span', class_='bio').get_text()
 
+        avatar = soup.find('img', class_='Avatar').get('src')
+
+        gender = soup.find('span', class_='gender').find('i').get('class')[1].split('-')[-1]
+
+        education = soup.find('span', class_='education').get('title')
+
+        agree = soup.find('span', class_='zm-profile-header-user-agree').find('strong').get_text()
+
+        thanks = soup.find('span', class_='zm-profile-header-user-thanks').find('strong').get_text()
+
+        num_part = soup.find('div', class_='profile-navbar').find_all('a')
+        num = []
+        for a in num_part:
+            num.append(a.find('span').get_text())
+
+        asks = num[1]
+        answkers = num[2]
+        posts = num[3]
+        collections = num[4]
+        logs = num[5]
+
+        followpart = soup.find('div', class_='zm-profile-side-following').find_all('a', class_='item')
+        followees = followpart[0].find('strong').get_text()
+        followers = followpart[1].find('strong').get_text()
+
+        watched = soup.find('a', class_='zg-link-litblue').get_text()
+        m = re.search(r'\d+',watched)
+        watched = m.group()
+        #TODO 保存数据
         pass
 
+    def user(self, url):
+
+        r = self.get(url)
+        soup = BeautifulSoup(r.content, 'lxml')
+        # 登录 or 未登录
+        self._user()
+
+    def find_question_url(self, soup):
+        '''
+
+        '''
+        r = []
+        a = soup.find_all('a')
+        for i in a:
+            href = i.get('href')
+            m = re.search(r'/question/(\d+)', str(href))
+            if m:
+                r.append(m.group()[-8:])
+        return r
+
+    def find_people_url(self, soup):
+        '''
+
+        '''
+        r = []
+        a = soup.find_all('a')
+        for i in a:
+            href = i.get('href')
+            m = re.search(r'/people/[^/]*', str(href))
+            if m:
+                r.append(m.group().split('/')[2])
+        return r
 
 if __name__ == '__main__':
     zhihu = ZhiHu()
     # zhihu.login()
-    html = zhihu.question('https://www.zhihu.com/question/23684766')
+    html = zhihu.question('https://www.zhihu.com/question/41035200')

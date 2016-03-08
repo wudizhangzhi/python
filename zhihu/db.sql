@@ -27,6 +27,7 @@ create table `zhihu_user`(
     `id` int unsigned primary key auto_increment,
     `name` varchar(52) comment'用户名',
     `sign` varchar(150) comment'一句话概括',
+    `avatar` text comment'url',
     `location` varchar(30) comment'居住地',
     `business` varchar(30) comment'行业',
     `gender` int comment'性别0:女，1:男',

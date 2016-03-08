@@ -1,11 +1,10 @@
 #!/usr/bin/python
 #coding=utf-8
 
-import time
 import getch
 import Queue
+import time
 from threading import Thread
-import getch
 from view.login_view import Login
 
 class BaseController(object):

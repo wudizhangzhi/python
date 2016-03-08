@@ -10,7 +10,6 @@ import time
 import threading
 
 
-
 def readMemInfo():
     res = {
     'total':0, 'free':0, 'buffers':0, 'cached':0
@@ -87,9 +86,8 @@ def copyfile(filename, backdir):
     try:
         basename = os.path.basename(filename)
         dirname = os.path.dirname(filename)
-        now = time.strftime('%Y-%m-%d_%H:%M:%S', time.localtime())
-
         targetname = backdir + dirname + '/' + basename
+        
         # print '正在复制 %s 到 %s' % (filename, targetname)
         # 判断目录是否存在
         if not os.path.exists(backdir + dirname):

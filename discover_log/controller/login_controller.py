@@ -10,9 +10,9 @@ import Queue
 import sqlite3
 from threading import Thread
 from view.login_view import Login
-from discovery_log_file import *
+from utils.methods import *
 
-log_list = ['nginx','httpd','mysqld','mongodb','sys']
+log_list = ['nginx', 'httpd', 'mysqld', 'mongodb', 'redis', 'sys']
 
 
 class LoginController(object):
@@ -66,7 +66,7 @@ class LoginController(object):
                 else:# 退出界面
                     self.quit = True
                     # self.switch_queue.put('quit_quit')
-                    self.switch_queue.put('bye')
+                    self.switch_queue.put('main')
             elif k == ' ':# 确定
                 self.view.log_name = log_list[self.view.select]
                 self.view.changelogfile(get_all_log()[log_list[self.view.select]])

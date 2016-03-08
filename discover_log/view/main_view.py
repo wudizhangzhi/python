@@ -4,8 +4,7 @@ import sys
 
 sys.path.append('..')
 from view.base_view import BaseView
-from discovery_log_file import get_all_log, calcMemUsage
-# from termcolor import colored
+from utils.methods import get_all_log, calcMemUsage
 import sqlite3
 
 

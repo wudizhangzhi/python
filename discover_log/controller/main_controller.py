@@ -10,7 +10,7 @@ import Queue
 import sqlite3
 from threading import Thread
 from view.main_view import Main
-from discovery_log_file import *
+from utils.methods  import *
 
 log_list = ['nginx','httpd','mysqld','sys']
 
@@ -62,7 +62,7 @@ class MainController(object):
                 self.switch_queue.put('bye')
             elif k == ' ':# 确定
                 if self.view.select == 0:# 全部选择,进入输出界面
-                    db = sqlite3.connect('loginfo.db')
+                    db = sqlite3.connect('db/loginfo.db')
                     cur = db.cursor()
                     data = get_all_log()
                     r = []
@@ -100,7 +100,7 @@ class MainController(object):
         '''
         while not self.quit:
             self.view.display()
-            time.sleep(0.3)
+            time.sleep(1)
 
 
 

@@ -10,7 +10,7 @@ from controller.bye_controller import ByeController
 from controller.process_controller import ProcessController
 from controller.main_controller import MainController
 from view.base_view import BaseView
-from discovery_log_file import *
+from utils.methods import *
 import sqlite3
 import subprocess
 import time
@@ -89,7 +89,7 @@ class QQ(object):
         time.sleep(time_welcome)
 
     def _init_db(self):
-        db = sqlite3.connect('loginfo.db')
+        db = sqlite3.connect('db/loginfo.db')
         cur = db.cursor()
         cur.execute('DROP TABLE IF EXISTS log_select')
         cur.execute('CREATE TABLE IF NOT EXISTS log_select(name TEXT)')
@@ -111,12 +111,15 @@ class QQ(object):
                 try:
                     # backdir = raw_input('请输入要保存的路径: ')
                     backdir = raw_input('\033[41m请输入要保存的路径:\033[m    ')
-                    
+
                 except KeyboardInterrupt:
                     print "\t\033[41m 程序终止! \033[m\n"
+                if backdir == '':
+                    backdir = '__save'
                 if backdir.endswith('/'):
                     backdir = backdir[::-1]
-
+                now = time.strftime('%Y-%m-%d_%H:%M:%S', time.localtime())
+                backdir = backdir + '/' + now
                 # 进度条
                 base = BaseView()
                 screen_height, screen_width = base.linesnum()
@@ -155,8 +158,7 @@ class QQ(object):
                         time.sleep(0.5)
 
                 Thread(target=thread_display).start()
-                t.start()
-                db = sqlite3.connect('loginfo.db')
+                db = sqlite3.connect('db/loginfo.db')
                 cur = db.cursor()
                 cur.execute('SELECT * FROM log_select')
                 all_log = cur.fetchall()

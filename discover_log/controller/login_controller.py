@@ -12,7 +12,7 @@ from threading import Thread
 from view.login_view import Login
 from discovery_log_file import *
 
-log_list = ['nginx','httpd','mysqld','sys']
+log_list = ['nginx','httpd','mysqld','mongodb','sys']
 
 
 class LoginController(object):

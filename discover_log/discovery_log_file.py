@@ -78,17 +78,14 @@ def copyfile(filename, backdir):
         targetname = backdir + dirname + '/' + basename
         # print '正在复制 %s 到 %s' % (filename, targetname)
         # 判断目录是否存在
-        if os.path.exists(backdir + dirname):
-            try:
-                shutil.copyfile(filename, targetname)
-            except Exception, e:
-                print e
-                if '[Errno 13] Permission denied' in e:
-                    subprocess.Popen('sudo chmod 644 %s' % filename)
-                    shutil.copyfile(filename, targetname)
-                # print e 
-        else:
+        if not os.path.exists(backdir + dirname):
             os.makedirs(backdir + dirname)
+        try:
+            shutil.copyfile(filename, targetname)
+        except Exception, e:
+            if '[Errno 13] Permission denied' in e:
+                subprocess.Popen('sudo chmod 644 %s' % filename)
+                shutil.copyfile(filename, targetname)
     #except KeyboardInterrupt:
     except Excepiton, e:
         print "\t\033[41m 程序终止! \033[m\n"
@@ -177,6 +174,19 @@ def get_all_log():
     else:
         all_log['mysqld'] = ['无']
 
+    #mongodb
+    p = subprocess.Popen("ps -C mongod -o pid,user --no-header | head -1 | awk '{print $1}'", stdout=subprocess.PIPE,
+                         shell=True)
+    ret = p.communicate()
+    if ret[0]:
+        mysql_pid = ret[0]
+        ret = getlogdir('Mongo', mysql_pid.strip())
+        if ret:
+            all_log['mongodb'] = ret
+        else:
+            all_log['mongodb'] = ['无']
+    else:
+        all_log['mongodb'] = ['无']
 
     # 系统日志文件
     # for logfile in listsyslogs():

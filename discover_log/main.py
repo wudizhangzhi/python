@@ -155,11 +155,11 @@ class QQ(object):
                         time.sleep(0.5)
 
                 Thread(target=thread_display).start()
+                t.start()
                 db = sqlite3.connect('loginfo.db')
                 cur = db.cursor()
                 cur.execute('SELECT * FROM log_select')
                 all_log = cur.fetchall()
-
                 #测试代码
                 total = len(all_log)
                 num = 0
@@ -173,6 +173,7 @@ class QQ(object):
                     per = num * 100 / total
                     #TODO delete
                     time.sleep(0.1)
+                time.sleep(2)
                 break
             else:
                 self.view_control_map[key].run(self.switch_queue)

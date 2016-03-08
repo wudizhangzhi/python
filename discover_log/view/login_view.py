@@ -12,7 +12,7 @@ import sqlite3
 
 # log文件显示行数
 line_show = 15
-log_list = ['nginx', 'httpd', 'mysqld', 'sys']
+log_list = ['nginx', 'httpd', 'mysqld','mongodb', 'sys']
 
 line_help = 'q--返回上一页,退出  o--输出日志  空格--进入  m--标记  k--向下  j--向上'
 
@@ -39,7 +39,7 @@ class Login(BaseView):
         self.logshow_start = 0
         self.logfile = ['无']
         # 具体文件的标记
-        self.mark = {'nginx': [], 'httpd': [], 'mysqld': [], 'sys': []}
+        self.mark = {'nginx': [], 'httpd': [], 'mysqld': [],'mongodb':[], 'sys': []}
         # 主页面的标记
         self.mark_main = []
         # 是否正在进行数据库操作

@@ -96,13 +96,17 @@ class LoginController(object):
         页面时间的变化
         '''
         while not self.quit:
-            self.view.display()
-            # if self.select < 0:
-            #     selk.select = 0
-            # elif self.select>3:
-            #     self.select = 3
-            # self.view.select = self.select
-            time.sleep(0.3)
+            try:
+                self.view.display()
+                # if self.select < 0:
+                #     selk.select = 0
+                # elif self.select>3:
+                #     self.select = 3
+                # self.view.select = self.select
+                time.sleep(0.3)
+            except Exception,e:
+                print e
+                break
 
     def _show_logfile(self, index):
         log_list = ['nginx','httpd','mysqld','sys']

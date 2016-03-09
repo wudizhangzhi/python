@@ -99,8 +99,12 @@ class MainController(object):
         页面时间的变化
         '''
         while not self.quit:
-            self.view.display()
-            time.sleep(1)
+            try:
+                self.view.display()
+                time.sleep(0.3)
+            except Exception,e:
+                print e
+                break
 
 
 

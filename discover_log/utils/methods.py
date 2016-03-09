@@ -70,16 +70,102 @@ def getDBLog(prefx, pid):
                 logfiles.append(logfile)
         return logfiles
 
+def getRedisData():
+    res = []
+    try:
+        if not os.path.exists('/etc/redis/redis.conf'):
+            p = subprocess.Popen("cat /etc/redis/redis.conf | grep 'dbfilename ' | awk '{print $2}'" , stdout=subprocess.PIPE,
+                                 shell=True)
+            ret = p.communicate()
+            dbname = ''
+            if ret:
+                for name in set(re.sub(r' ', '', ret[0]).split('\n')):
+                    if name:
+                        dbname = name
+            p = subprocess.Popen("cat /etc/redis/redis.conf | grep 'dir ' | awk '{print $2}'" , stdout=subprocess.PIPE,
+                                 shell=True)
+            ret = p.communicate()
+            path = ''
+            if ret:
+                for p in set(re.sub(r' ', '', ret[0]).split('\n')):
+                    if p:
+                        path = p
+            dbfilepath = ''
+            if dbname and path:
+                dbfilepath = path + '/' + dbname 
+                res.append(dbfilepath)
+        else:
+            p = subprocess.Popen("ps -C redis-server -o pid,user --no-header | head -1 | awk '{print $1}'", stdout=subprocess.PIPE,
+                             shell=True)
+            ret = p.communicate()
+            if ret[0]:
+                redis_pid = ret[0].replace('\n','').replace('\r','')
+                p = subprocess.Popen("dirname `sudo ls -l /proc/%s/exe | awk -F '->' '{print $2}'`" % redis_pid, stdout=subprocess.PIPE,
+                             shell=True)
+                ret = p.communicate()
+                path_redis = ret[0].replace('\n','').replace('\r','')
+                path = path_redis + '/redis-cli'
+
+                p = subprocess.Popen("%s info server | grep 'config_file:' | awk -F ':' '{print $2}'" % path, stdout=subprocess.PIPE,
+                             shell=True)
+                ret = p.communicate()
+                path_conf = ret[0].replace('\n','').replace('\r','')
+
+                p = subprocess.Popen("cat %s | grep 'dbfilename ' | awk '{print $2}'" % path_conf , stdout=subprocess.PIPE,
+                                     shell=True)
+                ret = p.communicate()
+                dbname = ret[0].replace('\n','').replace('\r','')
+                # if ret:
+                #     for name in set(re.sub(r' ', '', ret[0]).split('\n')):
+                #         if name:
+                #             dbname = name
+                p = subprocess.Popen("cat %s | grep 'dir ' | awk '{print $2}'" % path_conf, stdout=subprocess.PIPE,
+                                     shell=True)
+                ret = p.communicate()
+                path = ret[0].replace('\n','').replace('\r','')
+                # if ret:
+                #     for p in set(re.sub(r' ', '', ret[0]).split('\n')):
+                #         if p:
+                #             path = p
+                            
+                dbfilepath = ''
+                if path.startswith('.'):
+                    dbfilepath = path_conf.replace('redis.conf','') + path.replace('./','') +'/' + dbname
+                    dbfilepath = dbfilepath.replace('//','/')
+                    print dbfilepath
+                else:
+                    dbfilepath = path + '/' + dbname
+                res.append(dbfilepath)
+                # appendonly 是否开启
+                p = subprocess.Popen("cat %s | grep 'appendonly ' | awk '{print $2}'" % path_conf, stdout=subprocess.PIPE,
+                                     shell=True)
+                ret = p.communicate()
+                if ret[0].replace('\n','').replace('\r','').lower() == 'yes':
+                    p = subprocess.Popen("cat %s | grep 'appendfilename ' | awk '{print $2}'" % path_conf, stdout=subprocess.PIPE,
+                                     shell=True)
+                    ret = p.communicate()
+                    aofname = ret[0].replace('\n','').replace('\r','')
+                    aofpath = path_redis + '/' + aofname
+                    res.append(aofpath)
+    except Exception,e:
+        print e
+    return res
+
+
+
 
 def listsyslogs():
-    p = subprocess.Popen("ls -l /var/log |grep ^- | awk '{print $9}'", stdout=subprocess.PIPE, shell=True)
-    ret = p.communicate()
-    if ret:
-        logfiles = []
-        for logfile in set(re.sub(r' ', '', ret[0]).split('\n')):
-            if logfile:
-                logfiles.append('/var/log/%s' % logfile)
-        return logfiles
+    try:
+        p = subprocess.Popen("ls -l /var/log |grep ^- | awk '{print $9}'", stdout=subprocess.PIPE, shell=True)
+        ret = p.communicate()
+        if ret:
+            logfiles = []
+            for logfile in set(re.sub(r' ', '', ret[0]).split('\n')):
+                if logfile:
+                    logfiles.append('/var/log/%s' % logfile)
+            return logfiles
+    except Exception,e:
+        print e
 
 
 def copyfile(filename, backdir):
@@ -201,16 +287,12 @@ def get_all_log():
         all_log['mongodb'] = ['无']
 
     # redis
-    p = subprocess.Popen("ps -C redis-server -o pid,user --no-header | head -1 | awk '{print $1}'", stdout=subprocess.PIPE,
-                         shell=True)
-    ret = p.communicate()
-    if ret[0]:
-        redis_pid = ret[0]
-        ret = getlogdir('Redis', redis_pid.strip())
-        if ret:
-            all_log['redis'] = ret
-        else:
-            all_log['redis'] = ['无']
+    # p = subprocess.Popen("ps -C redis-server -o pid,user --no-header | head -1 | awk '{print $1}'", stdout=subprocess.PIPE,
+    #                      shell=True)
+    # ret = p.communicate()
+    ret = getRedisData()
+    if ret:
+        all_log['redis'] = ret
     else:
         all_log['redis'] = ['无']
 
@@ -346,19 +428,20 @@ welcome = [
 time_welcome = 3
 
 if __name__ == '__main__':
-    # 欢迎界面
-    height, width = linesnum()
-    print '\r'
-    top_margin = (height - len(welcome)) / 2
-    left_margin = (width - len(welcome[-2])) / 2
-    print '\n' * top_margin
-    for i in welcome:
-        print ' ' * left_margin + i
-    print '\n' * (height - top_margin - len(welcome))
-    # 欢迎界面结束
-    time.sleep(time_welcome)
-    uid = os.getuid()
-    if uid != 0:
-        print '请使用root用户操作'
-        sys.exit(-1)
-    main()
+    print getRedisData()
+    # # 欢迎界面
+    # height, width = linesnum()
+    # print '\r'
+    # top_margin = (height - len(welcome)) / 2
+    # left_margin = (width - len(welcome[-2])) / 2
+    # print '\n' * top_margin
+    # for i in welcome:
+    #     print ' ' * left_margin + i
+    # print '\n' * (height - top_margin - len(welcome))
+    # # 欢迎界面结束
+    # time.sleep(time_welcome)
+    # uid = os.getuid()
+    # if uid != 0:
+    #     print '请使用root用户操作'
+    #     sys.exit(-1)
+    # main()

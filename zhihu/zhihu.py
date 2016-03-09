@@ -154,15 +154,18 @@ class ZhiHu():
         m = re.search(r'([0-9]+)', text)
         if m:
             follow = m.group()
-        watch = ''
-        return follow, watch
+        return follow
 
     def question(self, url):
         question_id = re.search(r'\d+', url).group()
         r = self.get(url)
         soup = BeautifulSoup(r.content, 'lxml')
+
+        import chardet
+        
         # 题目
         title = soup.find('h2', class_='zm-item-title').get_text()
+        # chardet.detect(title)
         # 描述
         content = soup.find('div', id='zh-question-detail').get_text()
         # 回答数量
@@ -170,34 +173,56 @@ class ZhiHu():
 
         follow = ''
         watch = ''
+        t = int(time.time())
+        # TODO 保存数据
         if self._login:
             follow, watch = self._question_sign(soup)
+            sql = 'insert into zhihu_question(question_id, title, content, time, num_answer, num_follow, num_watch) '\
+            'values(%s, %s, %s, %s, %s, %s, %s)'
+            db.execute(sql, question_id, title, content, t, num_answer, follow, watch)
         else:
-            follow, watch = self._question_unsign(soup)
-        # TODO 删除
-        param = [title, content, num_answer, follow, watch]
-        t = int(time.time())
-        sql = 'insert into zhihu_question(question_id, title, content, time, num_answer, num_follow, num_watch) values(%s, %s, %s, %s, %s, %s, %s)'
-        db.execute(sql, question_id, title, content, t, num_answer, follow, watch)
-        for i in param:
-            print i
+            follow = self._question_unsign(soup)
+            sql = 'insert into zhihu_question(question_id, title, content, time, num_answer, num_follow) '\
+            'values(%s, %s, %s, %s, %s, %s)'
+            db.execute(sql, question_id, title, content, t, num_answer, follow)
 
-    def answer(self, soup):
+    def answer(self, soup, question_id):
         r = soup.find('div', id='zh-question-answer-wrap')
         items = r.find_all('div', class_='zm-item-answer')
-
+        params= []
         for answer in items:
+            p = []
             agree = answer.find('span', class_='count').get_text()
-            username = answer.find('a', class_='author-link').get_text()
-            user_info = answer.find('span', class_='bio').get_text()
-            summary = answer.find('div', class_='zh-summary').get_text()
+            token = int(answer.get('data-atoken'))
+            print token
+            try:
+                username = answer.find('a', class_='author-link').get_text()
+            except:
+                username = '匿名用户'
+            # user_info = answer.find('span', class_='bio').get_text()
+            # summary = answer.find('div', class_='zh-summary').get_text()
 
             content = answer.find('div', class_='zm-editable-content')
-            time_edit = answer.find('a', class_='answer-date-link').get_text()[-10:]
+            
             num_comment = answer.find('a', class_='toggle-comment').get_text()
             num_comment = re.search(r'\d+', num_comment).group()
+
+            time_edit = answer.find('a', class_='answer-date-link').get_text()
+            # 判断是日期还是时间
+            if '-' not in time_edit:
+                time_num = time_edit[-5:]
+                date_today = time.strftime('%Y-%m-%d', time.localtime())
+                time_num = date_today + ' ' + time_num
+                time_num = int(time.mktime(time.strptime(time_num, '%Y-%m-%d %H:%M')))
+                if '昨天' in time_edit:
+                     time_num = time_num - 24*60*60                       
+            else:# 日期
+                time_num = int(time.mktime(time.strptime(time_edit[-10:], '%Y-%m-%d')))
             # TODO 保存数据
-        pass
+            p = [question_id, username, agree, content, num_comment, time_num]
+            params.append(p)
+        # sql = 'insert into zhihu_answer(question_id,username,agree,content,num_comment,time) values(%s,%s,%s,%s,%s,%s)'
+        # db.executemany(sql, params)
 
     def _user(self, soup):
         # 登录 or 未登录
@@ -272,4 +297,7 @@ class ZhiHu():
 if __name__ == '__main__':
     zhihu = ZhiHu()
     # zhihu.login()
-    html = zhihu.question('https://www.zhihu.com/question/41035200')
+    r = zhihu.get('https://www.zhihu.com/question/41035200')
+    soup = BeautifulSoup(r.content, 'lxml')
+    zhihu.answer(soup, '41035200') 
+

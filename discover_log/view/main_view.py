@@ -6,6 +6,8 @@ sys.path.append('..')
 from view.base_view import BaseView
 from utils.methods import get_all_log, calcMemUsage
 import sqlite3
+import subprocess
+import re
 
 
 version = 'Linux&&Unix日志取证大师V1.0'
@@ -31,7 +33,14 @@ class Main(BaseView):
         l = ['系统:' + str(platform.platform()) + '\r']
         l.append('内存使用:' + str(memuse) + ' kb  内存总共:' + str(memtotal) + ' kb\r')
         l.append('计算机类型:'+ str(platform.machine()) + '\r')
-        l.append('处理器信息:' + str(platform.processor()) + '\r')
+        p = subprocess.Popen('cat /proc/cpuinfo | grep name | cut -f2 -d: | uniq -c', stdout=subprocess.PIPE,shell=True)
+        ret = p.communicate()
+        infos = []
+        if ret:                               
+            for info in set(re.sub(r' ', '', ret[0]).split('\n')):
+                if info:                   
+                    infos.append(info)
+        l.append('处理器信息:' + str(infos[0]) + '\r')
         self.sysinfo = l
 
 

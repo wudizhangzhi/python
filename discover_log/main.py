@@ -104,81 +104,84 @@ class QQ(object):
         self.view_control_map['main'].run(self.switch_queue)
 
         while not self.quit_quit:
-            key = self.switch_queue.get()
-            if key == 'quit_quit':
-                self.quit_quit = True
-            elif key == 'rawinput':
-                try:
-                    # backdir = raw_input('请输入要保存的路径: ')
-                    backdir = raw_input('\033[41m请输入要保存的路径:\033[m    ')
+            try:
+                key = self.switch_queue.get()
+                if key == 'quit_quit':
+                    self.quit_quit = True
+                elif key == 'rawinput':
+                    try:
+                        # backdir = raw_input('请输入要保存的路径: ')
+                        backdir = raw_input('\033[41m请输入要保存的路径:\033[m    ')
 
-                except KeyboardInterrupt:
-                    print "\t\033[41m 程序终止! \033[m\n"
-                if backdir == '':
-                    backdir = '__save'
-                if backdir.endswith('/'):
-                    backdir = backdir[::-1]
-                now = time.strftime('%Y-%m-%d_%H:%M:%S', time.localtime())
-                backdir = backdir + '/' + now
-                # 进度条
-                base = BaseView()
-                screen_height, screen_width = base.linesnum()
-                content = ['']
-                per = 0
-                # 进度条线程
-                def thread_display():
-                    while True:
-                        display_lines = ['\r']
-                        display_lines.append('正在复制' + '\r')
-                        display_lines.append('')
-                        # length = len(content)
-                        # 显示正在复制的内容
-                        c = content
-                        half = screen_height / 2
-                        if len(c) > half:
-                            c = c[-half:]
-                        for i in c:
-                            display_lines.append(i)
-
-                        if per == 100:
-                            display_lines.append("\t\033[36m 复制完成! \033[m")
-                        else:
-                            display_lines.append('\t\033[36m 完成:' + str(per) + '%\033[m')
-                        display_lines.append('')
-                        for i in range(screen_height - len(display_lines) - 3):
+                    except KeyboardInterrupt:
+                        print "\t\033[41m 程序终止! \033[m\n"
+                    if backdir == '':
+                        backdir = '__save'
+                    if backdir.endswith('/'):
+                        backdir = backdir[::-1]
+                    now = time.strftime('%Y-%m-%d_%H:%M:%S', time.localtime())
+                    backdir = backdir + '/' + now
+                    # 进度条
+                    base = BaseView()
+                    screen_height, screen_width = base.linesnum()
+                    content = ['']
+                    per = 0
+                    # 进度条线程
+                    def thread_display():
+                        while True:
+                            display_lines = ['\r']
+                            display_lines.append('正在复制' + '\r')
                             display_lines.append('')
-                        pos = screen_width * per / 100 - 1
-                        if pos < 1:
-                            pos = 1
-                        display_lines.append('=' * pos + '>')
-                        display_lines.append('\r')
-                        print '\n'.join(display_lines)
-                        if per == 100:
-                            break
-                        time.sleep(0.5)
+                            # length = len(content)
+                            # 显示正在复制的内容
+                            c = content
+                            half = screen_height / 2
+                            if len(c) > half:
+                                c = c[-half:]
+                            for i in c:
+                                display_lines.append(i)
 
-                Thread(target=thread_display).start()
-                db = sqlite3.connect('db/loginfo.db')
-                cur = db.cursor()
-                cur.execute('SELECT * FROM log_select')
-                all_log = cur.fetchall()
-                #测试代码
-                total = len(all_log)
-                num = 0
-                for filelog in all_log:
-                    copyfile(filelog[0], backdir)
-                    basename = os.path.basename(filelog[0])
-                    dirname = os.path.dirname(filelog[0])
-                    targetname = backdir + dirname + '/' + basename
-                    content.append('复制' + str(filelog[0]) + '-->' + str(targetname))
-                    num += 1
-                    per = num * 100 / total
-                    #TODO delete
-                    time.sleep(0.1)
-                time.sleep(2)
+                            if per == 100:
+                                display_lines.append("\t\033[36m 复制完成! \033[m")
+                            else:
+                                display_lines.append('\t\033[36m 完成:' + str(per) + '%\033[m')
+                            display_lines.append('')
+                            for i in range(screen_height - len(display_lines) - 3):
+                                display_lines.append('')
+                            pos = screen_width * per / 100 - 1
+                            if pos < 1:
+                                pos = 1
+                            display_lines.append('=' * pos + '>')
+                            display_lines.append('\r')
+                            print '\n'.join(display_lines)
+                            if per == 100:
+                                break
+                            time.sleep(0.5)
+
+                    Thread(target=thread_display).start()
+                    db = sqlite3.connect('db/loginfo.db')
+                    cur = db.cursor()
+                    cur.execute('SELECT * FROM log_select')
+                    all_log = cur.fetchall()
+                    #测试代码
+                    total = len(all_log)
+                    num = 0
+                    for filelog in all_log:
+                        copyfile(filelog[0], backdir)
+                        basename = os.path.basename(filelog[0])
+                        dirname = os.path.dirname(filelog[0])
+                        targetname = backdir + dirname + '/' + basename
+                        content.append('复制' + str(filelog[0]) + '-->' + str(targetname))
+                        num += 1
+                        per = num * 100 / total
+                        #TODO delete
+                        time.sleep(0.1)
+                    time.sleep(2)
+                    break
+                else:
+                    self.view_control_map[key].run(self.switch_queue)
+            except:
                 break
-            else:
-                self.view_control_map[key].run(self.switch_queue)
         self.quit()
         os._exit(0)
 

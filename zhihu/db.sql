@@ -6,21 +6,30 @@ create table `zhihu_question`(
     `content` text comment'问题正文',
     `time` int not null comment'记录时间',
     `time_recent` int comment'最近活动时间',
-    `num_answer` tinyint comment'回答数量',
+    `num_answer` int comment'回答数量',
     `num_follow` int comment'关注人数',
-    `num_watch` int comment'浏览人数',
+    `num_watch` int default null comment'浏览人数',
     key `idx_qestion_id` (`question_id`) 
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 drop table if exists `zhihu_answer`;
 create table `zhihu_answer`(
     `id` int unsigned primary key auto_increment,
+    `token` int unsigned not null,
     `question_id` int unsigned not null,
-    `primary` text comment'概述',
+    `username` varchar(52) not null comment'用户名',
+    `content` longtext comment'回答',
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+drop table if exists `zhihu_answer_data`;
+create table `zhihu_answer_data`(
+    `id` int unsigned primary key auto_increment,
+    `token` int unsigned not null,
     `agree` int comment'赞同数量',
     `content` longtext comment'回答',
-    `time` int comment'编辑时间'
-);
+    `num_comment`int comment'评论数量',
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
 drop table if exists `zhihu_user`;
 create table `zhihu_user`(
@@ -33,6 +42,8 @@ create table `zhihu_user`(
     `gender` int comment'性别0:女，1:男',
     `employment` varchar(60) comment'职业',
     `education` varchar(60) comment'教育',
+
+
     `agree` int default 0 comment'赞同',
     `thanks` int default 0 comment'感谢',
     `fav` int default 0 comment'被收藏',
@@ -46,4 +57,4 @@ create table `zhihu_user`(
     `followers` int default 0 comment'被关注',
     `watched` int default 0 comment'主页被查看次数'
 
-);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

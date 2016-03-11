@@ -9,14 +9,14 @@ import requests
 from bs4 import BeautifulSoup
 import torndb
 import time
+from conndb import *
 
+# mysql_host = 'localhost'
+# mysql_db = 'zhihu'
+# mysql_user = 'root'
+# mysql_pass = 'admin'
 
-mysql_host = 'localhost'
-mysql_db = 'zhihu'
-mysql_user = 'root'
-mysql_pass = 'admin'
-
-db = torndb.Connection(mysql_host, mysql_db, user=mysql_user, password=mysql_pass)
+# db = torndb.Connection(mysql_host, mysql_db, user=mysql_user, password=mysql_pass)
 # url_target = 'https://www.zhihu.com/#signin'
 # url_login = 'https://www.zhihu.com/login/email'
 # s = requests.Session()
@@ -194,7 +194,6 @@ class ZhiHu():
             p = []
             agree = answer.find('span', class_='count').get_text()
             token = int(answer.get('data-atoken'))
-            print token
             try:
                 username = answer.find('a', class_='author-link').get_text()
             except:
@@ -219,23 +218,42 @@ class ZhiHu():
             else:# 日期
                 time_num = int(time.mktime(time.strptime(time_edit[-10:], '%Y-%m-%d')))
             # TODO 保存数据
-            p = [question_id, username, agree, content, num_comment, time_num]
+            p = [question_id, token, username, content, time_num]
             params.append(p)
-        # sql = 'insert into zhihu_answer(question_id,username,agree,content,num_comment,time) values(%s,%s,%s,%s,%s,%s)'
-        # db.executemany(sql, params)
+        sql = 'insert into zhihu_answer(question_id,token,username,content,time) values(%s,%s,%s,%s,%s)'
+        db.executemany(sql, params)
 
-    def _user(self, soup):
+    def _user(self, soup, urlname):
+        '''
+        用户信息
+        '''
         # 登录 or 未登录
         part = soup.find('div', class_='ellipsis')
         name = part.find('span', class_='name').get_text()
         sign = part.find('span', class_='bio').get_text()
 
+        self._user_data(soup, urlname)
+
         avatar = soup.find('img', class_='Avatar').get('src')
 
         gender = soup.find('span', class_='gender').find('i').get('class')[1].split('-')[-1]
+        if gender == 'female':
+            gender = 0
+        else:
+            gender = 1
+        # education = soup.find('span', class_='education').get('title')
 
-        education = soup.find('span', class_='education').get('title')
+        #TODO 保存数据
+        params = [name,sign,avatar,gender]
+        for i in params:
+            print str(i)
+        # sql = 'insert into zhihu_user(name,urlname,sign,avatar,gender) values(%s,%s,%s,%s,%s)'
+        # db.execute(sql, name,urlname,sign,avatar,gender)
 
+    def _user_data(self, soup, urlname):
+        '''
+        用户数据
+        '''
         agree = soup.find('span', class_='zm-profile-header-user-agree').find('strong').get_text()
 
         thanks = soup.find('span', class_='zm-profile-header-user-thanks').find('strong').get_text()
@@ -258,19 +276,22 @@ class ZhiHu():
         watched = soup.find('a', class_='zg-link-litblue').get_text()
         m = re.search(r'\d+',watched)
         watched = m.group()
-        #TODO 保存数据
-        pass
 
-    def user(self, url):
+        params = [agree, thanks, asks, answkers, posts, collections, logs, followees, followers, watched]
+        for i in params:
+            print i
 
+
+    def user(self, urlname):
+        url = 'https://www.zhihu.com/people/%s/about' + urlname
         r = self.get(url)
         soup = BeautifulSoup(r.content, 'lxml')
         # 登录 or 未登录
-        self._user()
+        self._user(soup, urlname)
 
     def find_question_url(self, soup):
         '''
-
+        筛选问题地址
         '''
         r = []
         a = soup.find_all('a')
@@ -283,7 +304,7 @@ class ZhiHu():
 
     def find_people_url(self, soup):
         '''
-
+        筛选用户地址
         '''
         r = []
         a = soup.find_all('a')
@@ -297,7 +318,8 @@ class ZhiHu():
 if __name__ == '__main__':
     zhihu = ZhiHu()
     # zhihu.login()
-    r = zhihu.get('https://www.zhihu.com/question/41035200')
-    soup = BeautifulSoup(r.content, 'lxml')
-    zhihu.answer(soup, '41035200') 
+    # r = zhihu.get('https://www.zhihu.com/question/41035200')
+    # soup = BeautifulSoup(r.content, 'lxml')
+    # zhihu.answer(soup, '41035200') 
+    zhihu.user('https://www.zhihu.com/people/lu-pu-tao-21')
 

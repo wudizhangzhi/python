@@ -18,7 +18,10 @@ create table `zhihu_answer`(
     `token` int unsigned not null,
     `question_id` int unsigned not null,
     `username` varchar(52) not null comment'用户名',
+    `time` int unsigned not null comment'最后编辑时间',
     `content` longtext comment'回答',
+    key `idx_token` (`token`),
+    key `idx_question_id` (`question_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 drop table if exists `zhihu_answer_data`;
@@ -28,22 +31,28 @@ create table `zhihu_answer_data`(
     `agree` int comment'赞同数量',
     `content` longtext comment'回答',
     `num_comment`int comment'评论数量',
+    `time` int comment'采集时间'
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 drop table if exists `zhihu_user`;
 create table `zhihu_user`(
     `id` int unsigned primary key auto_increment,
+    `urlname` varchar(52) comment'用户url地址标识',
     `name` varchar(52) comment'用户名',
     `sign` varchar(150) comment'一句话概括',
-    `avatar` text comment'url',
+    `avatar` text comment'头像地址',
     `location` varchar(30) comment'居住地',
     `business` varchar(30) comment'行业',
     `gender` int comment'性别0:女，1:男',
     `employment` varchar(60) comment'职业',
-    `education` varchar(60) comment'教育',
+    `education` varchar(60) comment'教育'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-
+drop table if exists `zhihu_user_data`;
+create table `zhihu_user_data`(
+    `id` int unsigned primary key auto_increment,
+    `urlname` varchar(52) comment'用户url地址标识',
     `agree` int default 0 comment'赞同',
     `thanks` int default 0 comment'感谢',
     `fav` int default 0 comment'被收藏',
@@ -55,6 +64,14 @@ create table `zhihu_user`(
     `logs` int default 0 comment'公共编辑',
     `followees` int default 0 comment'关注了',
     `followers` int default 0 comment'被关注',
-    `watched` int default 0 comment'主页被查看次数'
+    `watched` int default 0 comment'主页被查看次数',
+     key `idx_urlname` (`urlname`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+
+drop table if exists `zhihu_url_crawled`;
+create table `zhihu_url_crawled`(
+    `id` int unsigned primary key auto_increment,
+    `url` varchar(52) comment'url地址',
+     key `idx_url` (`url`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

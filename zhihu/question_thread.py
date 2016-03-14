@@ -6,26 +6,28 @@ from zhihu import ZhiHu
 from conndb import *
 import time
 
+
 '''
-从redis取出用户地址进行爬取
+从redis取出问题地址进行爬取
 '''
 
-class People():
+class Question():
     def __init__(self):
         self.client = ZhiHu()
         pass
 
     def run(self):
         while True:
-            r = redis_cache.spop('zhihu_url_people')
+            r = redis_cache.spop('zhihu_url_question')
             if r:
-                self.client.user(r)
+                self.client.question(r)
 
-                print '采集用户:%s' % r
+                print '采集问题:%s' % r
+            else:
+                print 'wait'
             time.sleep(1)
         pass
 
-
 if __name__ == '__main__':
-    people = People()
-    people.run()
+    question = Question()
+    question.run()

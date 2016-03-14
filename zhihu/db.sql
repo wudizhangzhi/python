@@ -44,7 +44,7 @@ create table `zhihu_user`(
     `avatar` text comment'头像地址',
     `location` varchar(30) comment'居住地',
     `business` varchar(30) comment'行业',
-    `gender` int comment'性别0:女，1:男',
+    `gender` int comment'性别0:女，1:男,2:未知',
     `employment` varchar(60) comment'职业',
     `education` varchar(60) comment'教育'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -72,6 +72,6 @@ create table `zhihu_user_data`(
 drop table if exists `zhihu_url_crawled`;
 create table `zhihu_url_crawled`(
     `id` int unsigned primary key auto_increment,
-    `url` varchar(52) comment'url地址',
+    `url` varchar(102) comment'url地址',
      key `idx_url` (`url`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

@@ -89,13 +89,13 @@ class zhihu():
 url_login_get = 'https://www.zhihu.com/#signin'
 url_login_post = 'https://www.zhihu.com/login/email'
 email = 'wudizhangzhi@163.com'
-password = 'zzc549527'
+password = ''
 verify = False
 header = {
     'Accept': '*/*',
     'Accept-Encoding': 'gzip,deflate,sdch',
-    'Accept-Language': 'zh-CN,zh;q=0.8',
     'Connection': 'keep-alive',
+    'Accept-Language': 'zh-CN,zh;q=0.8',
     'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
     'Host': 'www.zhihu.com',
     'Origin': 'http://www.zhihu.com',
@@ -156,35 +156,49 @@ class ZhiHu():
             follow = m.group()
         return follow
 
-    def question(self, url):
-        question_id = re.search(r'\d+', url).group()
-        r = self.get(url)
-        soup = BeautifulSoup(r.content, 'lxml')
+    def question(self, question_id):
+        # question_id = re.search(r'\d+', url).group()
+        try:
+            url = 'https://www.zhihu.com/question/%s' % question_id
+            r = self.get(url)
+            soup = BeautifulSoup(r.content, 'lxml')
 
-        import chardet
-        
-        # 题目
-        title = soup.find('h2', class_='zm-item-title').get_text()
-        # chardet.detect(title)
-        # 描述
-        content = soup.find('div', id='zh-question-detail').get_text()
-        # 回答数量
-        num_answer = soup.find('h3', id='zh-question-answer-num').attrs['data-num']
+            # 题目
+            title = soup.find('h2', class_='zm-item-title').get_text()
+            # chardet.detect(title)
+            # 描述
+            content = soup.find('div', id='zh-question-detail').get_text()
+            # 回答数量
+            num_answer = soup.find('h3', id='zh-question-answer-num')
+            if num_answer:
+                num_answer = num_answer.attrs['data-num']
+            else:
+                num_answer = 0
 
-        follow = ''
-        watch = ''
-        t = int(time.time())
-        # TODO 保存数据
-        if self._login:
-            follow, watch = self._question_sign(soup)
-            sql = 'insert into zhihu_question(question_id, title, content, time, num_answer, num_follow, num_watch) '\
-            'values(%s, %s, %s, %s, %s, %s, %s)'
-            db.execute(sql, question_id, title, content, t, num_answer, follow, watch)
-        else:
-            follow = self._question_unsign(soup)
-            sql = 'insert into zhihu_question(question_id, title, content, time, num_answer, num_follow) '\
-            'values(%s, %s, %s, %s, %s, %s)'
-            db.execute(sql, question_id, title, content, t, num_answer, follow)
+            follow = ''
+            watch = ''
+            t = int(time.time())
+            # TODO 保存数据
+            if self._login:
+                follow, watch = self._question_sign(soup)
+                sql = 'insert into zhihu_question(question_id, title, content, time, num_answer, num_follow, num_watch) '\
+                'values(%s, %s, %s, %s, %s, %s, %s)'
+                db.execute(sql, question_id, title, content, t, num_answer, follow, watch)
+            else:
+                follow = self._question_unsign(soup)
+                try:
+                    sql = 'insert into zhihu_question(`question_id`, `title`, `content`, `time`, `num_answer`, `num_follow`) values(%s, %s, %s, %s, %s, %s)'
+                    db.execute(sql, question_id, title, content, t, num_answer, follow)
+                except Exception,e:
+                    print e
+                    print 'error: insert into zhihu_question(question_id, title, content, time, num_answer, num_follow) values(%s, %s, %s, %s, %s, %s)' % (question_id, title, content, t, num_answer, follow)
+
+            # 采集答案
+            # self.answer(soup, question_id)
+        except Exception,e:
+            print '问题地址:%s;error:%s' % (question_id,str(e))
+
+
 
     def answer(self, soup, question_id):
         r = soup.find('div', id='zh-question-answer-wrap')
@@ -192,6 +206,9 @@ class ZhiHu():
         params= []
         for answer in items:
             p = []
+            answer_status = answer.find('div', class_='answer-status')
+            if answer_status:
+                continue
             agree = answer.find('span', class_='count').get_text()
             token = int(answer.get('data-atoken'))
             try:
@@ -202,9 +219,18 @@ class ZhiHu():
             # summary = answer.find('div', class_='zh-summary').get_text()
 
             content = answer.find('div', class_='zm-editable-content')
-            
-            num_comment = answer.find('a', class_='toggle-comment').get_text()
-            num_comment = re.search(r'\d+', num_comment).group()
+
+            try:
+                num_comment = answer.find('a', class_='toggle-comment').get_text()
+            except:
+                continue
+                break
+            m = re.search(r'\d+', num_comment)
+            if m:
+                num_comment = m.group()
+            else:
+                num_comment = 0
+
 
             time_edit = answer.find('a', class_='answer-date-link').get_text()
             # 判断是日期还是时间
@@ -227,28 +253,45 @@ class ZhiHu():
         '''
         用户信息
         '''
+        
         # 登录 or 未登录
         part = soup.find('div', class_='ellipsis')
         name = part.find('span', class_='name').get_text()
-        sign = part.find('span', class_='bio').get_text()
+        # about界面下
+        # name = part.find('a', class_='name').get_text()
+        sign = part.find('span', class_='bio')
+        if sign:
+            sign = sign.get_text()
+        else:
+            sign = ''
 
+
+        # 用户数据
         self._user_data(soup, urlname)
 
         avatar = soup.find('img', class_='Avatar').get('src')
 
-        gender = soup.find('span', class_='gender').find('i').get('class')[1].split('-')[-1]
-        if gender == 'female':
-            gender = 0
+        gender = soup.find('span', class_='gender')
+        if gender:
+            gender = gender.find('i').get('class')[1].split('-')[-1]
+            if gender == 'female':
+                gender = 0
+            else:
+                gender = 1
         else:
-            gender = 1
+            gender = 2
         # education = soup.find('span', class_='education').get('title')
 
         #TODO 保存数据
         params = [name,sign,avatar,gender]
-        for i in params:
-            print str(i)
-        # sql = 'insert into zhihu_user(name,urlname,sign,avatar,gender) values(%s,%s,%s,%s,%s)'
-        # db.execute(sql, name,urlname,sign,avatar,gender)
+        # for i in params:
+        #     print str(i)
+        try:
+            sql = 'insert into zhihu_user(name,urlname,sign,avatar,gender) values(%s,%s,%s,%s,%s)'
+            db.execute(sql, name, urlname, sign, avatar, gender)
+        except Exception,e:
+            print '用户地址:%s ;error:%s' % (urlname, str(e))
+
 
     def _user_data(self, soup, urlname):
         '''
@@ -264,7 +307,7 @@ class ZhiHu():
             num.append(a.find('span').get_text())
 
         asks = num[1]
-        answkers = num[2]
+        answers = num[2]
         posts = num[3]
         collections = num[4]
         logs = num[5]
@@ -277,17 +320,23 @@ class ZhiHu():
         m = re.search(r'\d+',watched)
         watched = m.group()
 
-        params = [agree, thanks, asks, answkers, posts, collections, logs, followees, followers, watched]
-        for i in params:
-            print i
-
+        params = [urlname, agree, thanks, asks, answers, posts, collections, logs, followees, followers, watched]
+        # for i in params:
+        #     print i
+        sql = 'insert into zhihu_user_data(urlname,agree,thanks,asks,answers,posts,collections,logs,followees,followers,watched) values(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)'
+        db.execute(sql, *params)
 
     def user(self, urlname):
-        url = 'https://www.zhihu.com/people/%s/about' + urlname
+        url = 'https://www.zhihu.com/people/%s' % urlname
+        # print '用户地址:%s' % url
         r = self.get(url)
-        soup = BeautifulSoup(r.content, 'lxml')
-        # 登录 or 未登录
-        self._user(soup, urlname)
+        if r.status_code==200:
+            print '采集用户:%s ;status_code:%s' % (urlname, r.status_code)
+            soup = BeautifulSoup(r.content, 'lxml')
+            # 登录 or 未登录
+            self._user(soup, urlname)
+        else:
+            print '采集用户:%s ;status_code:%s' % (urlname, r.status_code)
 
     def find_question_url(self, soup):
         '''
@@ -318,8 +367,9 @@ class ZhiHu():
 if __name__ == '__main__':
     zhihu = ZhiHu()
     # zhihu.login()
-    # r = zhihu.get('https://www.zhihu.com/question/41035200')
-    # soup = BeautifulSoup(r.content, 'lxml')
-    # zhihu.answer(soup, '41035200') 
-    zhihu.user('https://www.zhihu.com/people/lu-pu-tao-21')
+    r = zhihu.get('https://www.zhihu.com/question/19763624')
+    soup = BeautifulSoup(r.content, 'lxml')
+    print zhihu.find_people_url(soup) 
+    # zhihu.user('lu-pu-tao-21')
+    # zhihu.question()
 

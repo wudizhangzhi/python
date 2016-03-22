@@ -89,7 +89,7 @@ class zhihu():
 url_login_get = 'https://www.zhihu.com/#signin'
 url_login_post = 'https://www.zhihu.com/login/email'
 email = 'wudizhangzhi@163.com'
-password = ''
+password = 'zzc549527'
 verify = False
 header = {
     'Accept': '*/*',
@@ -240,7 +240,7 @@ class ZhiHu():
                 time_num = date_today + ' ' + time_num
                 time_num = int(time.mktime(time.strptime(time_num, '%Y-%m-%d %H:%M')))
                 if '昨天' in time_edit:
-                     time_num = time_num - 24*60*60                       
+                     time_num = time_num - 24*60*60
             else:# 日期
                 time_num = int(time.mktime(time.strptime(time_edit[-10:], '%Y-%m-%d')))
             # TODO 保存数据
@@ -253,7 +253,7 @@ class ZhiHu():
         '''
         用户信息
         '''
-        
+
         # 登录 or 未登录
         part = soup.find('div', class_='ellipsis')
         name = part.find('span', class_='name').get_text()
@@ -364,12 +364,41 @@ class ZhiHu():
                 r.append(m.group().split('/')[2])
         return r
 
+
+    def follow_question(self, soup, question_id):
+        '''
+        关注问题
+        https://www.zhihu.com/node/QuestionFollowBaseV2
+        {'method':'follow_question',
+         'params':"{'question_id':'8870875'}",
+         '_xsrf':''
+         }
+        '''
+        #检查是否登录
+        #通过soup找到按钮的data-id，然后post
+
+        xsrf = soup.find('input',{'name':'_xsrf'}).get('value')
+        data = {
+                'method':'follow_question',
+                'params':'{"question_id":"%s"}' % question_id,
+                '_xsrf':xsrf
+                }
+
+        r = self.session.post('https://www.zhihu.com/node/QuestionFollowBaseV2', data=data, verify=verify)
+        print r
+        print r.json()
+        pass
+
+
 if __name__ == '__main__':
     zhihu = ZhiHu()
-    # zhihu.login()
-    r = zhihu.get('https://www.zhihu.com/question/19763624')
+    zhihu.login()
+    r = zhihu.get('https://www.zhihu.com/question/41658681')
+
+    #_xsrf = re.findall('xsrf(.*)',r.text)[0][8:42]
     soup = BeautifulSoup(r.content, 'lxml')
-    print zhihu.find_people_url(soup) 
+    zhihu.follow_question(soup, 41658681)
+    #print zhihu.find_people_url(soup)
     # zhihu.user('lu-pu-tao-21')
     # zhihu.question()
 

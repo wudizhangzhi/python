@@ -28,6 +28,24 @@ class Question():
             time.sleep(1)
         pass
 
-if __name__ == '__main__':
-    question = Question()
-    question.run()
+
+class QuestionThread(threading.Thread):
+    def __init__(self):
+        #threading.Thread.__init__(self)
+        super(QuestionThread, self).__init__()
+        self.client = ZhiHu()
+
+    def run(self):
+        print 'thread is start running'
+        r = redis_cache.spop('zhihu_url_question')
+        if r:
+            self.client.question(r)
+
+            print '采集问题:%s' % r
+        else:
+            print 'wait'
+        time.sleep(1)
+
+
+
+

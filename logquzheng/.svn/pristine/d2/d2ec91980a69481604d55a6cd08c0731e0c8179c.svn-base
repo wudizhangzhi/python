@@ -1,0 +1,13 @@
+#coding=utf8
+
+import platform
+import os
+
+if __name__=='__main__':
+   ret = platform.architecture()
+   if ret[0] == '64bit':
+       os.system('sudo bin64/main64')
+   else:
+       os.system('sudo bin32/main32')
+
+

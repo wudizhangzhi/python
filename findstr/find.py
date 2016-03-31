@@ -26,7 +26,7 @@ def find(filename):
             buff = open(filename, 'r')
             for line in buff.readlines():
                 line_num += 1
-                if target in line:
+                if target.lower() in line.lower():
                     total += 1
                     print '目标：%s 文件：%s 行号：%s' % (target, filename, line_num)
 

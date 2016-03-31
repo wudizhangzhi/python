@@ -340,13 +340,7 @@ def get_all_log():
                             if not h.startswith('/'):
                                 h = server_config_file.replace('httpd.conf','') + h                             
                             documentpath.append(h)
-    except Exception,e:
-        print e
-
-    try:
         # nginx部分
-        documentpath_nginx = []
-
         p = subprocess.Popen("ps -C nginx -o pid,user --no-header | head -1 | awk '{print $1}'",
                                  stdout=subprocess.PIPE,
                                  shell=True)
@@ -379,7 +373,7 @@ def get_all_log():
                                     m = re.search(r'[^\s]+;', line)
                                     if m :
                                         print 'nginx.conf:' + m.group()
-                                        documentpath_nginx.append(m.group())
+                                        documentpath.append(m.group())
                         f.close()
                         #查询另一个文件 include
                         dirname = ''# 其他配置文件的目录
@@ -403,15 +397,16 @@ def get_all_log():
                                         m = re.search(r'location / \{[^\}]+\}', content)
                                         if m:# nginx.conf文件中有
                                             for line in m.group().split('\n'):
+                                                print line
                                                 if 'root' in line:
                                                     m = re.search(r'[^\s]+;', line)
                                                     if m :
-                                                        documentpath_nginx.append(m.group().replace(';', ''))
-        for i in set(documentpath_nginx):
-            documentpath.append(i)
+                                                        documentpath.append(m.group())
+
+
     except Exception,e:
         print e
-        # documentpath = ['无']
+        documentpath = ['无']
     if not documentpath:
         documentpath = ['无']
     all_log['website'] = documentpath

@@ -204,8 +204,7 @@ class QQ(object):
                         logging.info('选择的文件共：%s' % total)
                         num = 0
                         for filelog in all_log:
-                            # copyfile(filelog[0], backdir)
-                            copyfileByCommd(filelog[0], backdir)
+                            copyfile(filelog[0], backdir)
                             basename = os.path.basename(filelog[0])
                             dirname = os.path.dirname(filelog[0])
                             targetname = backdir + dirname + '/' + basename

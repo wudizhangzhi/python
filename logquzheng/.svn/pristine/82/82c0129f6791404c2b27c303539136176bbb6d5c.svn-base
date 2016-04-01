@@ -579,6 +579,7 @@ def getAllPath(mainpath, root, include):
             # 找到其他设置配置文件的路径
             if line.startswith(include) and line.endswith('.conf'):
                 path = line[include_length:].replace('"','').replace(';','').replace(' ','')
+                print path
                 if not path.startswith('/'):# 相对路径
                     path = main_dir + '/' + path
 
@@ -589,6 +590,7 @@ def getAllPath(mainpath, root, include):
                         filelist = os.listdir(path)
                         for filename in filelist:
                             filepath = path + '/' +filename
+                            print filepath
                             if not os.path.isdir(filepath):
                                 for i in getAllPath(filepath, root, include):
                                     documentpath.append(i)

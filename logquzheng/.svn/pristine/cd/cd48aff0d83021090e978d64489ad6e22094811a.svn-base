@@ -417,7 +417,7 @@ def get_all_log():
                     global include_list
                     include_list = []
                     for i in getAllPath(config_file, 'DocumentRoot', 'Include'):
-                        documentpath.append(i)
+                            documentpath.append(i)
                     # # 获取所有含有documentroot的行
                     # p = subprocess.Popen("cat %s | grep DocumentRoot" % config_file , stdout=subprocess.PIPE,stderr=subprocess.PIPE, shell=True)
                     # ret = p.communicate()

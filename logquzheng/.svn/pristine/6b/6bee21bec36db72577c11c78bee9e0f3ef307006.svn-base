@@ -11,7 +11,7 @@ from utils.methods import get_all_log
 import sqlite3
 import subprocess
 import re
-import logging
+
 
 # log文件显示行数
 # line_show = 15
@@ -157,14 +157,10 @@ class Login(BaseView):
             try:
                 if self.logshow:
                     filename = self.logfile[self.select]
-
                     if self.select in self.mark[self.log_name]:
-                        logging.info('具体文件界面，标记:%s ' % filename)
                         self.mark[self.log_name].remove(self.select)
                         cur.execute('delete from log_select where name="%s"' % filename)
-
                     else:
-                        logging.info('具体文件界面，取消标记:%s ' % filename)
                         self.mark[self.log_name].append(self.select)
                         filename = self.logfile[self.select]
                         cur.execute('insert into log_select(name) values("%s")' % filename)
@@ -177,17 +173,14 @@ class Login(BaseView):
                         r.append(t)
                     if r and r[0][0] != '无':
                         if self.select in self.mark_main:
-                            logging.info('文件主界面，标记:%s ' % log_list[self.select])
                             self.mark_main.remove(self.select)
                             cur.executemany('DELETE FROM log_select WHERE name=?', r)
                         else:
-                            logging.info('文件主界面，取消标记:%s ' % log_list[self.select])
                             self.mark_main.append(self.select)
                             cur.executemany('INSERT INTO log_select(name) VALUES(?)', r)
                 db.commit()
             except Exception,e:
                 print e
-                logging.debug(e)
             #python2.4 error
             # finally:
             #     cur.close()

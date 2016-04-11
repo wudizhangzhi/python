@@ -11,18 +11,9 @@ from controller.process_controller import ProcessController
 from controller.main_controller import MainController
 from view.base_view import BaseView
 from utils.methods import *
-import sqlite3
+import sqlite
 import subprocess
 import time
-import logging
-
-# logging
-logging.basicConfig(level=logging.DEBUG,
-                    format='%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s',
-                    datefmt='%a, %d %b %y %H:%M:%S',
-                    filename='myapp.log',
-                    filemode='w')
-
 
 # 百度apikey
 apikey = 'b3bddbfd7081688c8c2f985e523a1d0a'
@@ -86,7 +77,7 @@ class QQ(object):
             'main': MainController(),
         }
         self._init_db()
-        logging.info('程序开始')
+
         Thread(target=self._watchdog_switch).start()
 
     def welcome(self):
@@ -103,7 +94,7 @@ class QQ(object):
         time.sleep(time_welcome)
 
     def _init_db(self):
-        db = sqlite3.connect('db/loginfo.db')
+        db = sqlite.connect('db/loginfo.db')
         cur = db.cursor()
         cur.execute('DROP TABLE IF EXISTS log_select')
         cur.execute('CREATE TABLE IF NOT EXISTS log_select(name TEXT)')
@@ -122,8 +113,7 @@ class QQ(object):
                 key = self.switch_queue.get()
                 if key == 'quit_quit':
                     self.quit_quit = True
-                elif key == 'rawinput':# 输出所有文件
-                    logging.info('输出所有文件 开始')
+                elif key == 'rawinput':
                     try:
                         # backdir = raw_input('请输入要保存的路径: ')
                         backdir = raw_input('\033[41m请输入要保存的目录名称:\033[m    ')
@@ -189,48 +179,38 @@ class QQ(object):
                                     time.sleep(0.5)
                                 except Exception,e:
                                     print e
-                                    logging.debug(e)
                                     break
 
                         Thread(target=thread_display).start()
-                        
-                        logging.info('读取选择的文件')
-                        db = sqlite3.connect('db/loginfo.db')
+                        db = sqlite.connect('db/loginfo.db')
                         cur = db.cursor()
                         cur.execute('SELECT * FROM log_select')
                         all_log = cur.fetchall()
-                        # 
+                        # 测试代码
                         total = len(all_log)
-                        logging.info('选择的文件共：%s' % total)
                         num = 0
                         for filelog in all_log:
-                            # copyfile(filelog[0], backdir)
-                            copyfileByCommd(filelog[0], backdir)
+                            copyfile(filelog[0], backdir)
                             basename = os.path.basename(filelog[0])
                             dirname = os.path.dirname(filelog[0])
                             targetname = backdir + dirname + '/' + basename
                             content.append('复制 ' + str(filelog[0]) + ' --> ' + str(targetname))
-                            logging.info('复制 ' + str(filelog[0]) + ' --> ' + str(targetname))
                             num += 1
                             per = num * 100 / total
                             # TODO delete
                             time.sleep(0.1)
                         per = 100
-                        logging.info('输出所有文件 结束')
                         self.initsysteminfo(backdir)
                         time.sleep(1)
                     except Exception,e:
                         print e
-                        logging.debug(e)
                     break
                 else:
                     self.view_control_map[key].run(self.switch_queue)
             except Exception, e:
                 print e
-                logging.debug('程序结束')
                 break
         # self.quit()
-        logging.info('输出所有文件 结束')
         os._exit(0)
 
     def quit(self):
@@ -241,7 +221,6 @@ class QQ(object):
 
     def initsysteminfo(self, backdir):
         try:
-            logging.info('开始生成系统信息文件')
             memuse, memtotal = calcMemUsage()
             import platform
             p = subprocess.Popen('cat /proc/cpuinfo | grep "^model name" | head -1 | awk -F ":" \'{print $2}\'',
@@ -265,7 +244,7 @@ class QQ(object):
             line3 = 'CPU 架构: ' + str(platform.machine()) + '\n'
             line4 = '内存使用: ' + str(memuse / 1024) + ' Mb' + '\n'
             line5 = '内存总量: ' + str(memtotal / 1024) + ' Mb' + '\n'
-            line6 = 'CPU 型号: ' + ' '.join(infos)+ '\n'
+            line6 = 'CPU 型号: ' + str(infos[0]) + '\n'
             line7 = '\n网卡信息:\n'
 
             line = line2 + line3 + line4 + line5 + line6 + line7
@@ -273,19 +252,14 @@ class QQ(object):
             # os.system("touch %s | echo '%s' >>%s | ifconfig >> %s | echo '\n硬盘信息:\n' >>%s |fdisk -l >> %s |  echo '\n分区信息:\n' >>%s | df -TH >> %s" % (filepath,line,filepath,filepath,filepath,filepath,filepath,filepath))
 
             os.system("touch %s | echo '%s' >>%s " % (filepath, line, filepath))
-
-            logging.info('创建信息文件：%s' % filepath)
-
             os.system("ifconfig >> %s " % filepath)
             os.system("echo '\n硬盘信息:' >>%s" % filepath)
             os.system("fdisk -l >> %s " % filepath)
             os.system("echo '\n分区信息:\n' >>%s" % filepath)
             os.system("df -TH >> %s" % (filepath))
             self.extrainfo(filepath)
-            logging.info('系统信息文件 结束')
         except Exception, e:
             print e
-            logging.debug(e)
             pass
 
     def extrainfo(self, filepath):
@@ -293,8 +267,8 @@ class QQ(object):
             # 外网ip地址
             p = subprocess.Popen("curl icanhazip.com -s", stdout=subprocess.PIPE, shell=True)
             ret = p.communicate()
-            ippath = str(ret[0].replace('\n', '').replace('\r', '')).strip()
-            p = subprocess.Popen("echo '\n外网ip地址：\n%s \n'>> %s" % (ippath,filepath), stdout=subprocess.PIPE, shell=True)
+            ippath = ret[0].replace('\n', '').replace('\r', '')
+            p = subprocess.Popen("echo '\n外网ip地址：\n %s \n'>> %s" % (ippath,filepath), stdout=subprocess.PIPE, shell=True)
                 # os.system("echo 外网ip地址：\n>> %s" % (filepath))
                 # os.system("echo %s\n>> %s" % (ippath, filepath))
             # 北京时间
@@ -309,14 +283,13 @@ class QQ(object):
                             beijing = eval(info)['stime']
             if beijing:
                 t = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(int(beijing)))
-                p = subprocess.Popen("echo '北京时间：\n%s' >> %s" % (t.strip(), filepath), stdout=subprocess.PIPE, shell=True)
+                p = subprocess.Popen("echo '时间：\n %s' >> %s" % (t, filepath), stdout=subprocess.PIPE, shell=True)
                 # os.system("echo '时间：\n %s' >> %s" % (t, filepath))
             else:
                 # os.system("echo 时间：\n>> %s" % (filepath))
                 # os.system("date >> %s" % (filepath))
-                p = subprocess.Popen("echo '北京时间：\n'>> %s" % (filepath), stdout=subprocess.PIPE, shell=True)
+                p = subprocess.Popen("echo '时间：\n'>> %s" % (filepath), stdout=subprocess.PIPE, shell=True)
                 p = subprocess.Popen("date >> %s" % (filepath), stdout=subprocess.PIPE, shell=True)
         except Exception,e:
-            logging.debug(e)
             print e
 qq = QQ()

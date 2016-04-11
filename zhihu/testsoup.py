@@ -4,8 +4,8 @@
 from bs4 import BeautifulSoup
 import re
 
-f = open('question_unsign.html')
-soup = BeautifulSoup(f.read(), 'lxml')
+# f = open('question_unsign.html')
+# soup = BeautifulSoup(f.read(), 'lxml')
 # r = soup.find('div', id='zh-question-answer-wrap')
 # item = r.find_all('div', class_='zm-item-answer')
 # answer = item[0]
@@ -74,8 +74,12 @@ soup = BeautifulSoup(f.read(), 'lxml')
 
 
 
-r = soup.find('div', id='zh-question-answer-wrap')
-items = r.find_all('div', class_='zm-item-answer')
-for item in items:
-    answer_status = item.find('div', class_='answer-status')
-    print answer_status
+# r = soup.find('div', id='zh-question-answer-wrap')
+# items = r.find_all('div', class_='zm-item-answer')
+# for item in items:
+#     answer_status = item.find('div', class_='answer-status')
+#     print answer_status
+
+
+cookie = {'www.zhihu.com': {'/': {'_xsrf': Cookie(version=0, name='_xsrf', value='348f194ee5f645a31a44b50476ddf1fa', port=None, port_specified=False, domain='www.zhihu.com', domain_specified=False, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=None, discard=True, comment=None, comment_url=None, rest={}, rfc2109=False)}}, '.zhihu.com': {'/': {'q_c1': Cookie(version=0, name='q_c1', value='6e88240047ea47d19cba54da5fb9df23|1459826951000|1459826951000', port=None, port_specified=False, domain='.zhihu.com', domain_specified=True, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=1554434951, discard=False, comment=None, comment_url=None, rest={}, rfc2109=False), 'z_c0': Cookie(version=0, name='z_c0', value='"QUFCQWkyMGNBQUFYQUFBQVlRSlZUUWUtS2xkVTlwUFBSRF83blo4VGxHeVl0dHpSbTdXdy13PT0=|1459826952|6c7bdc64d3589a70f785654a11eda8f5e0def26e"', port=None, port_specified=False, domain='.zhihu.com', domain_specified=True, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=1462418951, discard=False, comment=None, comment_url=None, rest={'httponly': None}, rfc2109=False), 'unlock_ticket': Cookie(version=0, name='unlock_ticket', value='"QUFCQWkyMGNBQUFYQUFBQVlRSlZUUTg0QTFmX0ZhVlpMYVh5aTVDTm8xdmNwdUs4STJVYm9BPT0=|1459826952|e647629dacceb92d13676e354041488b1a8cd3c8"', port=None, port_specified=False, domain='.zhihu.com', domain_specified=True, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=1459828692, discard=False, comment=None, comment_url=None, rest={}, rfc2109=False), '__ytma': Cookie(version=0, name='cap_id', value='"ODUwNjQzNjk2OGExNDVlZjk2OWE3ZDYyYjgyMGFkYTE=|1459826951|dff8c4873fb21053dac34b33911150b2c40505d7"', port=None, port_specified=False, domain='.zhihu.com', domain_specified=True, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=1462418951, discard=False, comment=None, comment_url=None, rest={}, rfc2109=False), 'l_cap_id': Cookie(version=0, name='l_cap_id', value='"NDE0N2JkNWE4ZjZkNDNmNjg1NDBmMzgxNDMzM2Q1ODc=|1459826951|fa67fa6839cbd4aec1306743a6fb03559f342d3b"', port=None, port_specified=False, domain='.zhihu.com', domain_specified=True, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=1462418951, discard=False, comment=None, comment_url=None, rest={}, rfc2109=False), 'login': Cookie(version=0, name='login', value='"M2UzMTk3MmU5NDc4NGEyZGEyNDUwNjZkNDAwNGIzN2Y=|1459826952|50924d6d550374d0a59ba5c13dc6bcb9fc4dfc7b"', port=None, port_specified=False, domain='.zhihu.com', domain_specified=True, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=1462418952, discard=False, comment=None, comment_url=None, rest={}, rfc2109=False), 'n_c': Cookie(version=0, name='n_c', value='1', port=None, port_specified=False, domain='.zhihu.com', domain_specified=True, domain_initial_dot=False, path='/', path_specified=True, secure=False, expires=None, discard=True, comment=None, comment_url=None, rest={}, rfc2109=False)}}}
+print cookie['www.zhihu.com'].keys

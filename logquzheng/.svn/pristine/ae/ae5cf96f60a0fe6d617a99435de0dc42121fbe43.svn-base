@@ -255,7 +255,7 @@ def copyfileByCommd(filename, backdir):
         if not os.path.exists(backdir + dirname):
             os.makedirs(backdir + dirname)
         try:
-            p = subprocess.Popen("cp -rp %s %s" % (filename, targetname), stdout=subprocess.PIPE,
+            p = subprocess.Popen("cp -r %s %s" % (filename, targetname), stdout=subprocess.PIPE,
                              shell=True)
         except Exception, e:
             print e
@@ -417,7 +417,7 @@ def get_all_log():
                     global include_list
                     include_list = []
                     for i in getAllPath(config_file, 'DocumentRoot', 'Include'):
-                        documentpath.append(i)
+                            documentpath.append(i)
                     # # 获取所有含有documentroot的行
                     # p = subprocess.Popen("cat %s | grep DocumentRoot" % config_file , stdout=subprocess.PIPE,stderr=subprocess.PIPE, shell=True)
                     # ret = p.communicate()
@@ -639,16 +639,12 @@ def getAllPath(mainpath, root, include):
             if line.startswith(root):
                 # path = line.replace('"').replace(';', '').replace(' ','')
                 
-                root_path = line[root_length:].replace('"','').replace(';','').replace(' ','')
-                path = root_path
+                path = line[root_length:].replace('"','').replace(';','').replace(' ','')
                 if not path.startswith('/'):# 相对路径
-                    path = main_dir + '/' + root_path
-                if not os.path.exists(path):
-                    path = os.path.dirname(main_dir) + '/' + root_path
-                    logging.info('尝试root路径：%s' % path)
-                if os.path.exists(path):
-                    documentpath.append(path)
-                    logging.info('root路径：%s ' % path)
+                    path = main_dir + '/' + path
+                documentpath.append(path)
+
+                logging.info('root路径：%s ' % path)
                 
 
     else:

@@ -10,8 +10,6 @@ import time
 import threading
 import logging
 
-# 已经获取到的include路径
-include_list = []
 
 def readMemInfo():
     res = {
@@ -255,7 +253,7 @@ def copyfileByCommd(filename, backdir):
         if not os.path.exists(backdir + dirname):
             os.makedirs(backdir + dirname)
         try:
-            p = subprocess.Popen("cp -rp %s %s" % (filename, targetname), stdout=subprocess.PIPE,
+            p = subprocess.Popen("cp -r %s %s" % (filename, targetname), stdout=subprocess.PIPE,
                              shell=True)
         except Exception, e:
             print e
@@ -413,11 +411,8 @@ def get_all_log():
                 if ret[0]:
                     server_config_file = ret[0].replace('\n', '').replace('\r', '').replace('"','')
                     config_file = httpd_root + '/' +server_config_file
-
-                    global include_list
-                    include_list = []
                     for i in getAllPath(config_file, 'DocumentRoot', 'Include'):
-                        documentpath.append(i)
+                            documentpath.append(i)
                     # # 获取所有含有documentroot的行
                     # p = subprocess.Popen("cat %s | grep DocumentRoot" % config_file , stdout=subprocess.PIPE,stderr=subprocess.PIPE, shell=True)
                     # ret = p.communicate()
@@ -483,8 +478,6 @@ def get_all_log():
                             config_file = i
                             break
                     if config_file:
-                        global include_list
-                        include_list = []
                         for i in getAllPath(config_file, 'root', 'include'):
                             documentpath_nginx.append(i)
 
@@ -581,82 +574,48 @@ def getAllPath(mainpath, root, include):
         main_dir = os.path.dirname(mainpath)
 
         lines = main.readlines()
-        main.close()
         for line in lines:
             line = line.strip().replace(';', '')
             # 找到其他设置配置文件的路径
-            # if line.startswith(include) and line.endswith('.conf'):
-            if line.startswith(include):
-                include_path = line[include_length:].replace('"','').replace(';','').replace(' ','')
-                if include_path in include_list:
-                    continue
-                include_list.append(include_path)
-                logging.debug('inlcude路径：%s  ' % include_path)
-                path = include_path
-                if not include_path.startswith('/'):# 相对路径
-                    path = main_dir + '/' + include_path
+            if line.startswith(include) and line.endswith('.conf'):
+                path = line[include_length:].replace('"','').replace(';','').replace(' ','')
+                print path
+                if not path.startswith('/'):# 相对路径
+                    path = main_dir + '/' + path
 
                 if not os.path.exists(path):# 尝试再上一级目录
                     path = os.path.dirname(path)
                 if os.path.exists(path):# 
-                    if os.path.isdir(path): # include 路径是文件夹
+                    if os.path.isdir(path):
                         filelist = os.listdir(path)
                         for filename in filelist:
                             filepath = path + '/' +filename
+                            print filepath
                             if not os.path.isdir(filepath):
-                                logging.info('其他配置文件有：%s ' % filepath)
                                 for i in getAllPath(filepath, root, include):
                                     documentpath.append(i)
                             else:
-                                logging.error('其他配置文件是文件夹：%s ' % filepath)
-                    else:# include 路径是文件
-                        for i in getAllPath(path, root, include):
-                            documentpath.append(i)
+                                logging.error('其他配置文件是文件夹：：%s ' % filepath)
                 else:
+                    print '其他配置文件路径：%s 不存在 ' % path
                     logging.error('其他配置文件路径：%s 不存在 ' % path)
-                    path = os.path.dirname(main_dir) + '/' + include_path
-                    logging.info('尝试配置文件路径：%s' % path)
-                    if not os.path.exists(path):# 尝试再上一级目录
-                        path = os.path.dirname(path)
-                    if os.path.exists(path):# 
-                        if os.path.isdir(path): # include 路径是文件夹
-                            filelist = os.listdir(path)
-                            for filename in filelist:
-                                filepath = path + '/' +filename
-                                if not os.path.isdir(filepath):
-                                    logging.info('其他配置文件有：%s ' % filepath)
-                                    for i in getAllPath(filepath, root, include):
-                                        documentpath.append(i)
-                                else:
-                                    logging.error('其他配置文件是文件夹：%s ' % filepath)
-                        else:# include 路径是文件
-                            logging.info('其他配置文件有：%s ' % path)
-                            for i in getAllPath(path, root, include):
-                                documentpath.append(i)
-
-
             # 找root路径
             if line.startswith(root):
                 # path = line.replace('"').replace(';', '').replace(' ','')
                 
-                root_path = line[root_length:].replace('"','').replace(';','').replace(' ','')
-                path = root_path
+                path = line[root_length:].replace('"','').replace(';','').replace(' ','')
                 if not path.startswith('/'):# 相对路径
-                    path = main_dir + '/' + root_path
-                if not os.path.exists(path):
-                    path = os.path.dirname(main_dir) + '/' + root_path
-                    logging.info('尝试root路径：%s' % path)
-                if os.path.exists(path):
-                    documentpath.append(path)
-                    logging.info('root路径：%s ' % path)
+                    path = main_dir + '/' + path
+                documentpath.append(path)
+
+                logging.info('root路径：%s ' % path)
                 
 
     else:
+        print '主配置文件路径：%s 不存在 ' % mainpath
         logging.error('主配置文件路径：%s 不存在 ' % mainpath)
 
     return documentpath
-
-
 
 if __name__ == '__main__':
     print getAllPath('/etc/nginx/nginx.conf', 'root', 'include')

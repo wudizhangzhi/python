@@ -365,6 +365,7 @@ class ZhiHu():
         return r
 
 
+
     def follow_question(self, soup, question_id):
         '''
         关注问题
@@ -378,6 +379,7 @@ class ZhiHu():
         #通过soup找到按钮的data-id，然后post
 
         xsrf = soup.find('input',{'name':'_xsrf'}).get('value')
+        self.touch(xsrf, question_id)
         data = {
                 'method':'follow_question',
                 'params':'{"question_id":"%s"}' % question_id,
@@ -387,8 +389,20 @@ class ZhiHu():
         r = self.session.post('https://www.zhihu.com/node/QuestionFollowBaseV2', data=data, verify=verify)
         print r
         print r.json()
-        pass
 
+
+    def touch(self, _xsrf, question_id):
+        data = {
+            'items':"[['question',%s,'read']]" % question_id,
+            '_xsrf':_xsrf
+        }
+        r = self.session.post('https://www.zhihu.com/lastread/touch')
+        print 'touch:%s' % str(r)
+
+'''
+https://zhihu-web-analytics.zhihu.com/collect
+{"v":1,"cid":"17cfc08a-d1f0-4131-94b9-01d8a12cd687","uid":"31256813240320","t":"event","ni":false,"dp":"/question/25311180","ts":"1459826455399","sr":"1920x1080","vp":"1518x488","ul":"en-US","ua":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:44.0) Gecko/20100101 Firefox/44.0","dl":"https://www.zhihu.com/question/25311180","dr":"https://www.zhihu.com/","de":"UTF-8","dt":"(18 条消息) 博士生们都在干什么？ - 知乎","sd":24,"ea":"click_follow_question","ec":"question_answer","el":"question_follow_question"}
+'''
 
 if __name__ == '__main__':
     zhihu = ZhiHu()
@@ -397,7 +411,13 @@ if __name__ == '__main__':
 
     #_xsrf = re.findall('xsrf(.*)',r.text)[0][8:42]
     soup = BeautifulSoup(r.content, 'lxml')
+<<<<<<< HEAD
     zhihu.follow_question(soup, 42057335 )
+=======
+    zhihu.follow_question(soup, 41658681)
+    print zhihu.session.cookies['cap_id']
+    print zhihu.session.cookies['__utmc']
+>>>>>>> c2d17a62b04df47cc555984c90883eb6e6783f4a
     #print zhihu.find_people_url(soup)
     # zhihu.user('lu-pu-tao-21')
     # zhihu.question()

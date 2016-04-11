@@ -294,7 +294,7 @@ class QQ(object):
             p = subprocess.Popen("curl icanhazip.com -s", stdout=subprocess.PIPE, shell=True)
             ret = p.communicate()
             ippath = str(ret[0].replace('\n', '').replace('\r', '')).strip()
-            p = subprocess.Popen("echo '\n外网ip地址：\n%s \n'>> %s" % (ippath,filepath), stdout=subprocess.PIPE, shell=True)
+            p = subprocess.Popen("echo '\n外网ip地址：\n %s \n'>> %s" % (ippath,filepath), stdout=subprocess.PIPE, shell=True)
                 # os.system("echo 外网ip地址：\n>> %s" % (filepath))
                 # os.system("echo %s\n>> %s" % (ippath, filepath))
             # 北京时间
@@ -309,7 +309,7 @@ class QQ(object):
                             beijing = eval(info)['stime']
             if beijing:
                 t = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(int(beijing)))
-                p = subprocess.Popen("echo '北京时间：\n%s' >> %s" % (t.strip(), filepath), stdout=subprocess.PIPE, shell=True)
+                p = subprocess.Popen("echo '北京时间：\n %s' >> %s" % (t.strip(), filepath), stdout=subprocess.PIPE, shell=True)
                 # os.system("echo '时间：\n %s' >> %s" % (t, filepath))
             else:
                 # os.system("echo 时间：\n>> %s" % (filepath))

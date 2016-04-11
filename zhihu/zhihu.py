@@ -393,11 +393,11 @@ class ZhiHu():
 if __name__ == '__main__':
     zhihu = ZhiHu()
     zhihu.login()
-    r = zhihu.get('https://www.zhihu.com/question/41658681')
+    r = zhihu.get('https://www.zhihu.com/question/42057335')
 
     #_xsrf = re.findall('xsrf(.*)',r.text)[0][8:42]
     soup = BeautifulSoup(r.content, 'lxml')
-    zhihu.follow_question(soup, 41658681)
+    zhihu.follow_question(soup, 42057335 )
     #print zhihu.find_people_url(soup)
     # zhihu.user('lu-pu-tao-21')
     # zhihu.question()

@@ -407,13 +407,17 @@ https://zhihu-web-analytics.zhihu.com/collect
 if __name__ == '__main__':
     zhihu = ZhiHu()
     zhihu.login()
-    r = zhihu.get('https://www.zhihu.com/question/41658681')
+    r = zhihu.get('https://www.zhihu.com/question/42057335')
 
     #_xsrf = re.findall('xsrf(.*)',r.text)[0][8:42]
     soup = BeautifulSoup(r.content, 'lxml')
+<<<<<<< HEAD
+    zhihu.follow_question(soup, 42057335 )
+=======
     zhihu.follow_question(soup, 41658681)
     print zhihu.session.cookies['cap_id']
     print zhihu.session.cookies['__utmc']
+>>>>>>> c2d17a62b04df47cc555984c90883eb6e6783f4a
     #print zhihu.find_people_url(soup)
     # zhihu.user('lu-pu-tao-21')
     # zhihu.question()

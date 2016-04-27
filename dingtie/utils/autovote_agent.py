@@ -59,17 +59,15 @@ def autovote():
     docId = postid_commentid.split('|')[2]
     shorturl = postid_commentid.split('|')[3]
     adminid = postid_commentid.split('|')[4]
-
+    
     processlog('autovote_agent', 1, 'autovote', '爬取:postid:%s, commetnid:%s, drcid:%s, shorturl: %s' % (postid, commentId, docId, shorturl))
-
-    # adminid = mysql_cursor.query('select adminid from system_url_posts where postid=%s', postid)[0]['adminid']
 
 
     # TODO 修改完成判断为截图完成
     # 搜索截图完成队列中是否含有本条帖子
-    if redis_cursor.hexists(pre_system + 'complete', '%s|%s|%s|%s' % (postid, commentid, docId, shorturl)):
+    # if redis_cursor.hexists(pre_system + 'complete', '%s|%s|%s|%s' % (postid, commentId, docId, shorturl)):
 
-        return 0
+    #     return 0
 
 
     # 获取代理ip 如果没有代理ip则为127.0.0.1

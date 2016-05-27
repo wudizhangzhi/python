@@ -1,0 +1,124 @@
+/***************************
+GENERAL
+***************************/
+body, div, ul, li, a, h1, h2, h3, h4, form, input {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font: normal 14px / 20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background: #ffffff;
+    /*color: #444444;*/
+    line-height: 1.62;
+    margin: 0px;
+    padding: 0px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: dodgerblue;
+}
+.content{
+    margin-left:20px;
+}
+
+/*头部导航*/
+.nav {
+    background-color: cornflowerblue;
+    font-size: 3em;
+}
+
+.nav, .item-chat {
+    list-style-type: none;
+}
+
+.nav_inline ,.form-inline{
+    /*display: table-cell;*/
+    float: left;
+    margin-right: 15px;
+    color: whitesmoke;
+    display: inline-block;
+    align:"absbottom"
+}
+
+.form-group {
+    float: left;
+}
+
+/*主体内容部分*/
+.content{
+
+}
+
+.index_blog_one{
+    background-color:lightgoldenrodyellow;
+}
+/*成员列表*/
+.item-list {
+    font-size: 6em;
+    color: darkgreen;
+}
+
+/*当前页码*/
+.active {
+    color: red;
+}
+
+.pagination {
+    list-style-type: none;
+    font-size: 2em;
+    color: black;
+}
+
+.pagination li {
+    /*float: left;*/
+    display:inline-block;
+    margin-right: 5px;
+    padding: 2px;
+}
+
+.worning {
+    color: red;
+}
+
+/*主要页面*/
+.index_author,.index_title,.index_rate{
+    display:inline-block;
+    margin-right:10px;
+}
+
+/*个人页面*/
+.overflow{
+    width:30%;
+    height:20px;
+    max-height:20px;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+}
+
+.blog_overflow{
+    width:30%;
+    background-color:lightyellow;
+    margin:5px;
+}
+
+td{
+    margin-left: 10px;
+    width:100px;
+    height:50px;
+}
+
+a{ text-decoration:none;}
+a:hover{ text-decoration:none;}
+.tcdPageCode{padding: 15px 20px;text-align: left;color: #ccc;}
+.tcdPageCode a{display: inline-block;color: #428bca;display: inline-block;height: 25px;	line-height: 25px;	padding: 0 10px;border: 1px solid #ddd;	margin: 0 2px;border-radius: 4px;vertical-align: middle;}
+.tcdPageCode a:hover{text-decoration: none;border: 1px solid #428bca;}
+.tcdPageCode span.current{display: inline-block;height: 25px;line-height: 25px;padding: 0 10px;margin: 0 2px;color: #fff;background-color: #428bca;	border: 1px solid #428bca;border-radius: 4px;vertical-align: middle;}
+.tcdPageCode span.disabled{	display: inline-block;height: 25px;line-height: 25px;padding: 0 10px;margin: 0 2px;	color: #bfbfbf;background: #f2f2f2;border: 1px solid #bfbfbf;border-radius: 4px;vertical-align: middle;}

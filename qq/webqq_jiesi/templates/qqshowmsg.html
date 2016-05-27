@@ -1,0 +1,54 @@
+{%extends 'main.html'%}
+{%block content%}
+<p>用户：{{username}}</p>
+<script>
+    function search() {
+        var key = $('#search').val();
+        $.ajax({
+            url: '/qqshowmsg',
+            method: 'POST',
+            data: 'searchword=' + key,
+            success: function (data) {
+                document.getElementById('msgs_show').innerHTML = data
+            },
+            error: function () {
+                alert('失败')
+            }
+        })
+    }
+</script>
+<input type="search" placeholder="搜索" id="search" onblur="" onkeypress="search()">
+<p>回车搜索</p>
+<div id="msgs_show">
+    <table>
+        <tr>
+            <td>序号</td>
+            <td>消息类型</td>
+            <td>msg_id</td>
+            <td>from_uin普通消息QQ</td>
+            <td>to_uin</td>
+            <td>info_seq群号</td>
+            <td>send_uin群消息QQ</td>
+            <td>seq</td>
+            <td>msg_id2</td>
+            <td>time</td>
+            <td>content</td>
+        </tr>
+        {%for msg in msgs%}
+        <tr>
+            <td>{{msg['id']}}</td>
+            <td>{{msg['msg_type']}}</td>
+            <td>{{msg['msg_id']}}</td>
+            <td>{{msg['from_uin']}}</td>
+            <td>{{msg['to_uin']}}</td>
+            <td>{{msg['info_seq']}}</td>
+            <td>{{msg['send_uin']}}</td>
+            <td>{{msg['seq']}}</td>
+            <td>{{msg['msg_id2']}}</td>
+            <td>{%module msg_time_module(msg['time'])%}</td>
+            <td>{%module msg_module(msg['content'])%}</td>
+        </tr>
+        {%end%}
+    </table>
+</div>
+{%end%}

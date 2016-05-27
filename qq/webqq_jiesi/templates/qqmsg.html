@@ -1,0 +1,30 @@
+<table>
+        <tr>
+            <td>序号</td>
+            <td>消息类型</td>
+            <td>msg_id</td>
+            <td>from_uin普通消息QQ</td>
+            <td>to_uin</td>
+            <td>info_seq群号</td>
+            <td>send_uin群消息QQ</td>
+            <td>seq</td>
+            <td>msg_id2</td>
+            <td>time</td>
+            <td>content</td>
+        </tr>
+        {%for msg in msgs%}
+        <tr>
+            <td>{{msg['id']}}</td>
+            <td>{{msg['msg_type']}}</td>
+            <td>{{msg['msg_id']}}</td>
+            <td>{{msg['from_uin']}}</td>
+            <td>{{msg['to_uin']}}</td>
+            <td>{{msg['info_seq']}}</td>
+            <td>{{msg['send_uin']}}</td>
+            <td>{{msg['seq']}}</td>
+            <td>{{msg['msg_id2']}}</td>
+            <td>{{msg['time']}}</td>
+            <td>{%module msg_module(msg['content'])%}</td>
+        </tr>
+        {%end%}
+    </table>

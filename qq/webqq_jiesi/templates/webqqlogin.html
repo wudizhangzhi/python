@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="{{static_url('js/jQueryv1.11.3.js')}}"></script>
+    <script>
+        setInterval(function () {
+            $('iframe').attr('src', $('iframe').attr('src'));
+//            $('img').attr('src', $('img').attr('src'));
+//            //            $('img').reload();
+//            //            var comment = $('#comment');
+//            //            comment.children().remove();
+//            //            comment.load('RQcode.html');
+        }, 2000);
+//        function login() {
+//            var xmlhttp;
+//            var value=$('iframe').attr('src');
+//            if (window.xmlhttp) {
+//                xmlhttp = new XMLHttpRequest()
+//            } else {
+//                xmlhttp = new ActiveXObject('Microsoft.XMLHTTP')
+//            }
+//            xmlhttp.onreadystatechange = function () {
+//                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+////                    alert(xmlhttp.responseText);
+//                    location.href='http://'+location.host+'/qqshowmsg'
+//                }
+//            };
+//            xmlhttp.open('POST', '/rqcode/1', true);
+//            xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+//            xmlhttp.send('rqnum='+value);
+//        }
+        function refreshRQcode(){
+            location.href='http://'+location.host+'/webqqlogin'
+        }
+        function login(){
+            var value=$('iframe').attr('src');
+            $.ajax({
+                type:'POST',
+                url:'/webqqlogin',
+                data:'rqnum='+value,
+                success:function(){
+                    location.href='http://'+location.host+'/qqshowmsg'
+                },
+                error:function(){
+                    alert('尚未登录或者登录失败')
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+<input value="刷新二维码" onclick="refreshRQcode()" type="button">
+
+<!--<input type="button" value="post" onclick="postlogin()">-->
+<iframe src="/static/img/{{rqname}}" width="400px" height="400px">
+</iframe>
+<!--<img src="static/img/v.png">-->
+<!--<img src="/static/img/{{rqname}}">-->
+<input value="已经扫码，登录" type="button" onclick="login()">
+<!--<form action="/rq/" method="post">-->
+    <!--<input value="已经扫码，登录" type="submit">-->
+<!--</form>-->
+
+
+<!--<input value="跳转信息显示页面" type="button" onclick="toshowmsg()">-->
+
+</body>
+</html>
+
+

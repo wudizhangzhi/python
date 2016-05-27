@@ -1,0 +1,15 @@
+<!--页码-->
+<ul class="pagination">
+    {% if pages-num>5%}
+
+    {%for i in range(num,num+4)%}
+    <li><a {% if num==i%}class='active'{%end%} href="/chat/{{i}}" class="pagination_a" type="button">{{i}}</a></li>
+    {%end%}
+    <li>...</li>
+    <li><a class="pagination_a" type="button">{{pages}}</a></li>
+    {%else%}
+    {% for i in range(num,pages+1)%}
+    <li><a {% if num==i%}class='active'{%end%} href="/chat/{{i}}" class="pagination_a" type="button">{{i}}</a></li>
+    {%end%}
+    {%end%}
+</ul>

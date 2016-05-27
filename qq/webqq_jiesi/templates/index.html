@@ -1,0 +1,109 @@
+{%extends 'main.html'%}
+{%include 'header.html'%}
+
+{%block content%}
+<!--下面是向左滚动代码-->
+<div id="butong_net_left" style="overflow:hidden;width:500px;">
+    <table cellpadding="0" cellspacing="0" border="0">
+        <tr>
+            <td id="butong_net_left1" valign="top" align="center">
+                <table cellpadding="2" cellspacing="0" border="0">
+                    <tr align="center">
+                        <td><a href="{{static_url('img/p2187231762.jpg')}}"><img
+                                src="{{static_url('img/p2187231762.jpg')}}"></a></td>
+                        <td><a href="{{static_url('img/p2185227574.jpg')}}"><img
+                                src="{{static_url('img/p2185227574.jpg')}}"></a></td>
+                        <td><a href="{{static_url('img/p2185343341.jpg')}}"><img
+                                src="{{static_url('img/p2185343341.jpg')}}"></a></td>
+                        <td><a href="{{static_url('img/p2185958530.jpg')}}"><img
+                                src="{{static_url('img/p2185958530.jpg')}}"></a></td>
+                        <td><a href="{{static_url('img/p2187004396.jpg')}}"><img
+                                src="{{static_url('img/p2187004396.jpg')}}"></a></td>
+                    </tr>
+                </table>
+            </td>
+            <td id="butong_net_left2" valign="top"></td>
+        </tr>
+    </table>
+</div>
+<script>
+    var speed = 30;//速度数值越大速度越慢
+    document.getElementById('butong_net_left2').innerHTML = document.getElementById('butong_net_left1').innerHTML;
+    function Marquee3() {
+        if (document.getElementById('butong_net_left2').offsetWidth - document.getElementById('butong_net_left').scrollLeft <= 0)
+            document.getElementById('butong_net_left').scrollLeft -= document.getElementById('butong_net_left1').offsetWidth;
+        else {
+            document.getElementById('butong_net_left').scrollLeft++
+        }
+    }
+    var MyMar3 = setInterval(Marquee3, speed);
+    document.getElementById('butong_net_left').onmouseover = function () {
+        clearInterval(MyMar3)
+    };
+    document.getElementById('butong_net_left').onmouseout = function () {
+        MyMar3 = setInterval(Marquee3, speed)
+    }
+</script>
+<!--向左滚动代码结束-->
+<div>
+    <a href="test.html"><img src="http://i1.sinaimg.cn/home/2013/1008/U8455P30DT20131008135420.png"></a>
+</div>
+
+<!-- 最热文章-->
+<p>最热文章</p>
+<ul class="">
+    {%for i in hot %}
+    <li class="index_blog_one"><a href="/user/hehe?name={{i[1]}}" class="index_author">【{{i[1]}}】</a>
+        <a href="/blog/{{i[0]}}" class="index_title">{{i[2]}}</a>
+
+        <p class="index_rate">点击量:{{i[5]}}</p>
+
+        <p>{{i[4]}}</p>
+    </li>
+    <br/>
+    {%end%}
+    <!--页码-->
+</ul>
+<br/>
+<!-- 最热文章结束-->
+<!--最新文章-->
+<p>最新文章</p>
+<ul class="">
+    {%for i in blogs[(num-1)*10:num*10] %}
+    <li class="index_blog_one"><a href="/user/{{i[1]}}" class="index_author">【{{i[1]}}】</a>
+        <a href="/blog/{{i[0]}}" class="index_title">{{i[2]}}</a>
+
+        <p class="index_rate">点击量:{{i[5]}}</p>
+
+        <p>{{i[4]}}</p>
+    </li>
+    <br/>
+    {%end%}
+    <!--页码-->
+</ul>
+<!--<ul class="pagination">-->
+    <!--{% for i in range(1,pages+1)%}-->
+    <!--<li><a {% if num==i%}class='active'{%end%} href="/index/{{i}}">{{i}}</a></li>-->
+    <!--{%end%}-->
+<!--</ul>-->
+{%end%}
+<!--最新文章结束-->
+
+
+
+{%block footer%}
+
+<script src="{{ static_url('js/page.js') }}"></script>
+<div class="tcdPageCode">
+</div>
+<script>
+    $('.tcdPageCode').createPage({
+        pageCount: {{pages}},
+        current: {{num}},
+        backFn: function (p) {
+            location.href='http://'+location.host+'/index/'+p
+        }
+    });
+</script>
+<p>{{footer}}</p>
+{%end%}

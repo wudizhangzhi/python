@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{static_url('css/normalize.css')}}">
+    <link rel="stylesheet" href="{{static_url('css/main.css')}}">
+    <script src="{{static_url('js/jQueryv1.11.3.js')}}"></script>
+    <script>
+        function sureToLogout() {
+            var res = confirm('确定要注销吗？');
+            if (res) {
+                window.location.href = '/logout';
+            }
+        }
+    </script>
+    <title>月牙天冲's Web</title>
+</head>
+<body>
+<header>
+    {% block header%}{%end%}
+</header>
+<content class="content">
+    {% block content%}{%end%}
+</content>
+<footer>
+    {% block footer%}{%end%}
+</footer>
+</body>
+</html>

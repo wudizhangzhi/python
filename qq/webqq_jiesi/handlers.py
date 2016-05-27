@@ -72,7 +72,6 @@ class QQLoginhandler(baseHandler):
         self.pro=None
 
     def get(self, *args, **kwargs):
-        print 'qqlogin get'
         # TODO 每刷新一次都需要等上一个线程自动停止。如何控制子线程停止???
         # TODO 目前设置子线程20次循环检查后退出
         # 设置唯一的二维码文件名

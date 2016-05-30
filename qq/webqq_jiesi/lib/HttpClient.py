@@ -26,10 +26,10 @@ class HttpClient():
     def Post(self, url, data, refer=None):
         try:
             req = urllib2.Request(url, urllib.urlencode(data))
+            # req = urllib2.Request(url, data)
             if refer is not None:
                 req.add_header('Referer', refer)
             s= urllib2.urlopen(req).read()
-            print s
             return s
         except urllib2.HTTPError, e:
             print str(e)

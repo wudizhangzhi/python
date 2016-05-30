@@ -440,6 +440,8 @@ class QQ():
 
                 logging.info(u'[{0}] Get QRCode Picture Success.'.format(T))
                 print u'二维码下载:' + str(self.VPath)
+
+
                 rq_check_time = 0  # 验证码检查20次
                 while True:
                     print u'开始监听二维码扫描:' + str(rq_check_time)

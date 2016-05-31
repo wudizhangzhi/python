@@ -79,7 +79,8 @@ def send_msg(tuin, content, isSess, group_sig, service_type):
 
             }
         # rsp = session.post(reqURL, data).text
-        rsp = Client.Post(reqURL, data, Referer)
+        _Referer = "http://d1.web2.qq.com/proxy.html?v=20151105001&callback=1&id=2"
+        rsp = Client.Post(reqURL, data, _Referer)
         rspp = json.loads(rsp)
         if rspp['retcode'] != 0:
             print u'回复私人消息失败：'+str(rspp)
@@ -302,6 +303,7 @@ if m:
         # }).text
         ret = json.loads(html)
         recode = ret['retcode']
+        print ret
         # 返回数据有误
         if ret == "" or ret['retcode'] == 121:
             E += 1

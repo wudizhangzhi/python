@@ -1,0 +1,15 @@
+language: python
+python:
+  - '2.7'
+  - '2.6'
+script: 
+  - py.test -q QQBot.py
+after_script:
+  - nohup python QQBot.py >qbot.log&
+  - sleep 500s
+  - echo "still waiting"
+  - sleep 500s
+  - cat qbot.log
+  - cat log.log
+  - ls
+  - killall python

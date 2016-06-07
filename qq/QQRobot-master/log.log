@@ -1,0 +1,685 @@
+Tue, 07 Jun 2016 16:33:12  QQBot.py[line:279] CRITICAL 正在获取登陆页面
+Tue, 07 Jun 2016 16:33:13  QQBot.py[line:283] CRITICAL 正在获取appid
+Tue, 07 Jun 2016 16:33:13  QQBot.py[line:285] CRITICAL 正在获取login_sig
+Tue, 07 Jun 2016 16:33:13  QQBot.py[line:287] INFO get sign : 
+Tue, 07 Jun 2016 16:33:13  QQBot.py[line:288] CRITICAL 正在获取pt_version
+Tue, 07 Jun 2016 16:33:13  QQBot.py[line:290] INFO get g_pt_version : 10162
+Tue, 07 Jun 2016 16:33:13  QQBot.py[line:291] CRITICAL 正在获取mibao_css
+Tue, 07 Jun 2016 16:33:13  QQBot.py[line:293] INFO get g_mibao_css : 
+Tue, 07 Jun 2016 16:33:13  QQBot.py[line:301] INFO [1] Get QRCode Picture Success.
+Tue, 07 Jun 2016 16:33:32  QQBot.py[line:314] INFO ['ptuiCB(', '0', ',', '0', ',', 'http://ptlogin4.web2.qq.com/check_sig?pttype=1&uin=2634107307&service=ptqrlogin&nodirect=0&ptsigx=75af5b63a58c64095ec10bdd4f6ea6b00ff071ee07820a3cedcee9520f04f9323c872046422e7566bee4e0c923de253ceed82bd6a7337e1af3f889cfc52f7f88&s_url=http%3A%2F%2Fw.qq.com%2Fproxy.html%3Flogin2qq%3D1%26webqq_type%3D10&f_url=&ptlang=2052&ptredirect=100&aid=501004106&daid=164&j_later=0&low_login_hour=0&regmaster=0&pt_login_type=3&pt_aid=0&pt_aaid=16&pt_light=0&pt_3rd_aid=0', ',', '0', ',', '\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f\xef\xbc\x81', ', ', '\xe7\x9b\x9b\xe5\xa4\x8f\xe5\x85\x89\xe5\xb9\xb4', ');\r\n']
+Tue, 07 Jun 2016 16:33:32  QQBot.py[line:318] CRITICAL 二维码已扫描，正在登陆
+Tue, 07 Jun 2016 16:33:33  QQBot.py[line:92] ERROR Get mibao_res Url Error.
+Tue, 07 Jun 2016 16:33:33  QQBot.py[line:336] INFO PTWebQQ: c206f5e7d0b11c4c5a172edb39f54a9f502458b1138c97bf8a1641d25e0572b4
+Tue, 07 Jun 2016 16:33:33  QQBot.py[line:346] INFO getvfwebqq html:  {"retcode":0,"result":{"vfwebqq":"f14881e7ced19e9944e023201c04ce590034c203cdd10fda84fe565e87d232c1744e8c419bff330f"}}
+Tue, 07 Jun 2016 16:33:33  QQBot.py[line:360] CRITICAL QQ号：2634107307 登陆成功, 用户名：盛夏光年
+Tue, 07 Jun 2016 16:33:33  QQBot.py[line:361] INFO Login success
+Tue, 07 Jun 2016 16:33:33  QQBot.py[line:362] CRITICAL 登陆二维码用时0.548秒
+Tue, 07 Jun 2016 16:33:33  QQBot.py[line:756] ERROR 无法找到群：群名1
+Tue, 07 Jun 2016 16:33:33  QQBot.py[line:756] ERROR 无法找到群：群名2
+Tue, 07 Jun 2016 16:33:33  QQBot.py[line:756] ERROR 无法找到群：群名3
+Tue, 07 Jun 2016 16:34:22  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"112"],"from_uin":507907488,"group_code":507907488,"msg_id":34161,"msg_type":0,"send_uin":1611425194,"time":1465288459,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:34:22  QQBot.py[line:196] INFO 507907488群有动态，但是没有被监控
+Tue, 07 Jun 2016 16:34:34  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"测试你大爷"],"from_uin":507907488,"group_code":507907488,"msg_id":49699,"msg_type":0,"send_uin":3987347211,"time":1465288470,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:34:34  QQBot.py[line:196] INFO 507907488群有动态，但是没有被监控
+Tue, 07 Jun 2016 16:35:06  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"逗逼"],"from_uin":507907488,"group_code":507907488,"msg_id":34163,"msg_type":0,"send_uin":1611425194,"time":1465288502,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:35:06  QQBot.py[line:196] INFO 507907488群有动态，但是没有被监控
+Tue, 07 Jun 2016 16:35:13  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"叼，我要举报"],"from_uin":507907488,"group_code":507907488,"msg_id":49706,"msg_type":0,"send_uin":3987347211,"time":1465288509,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:35:13  QQBot.py[line:196] INFO 507907488群有动态，但是没有被监控
+Tue, 07 Jun 2016 16:36:13  QQBot.py[line:448] INFO Check html: {"errmsg":"error!!!","retcode":0}
+
+Tue, 07 Jun 2016 16:37:13  QQBot.py[line:448] INFO Check html: {"errmsg":"error!!!","retcode":0}
+
+Tue, 07 Jun 2016 16:38:14  QQBot.py[line:448] INFO Check html: {"errmsg":"error!!!","retcode":0}
+
+Tue, 07 Jun 2016 16:38:44  QQBot.py[line:279] CRITICAL 正在获取登陆页面
+Tue, 07 Jun 2016 16:38:45  QQBot.py[line:283] CRITICAL 正在获取appid
+Tue, 07 Jun 2016 16:38:45  QQBot.py[line:285] CRITICAL 正在获取login_sig
+Tue, 07 Jun 2016 16:38:45  QQBot.py[line:287] INFO get sign : 
+Tue, 07 Jun 2016 16:38:45  QQBot.py[line:288] CRITICAL 正在获取pt_version
+Tue, 07 Jun 2016 16:38:45  QQBot.py[line:290] INFO get g_pt_version : 10162
+Tue, 07 Jun 2016 16:38:45  QQBot.py[line:291] CRITICAL 正在获取mibao_css
+Tue, 07 Jun 2016 16:38:45  QQBot.py[line:293] INFO get g_mibao_css : 
+Tue, 07 Jun 2016 16:38:50  QQBot.py[line:301] INFO [1] Get QRCode Picture Success.
+Tue, 07 Jun 2016 16:39:03  QQBot.py[line:314] INFO ['ptuiCB(', '0', ',', '0', ',', 'http://ptlogin4.web2.qq.com/check_sig?pttype=1&uin=2634107307&service=ptqrlogin&nodirect=0&ptsigx=9d6b69da20666c95fd5056f20ae8d06c00e515a6c9887622bec3c1674f4b70c2914d5132d07ddec511739b6fb1d9556aa9cd9892c5654fae748cf84aa654976a&s_url=http%3A%2F%2Fw.qq.com%2Fproxy.html%3Flogin2qq%3D1%26webqq_type%3D10&f_url=&ptlang=2052&ptredirect=100&aid=501004106&daid=164&j_later=0&low_login_hour=0&regmaster=0&pt_login_type=3&pt_aid=0&pt_aaid=16&pt_light=0&pt_3rd_aid=0', ',', '0', ',', '\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f\xef\xbc\x81', ', ', '\xe7\x9b\x9b\xe5\xa4\x8f\xe5\x85\x89\xe5\xb9\xb4', ');\r\n']
+Tue, 07 Jun 2016 16:39:03  QQBot.py[line:318] CRITICAL 二维码已扫描，正在登陆
+Tue, 07 Jun 2016 16:39:03  QQBot.py[line:92] ERROR Get mibao_res Url Error.
+Tue, 07 Jun 2016 16:39:03  QQBot.py[line:336] INFO PTWebQQ: 32fa91b74245e6752a10d603c8a67d2909d9db197d0dfc962cd49bf2eb141e68
+Tue, 07 Jun 2016 16:39:03  QQBot.py[line:346] INFO getvfwebqq html:  {"retcode":0,"result":{"vfwebqq":"f14ef585daff1144aec360652878251373c95f3302774296134283c61ec8497aeb50c520f52858e5"}}
+Tue, 07 Jun 2016 16:39:03  QQBot.py[line:360] CRITICAL QQ号：2634107307 登陆成功, 用户名：盛夏光年
+Tue, 07 Jun 2016 16:39:03  QQBot.py[line:361] INFO Login success
+Tue, 07 Jun 2016 16:39:03  QQBot.py[line:362] CRITICAL 登陆二维码用时0.355秒
+Tue, 07 Jun 2016 16:39:03  QQBot.py[line:756] ERROR 无法找到群：群名1
+Tue, 07 Jun 2016 16:39:03  QQBot.py[line:756] ERROR 无法找到群：群名2
+Tue, 07 Jun 2016 16:39:03  QQBot.py[line:756] ERROR 无法找到群：群名3
+Tue, 07 Jun 2016 16:39:21  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"111"],"from_uin":507907488,"group_code":507907488,"msg_id":34191,"msg_type":0,"send_uin":1611425194,"time":1465288758,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:39:21  QQBot.py[line:196] INFO 507907488群有动态，但是没有被监控
+Tue, 07 Jun 2016 16:40:07  QQBot.py[line:279] CRITICAL 正在获取登陆页面
+Tue, 07 Jun 2016 16:40:13  QQBot.py[line:283] CRITICAL 正在获取appid
+Tue, 07 Jun 2016 16:40:13  QQBot.py[line:285] CRITICAL 正在获取login_sig
+Tue, 07 Jun 2016 16:40:13  QQBot.py[line:287] INFO get sign : 
+Tue, 07 Jun 2016 16:40:13  QQBot.py[line:288] CRITICAL 正在获取pt_version
+Tue, 07 Jun 2016 16:40:13  QQBot.py[line:290] INFO get g_pt_version : 10162
+Tue, 07 Jun 2016 16:40:13  QQBot.py[line:291] CRITICAL 正在获取mibao_css
+Tue, 07 Jun 2016 16:40:13  QQBot.py[line:293] INFO get g_mibao_css : 
+Tue, 07 Jun 2016 16:40:13  QQBot.py[line:301] INFO [1] Get QRCode Picture Success.
+Tue, 07 Jun 2016 16:40:27  QQBot.py[line:314] INFO ['ptuiCB(', '0', ',', '0', ',', 'http://ptlogin4.web2.qq.com/check_sig?pttype=1&uin=2634107307&service=ptqrlogin&nodirect=0&ptsigx=a439bdd6d6f8226faa1d48f2a4606091e283aa446885f0ead5ddcfac7ef1eb3dd3a4645d1b526e6f76d314e2893131e5358d8264328b88b1c8b04dd00e553e8e&s_url=http%3A%2F%2Fw.qq.com%2Fproxy.html%3Flogin2qq%3D1%26webqq_type%3D10&f_url=&ptlang=2052&ptredirect=100&aid=501004106&daid=164&j_later=0&low_login_hour=0&regmaster=0&pt_login_type=3&pt_aid=0&pt_aaid=16&pt_light=0&pt_3rd_aid=0', ',', '0', ',', '\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f\xef\xbc\x81', ', ', '\xe7\x9b\x9b\xe5\xa4\x8f\xe5\x85\x89\xe5\xb9\xb4', ');\r\n']
+Tue, 07 Jun 2016 16:40:27  QQBot.py[line:318] CRITICAL 二维码已扫描，正在登陆
+Tue, 07 Jun 2016 16:40:27  QQBot.py[line:92] ERROR Get mibao_res Url Error.
+Tue, 07 Jun 2016 16:40:27  QQBot.py[line:336] INFO PTWebQQ: 1f367214705fbdb261e592b923ecc7408c323700467eb728d78f533d53e61281
+Tue, 07 Jun 2016 16:40:27  QQBot.py[line:346] INFO getvfwebqq html:  {"retcode":0,"result":{"vfwebqq":"74199a0f305ce9136757ecc66cc95fe91141dfec6b794441f553a8329e9adbe9f75944fadce32601"}}
+Tue, 07 Jun 2016 16:40:27  QQBot.py[line:360] CRITICAL QQ号：2634107307 登陆成功, 用户名：盛夏光年
+Tue, 07 Jun 2016 16:40:27  QQBot.py[line:361] INFO Login success
+Tue, 07 Jun 2016 16:40:27  QQBot.py[line:362] CRITICAL 登陆二维码用时0.346秒
+Tue, 07 Jun 2016 16:40:27  QQBot.py[line:756] ERROR 无法找到群：群名1
+Tue, 07 Jun 2016 16:40:27  QQBot.py[line:756] ERROR 无法找到群：群名2
+Tue, 07 Jun 2016 16:40:27  QQBot.py[line:756] ERROR 无法找到群：群名3
+Tue, 07 Jun 2016 16:40:58  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"揉揉是弱鸡"],"from_uin":507907488,"group_code":507907488,"msg_id":34194,"msg_type":0,"send_uin":1611425194,"time":1465288854,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:40:58  QQBot.py[line:196] INFO 507907488群有动态，但是没有被监控
+Tue, 07 Jun 2016 16:41:58  QQBot.py[line:448] INFO Check html: {"errmsg":"error!!!","retcode":0}
+
+Tue, 07 Jun 2016 16:42:05  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"垃圾"],"from_uin":507907488,"group_code":507907488,"msg_id":49712,"msg_type":0,"send_uin":2700935109,"time":1465288921,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:42:05  QQBot.py[line:196] INFO 507907488群有动态，但是没有被监控
+Tue, 07 Jun 2016 16:42:13  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"都比"],"from_uin":507907488,"group_code":507907488,"msg_id":49715,"msg_type":0,"send_uin":2700935109,"time":1465288929,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:42:13  QQBot.py[line:196] INFO 507907488群有动态，但是没有被监控
+Tue, 07 Jun 2016 16:43:13  QQBot.py[line:448] INFO Check html: {"errmsg":"error!!!","retcode":0}
+
+Tue, 07 Jun 2016 16:43:22  QQBot.py[line:279] CRITICAL 正在获取登陆页面
+Tue, 07 Jun 2016 16:43:22  QQBot.py[line:283] CRITICAL 正在获取appid
+Tue, 07 Jun 2016 16:43:22  QQBot.py[line:285] CRITICAL 正在获取login_sig
+Tue, 07 Jun 2016 16:43:22  QQBot.py[line:287] INFO get sign : 
+Tue, 07 Jun 2016 16:43:22  QQBot.py[line:288] CRITICAL 正在获取pt_version
+Tue, 07 Jun 2016 16:43:22  QQBot.py[line:290] INFO get g_pt_version : 10162
+Tue, 07 Jun 2016 16:43:22  QQBot.py[line:291] CRITICAL 正在获取mibao_css
+Tue, 07 Jun 2016 16:43:22  QQBot.py[line:293] INFO get g_mibao_css : 
+Tue, 07 Jun 2016 16:43:22  QQBot.py[line:301] INFO [1] Get QRCode Picture Success.
+Tue, 07 Jun 2016 16:43:40  QQBot.py[line:314] INFO ['ptuiCB(', '0', ',', '0', ',', 'http://ptlogin4.web2.qq.com/check_sig?pttype=1&uin=2634107307&service=ptqrlogin&nodirect=0&ptsigx=a76edeb1f812417f821a07019b3c98d8f76e7ede87027b2afea903d0c7105cb69dcaaf7efdf4f896d2530d2b55bbed88bdbc727d9b07eb6cc00089725b1627d9&s_url=http%3A%2F%2Fw.qq.com%2Fproxy.html%3Flogin2qq%3D1%26webqq_type%3D10&f_url=&ptlang=2052&ptredirect=100&aid=501004106&daid=164&j_later=0&low_login_hour=0&regmaster=0&pt_login_type=3&pt_aid=0&pt_aaid=16&pt_light=0&pt_3rd_aid=0', ',', '0', ',', '\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f\xef\xbc\x81', ', ', '\xe7\x9b\x9b\xe5\xa4\x8f\xe5\x85\x89\xe5\xb9\xb4', ');\r\n']
+Tue, 07 Jun 2016 16:43:40  QQBot.py[line:318] CRITICAL 二维码已扫描，正在登陆
+Tue, 07 Jun 2016 16:43:46  QQBot.py[line:92] ERROR Get mibao_res Url Error.
+Tue, 07 Jun 2016 16:43:46  QQBot.py[line:336] INFO PTWebQQ: 6ebc2ab929dfa2776b070c5853cd8a3998985a6ddc944e694b2c1fd05984460e
+Tue, 07 Jun 2016 16:43:46  QQBot.py[line:346] INFO getvfwebqq html:  {"retcode":0,"result":{"vfwebqq":"655c4e31bc4430fdd5388691dead448a42216053e0a04ca77d59992a63325be8dc42794844558809"}}
+Tue, 07 Jun 2016 16:43:46  QQBot.py[line:360] CRITICAL QQ号：2634107307 登陆成功, 用户名：盛夏光年
+Tue, 07 Jun 2016 16:43:46  QQBot.py[line:361] INFO Login success
+Tue, 07 Jun 2016 16:43:46  QQBot.py[line:362] CRITICAL 登陆二维码用时5.361秒
+Tue, 07 Jun 2016 16:43:46  QQBot.py[line:756] ERROR 无法找到群：群名1
+Tue, 07 Jun 2016 16:43:46  QQBot.py[line:756] ERROR 无法找到群：群名2
+Tue, 07 Jun 2016 16:43:46  QQBot.py[line:756] ERROR 无法找到群：群名3
+Tue, 07 Jun 2016 16:43:51  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"1"],"from_uin":507907488,"group_code":507907488,"msg_id":34199,"msg_type":0,"send_uin":1611425194,"time":1465289027,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:43:51  QQBot.py[line:673] INFO 读取存档出错:[Errno 2] No such file or directory: 'database.507907488.save'
+Tue, 07 Jun 2016 16:43:51  QQBot.py[line:112] INFO Get uin to account info:{u'retcode': 0, u'result': {u'account': 554330595, u'uin': 1611425194, u'uiuin': u''}}
+Tue, 07 Jun 2016 16:43:51  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595}
+Tue, 07 Jun 2016 16:43:51  QQBot.py[line:194] INFO 群线程已生成
+Tue, 07 Jun 2016 16:44:11  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"揉揉是弱鸡"],"from_uin":507907488,"group_code":507907488,"msg_id":34200,"msg_type":0,"send_uin":1611425194,"time":1465289048,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:44:11  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595}
+Tue, 07 Jun 2016 16:44:21  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"揉揉是弱鸡"],"from_uin":507907488,"group_code":507907488,"msg_id":34201,"msg_type":0,"send_uin":1611425194,"time":1465289057,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:44:21  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595}
+Tue, 07 Jun 2016 16:44:21  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":507907488, "face":564,"content":"[\\"\xe6\x8f\x89\xe6\x8f\x89\xe6\x98\xaf\xe5\xbc\xb1\xe9\xb8\xa1\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":34423,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 16:44:21  QQBot.py[line:577] ERROR [Fail to reply group 507907488]:{"errmsg":"error!!!","retcode":1202}
+
+Tue, 07 Jun 2016 16:44:21  QQBot.py[line:629] INFO 已复读：{揉揉是弱鸡}
+Tue, 07 Jun 2016 16:44:34  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"揉揉是弱鸡！"],"from_uin":507907488,"group_code":507907488,"msg_id":34202,"msg_type":0,"send_uin":1611425194,"time":1465289070,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:44:34  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595}
+Tue, 07 Jun 2016 16:45:35  QQBot.py[line:448] INFO Check html: {"errmsg":"error!!!","retcode":0}
+
+Tue, 07 Jun 2016 16:46:03  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"111"],"from_uin":1611425194,"msg_id":32561,"msg_type":0,"time":1465289159,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:46:03  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595}
+Tue, 07 Jun 2016 16:46:03  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595}
+Tue, 07 Jun 2016 16:46:03  QQBot.py[line:475] INFO 私聊线程生成，私聊对象：554330595
+Tue, 07 Jun 2016 16:46:03  QQBot.py[line:499] INFO PM get info from AI: 111
+Tue, 07 Jun 2016 16:46:04  QQBot.py[line:502] INFO AI REPLY:{"code":100000,"text":"112"}
+Tue, 07 Jun 2016 16:46:04  QQBot.py[line:515] ERROR ERROR:'errCode'
+Tue, 07 Jun 2016 16:46:12  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"11111"],"from_uin":1611425194,"msg_id":32562,"msg_type":0,"time":1465289168,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:46:12  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595}
+Tue, 07 Jun 2016 16:46:12  QQBot.py[line:499] INFO PM get info from AI: 11111
+Tue, 07 Jun 2016 16:46:12  QQBot.py[line:502] INFO AI REPLY:{"code":100000,"text":"11112"}
+Tue, 07 Jun 2016 16:46:12  QQBot.py[line:486] INFO Reply to 554330595:11112
+Tue, 07 Jun 2016 16:46:19  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"nihao"],"from_uin":1611425194,"msg_id":32563,"msg_type":0,"time":1465289175,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:46:19  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595}
+Tue, 07 Jun 2016 16:46:19  QQBot.py[line:499] INFO PM get info from AI: nihao
+Tue, 07 Jun 2016 16:46:19  QQBot.py[line:502] INFO AI REPLY:{"code":100000,"text":"你也好 嘻嘻"}
+Tue, 07 Jun 2016 16:46:19  QQBot.py[line:515] ERROR ERROR:'errCode'
+Tue, 07 Jun 2016 16:46:23  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"你好"],"from_uin":1611425194,"msg_id":32564,"msg_type":0,"time":1465289179,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:46:23  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595}
+Tue, 07 Jun 2016 16:46:23  QQBot.py[line:499] INFO PM get info from AI: 你好
+Tue, 07 Jun 2016 16:46:23  QQBot.py[line:502] INFO AI REPLY:{"code":100000,"text":"您好，我是图灵机器人，有什么可以帮您的吗？"}
+Tue, 07 Jun 2016 16:46:24  QQBot.py[line:515] ERROR ERROR:'errCode'
+Tue, 07 Jun 2016 16:46:31  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"天气"],"from_uin":1611425194,"msg_id":32565,"msg_type":0,"time":1465289187,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:46:31  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595}
+Tue, 07 Jun 2016 16:46:31  QQBot.py[line:499] INFO PM get info from AI: 天气
+Tue, 07 Jun 2016 16:46:31  QQBot.py[line:502] INFO AI REPLY:{"code":100000,"text":"亲爱的，悄悄地告诉我你在哪个城市？"}
+Tue, 07 Jun 2016 16:46:36  QQBot.py[line:486] INFO Reply to 554330595:亲爱的，悄悄地告诉我你在哪个城市？
+Tue, 07 Jun 2016 16:46:53  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"天气"],"from_uin":507907488,"group_code":507907488,"msg_id":34203,"msg_type":0,"send_uin":1611425194,"time":1465289209,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:46:53  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595}
+Tue, 07 Jun 2016 16:47:04  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"呵呵"],"from_uin":507907488,"group_code":507907488,"msg_id":34204,"msg_type":0,"send_uin":1611425194,"time":1465289220,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:47:04  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595}
+Tue, 07 Jun 2016 16:47:07  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"傻逼"],"from_uin":507907488,"group_code":507907488,"msg_id":49721,"msg_type":0,"send_uin":2700935109,"time":1465289223,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:47:07  QQBot.py[line:112] INFO Get uin to account info:{u'retcode': 0, u'result': {u'account': 80000000, u'uin': 2700935109, u'uiuin': u''}}
+Tue, 07 Jun 2016 16:47:07  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:47:33  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"尼玛。群不能回复"],"from_uin":507907488,"group_code":507907488,"msg_id":34206,"msg_type":0,"send_uin":1611425194,"time":1465289249,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:47:33  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:48:30  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"傻逼"],"from_uin":507907488,"group_code":507907488,"msg_id":49724,"msg_type":0,"send_uin":2700935109,"time":1465289306,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:48:30  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:49:30  QQBot.py[line:448] INFO Check html: {"errmsg":"error!!!","retcode":0}
+
+Tue, 07 Jun 2016 16:49:49  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"傻逼"],"from_uin":507907488,"group_code":507907488,"msg_id":2750,"msg_type":0,"send_uin":2700935109,"time":1465289385,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:49:49  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:49:49  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":507907488, "face":564,"content":"[\\"\xe5\x82\xbb\xe9\x80\xbc\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":34423,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 16:49:50  QQBot.py[line:573] INFO [Reply to group 507907488]:傻逼
+Tue, 07 Jun 2016 16:49:50  QQBot.py[line:629] INFO 已复读：{傻逼}
+Tue, 07 Jun 2016 16:49:56  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"傻逼"],"from_uin":507907488,"group_code":507907488,"msg_id":49731,"msg_type":0,"send_uin":2700935109,"time":1465289392,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:49:56  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:49:56  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":507907488, "face":564,"content":"[\\"\xe5\x82\xbb\xe9\x80\xbc\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":34423,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 16:49:56  QQBot.py[line:573] INFO [Reply to group 507907488]:傻逼
+Tue, 07 Jun 2016 16:49:56  QQBot.py[line:629] INFO 已复读：{傻逼}
+Tue, 07 Jun 2016 16:50:11  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"叼。。能恢复了"],"from_uin":507907488,"group_code":507907488,"msg_id":34255,"msg_type":0,"send_uin":1611425194,"time":1465289407,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:50:11  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:50:21  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"天气"],"from_uin":507907488,"group_code":507907488,"msg_id":2752,"msg_type":0,"send_uin":2700935109,"time":1465289417,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:50:21  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:50:29  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"妈的。。。时好时坏"],"from_uin":507907488,"group_code":507907488,"msg_id":34256,"msg_type":0,"send_uin":1611425194,"time":1465289426,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:50:29  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:51:05  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"妈的智障"],"from_uin":507907488,"group_code":507907488,"msg_id":49734,"msg_type":0,"send_uin":2700935109,"time":1465289462,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:51:05  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:51:17  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"傻逼"],"from_uin":507907488,"group_code":507907488,"msg_id":49735,"msg_type":0,"send_uin":2700935109,"time":1465289473,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:51:17  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:51:18  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"fuck"],"from_uin":507907488,"group_code":507907488,"msg_id":34258,"msg_type":0,"send_uin":1611425194,"time":1465289474,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:51:18  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:51:21  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"fuck"],"from_uin":507907488,"group_code":507907488,"msg_id":34259,"msg_type":0,"send_uin":1611425194,"time":1465289477,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:51:21  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:51:21  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":507907488, "face":564,"content":"[\\"fuck\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":34423,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 16:51:21  QQBot.py[line:577] ERROR [Fail to reply group 507907488]:{"errmsg":"error!!!","retcode":1202}
+
+Tue, 07 Jun 2016 16:51:21  QQBot.py[line:629] INFO 已复读：{fuck}
+Tue, 07 Jun 2016 16:51:22  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"根本没用啊"],"from_uin":507907488,"group_code":507907488,"msg_id":49736,"msg_type":0,"send_uin":2700935109,"time":1465289479,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:51:22  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:51:32  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"根本没用啊"],"from_uin":507907488,"group_code":507907488,"msg_id":2754,"msg_type":0,"send_uin":2700935109,"time":1465289489,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:51:32  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:51:32  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":507907488, "face":564,"content":"[\\"\xe6\xa0\xb9\xe6\x9c\xac\xe6\xb2\xa1\xe7\x94\xa8\xe5\x95\x8a\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":34423,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 16:51:33  QQBot.py[line:577] ERROR [Fail to reply group 507907488]:{"errmsg":"error!!!","retcode":1202}
+
+Tue, 07 Jun 2016 16:51:33  QQBot.py[line:629] INFO 已复读：{根本没用啊}
+Tue, 07 Jun 2016 16:51:42  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"不懂。是好时坏的"],"from_uin":507907488,"group_code":507907488,"msg_id":34260,"msg_type":0,"send_uin":1611425194,"time":1465289498,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:51:42  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:51:43  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"辣鸡"],"from_uin":507907488,"group_code":507907488,"msg_id":2755,"msg_type":0,"send_uin":2700935109,"time":1465289499,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:51:43  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:51:48  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"私聊没事a"],"from_uin":507907488,"group_code":507907488,"msg_id":34261,"msg_type":0,"send_uin":1611425194,"time":1465289504,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:51:48  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:52:27  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"a"],"from_uin":507907488,"group_code":507907488,"msg_id":34263,"msg_type":0,"send_uin":1611425194,"time":1465289543,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:52:27  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:52:29  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"a"],"from_uin":507907488,"group_code":507907488,"msg_id":34264,"msg_type":0,"send_uin":1611425194,"time":1465289545,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:52:29  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:52:29  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":507907488, "face":564,"content":"[\\"a\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":34423,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 16:52:29  QQBot.py[line:573] INFO [Reply to group 507907488]:a
+Tue, 07 Jun 2016 16:52:29  QQBot.py[line:629] INFO 已复读：{a}
+Tue, 07 Jun 2016 16:53:07  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"!about"],"from_uin":507907488,"group_code":507907488,"msg_id":34291,"msg_type":0,"send_uin":1611425194,"time":1465289583,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:53:07  QQBot.py[line:705] INFO output about info
+Tue, 07 Jun 2016 16:53:07  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":507907488, "face":564,"content":"[\\"\xe5\xb0\x8f\xe9\xbb\x84\xe9\xb8\xa13.3 By Jeffery, \xe6\xba\x90\xe4\xbb\xa3\xe7\xa0\x81\xef\xbc\x9a(github.com/zeruniverse/QQRobot)\\\\n\xe4\xbd\xbf\xe7\x94\xa8\xe8\xaf\xad\xe6\xb3\x95\xef\xbc\x9a \xef\xbc\x88\xe6\x8c\x89\xe4\xbc\x98\xe5\x85\x88\xe7\xba\xa7\xe6\x8e\x92\xe5\xba\x8f\xef\xbc\x8c\xe8\x8b\xa5\xe5\x90\x8c\xe6\x97\xb6\xe8\xa7\xa6\xe5\x8f\x91\xe5\x88\x99\xe5\x8f\xaa\xe6\x8c\x89\xe4\xbc\x98\xe5\x85\x88\xe7\xba\xa7\xe6\x9c\x80\xe9\xab\x98\xe7\x9a\x84\xe7\xb1\xbb\xe5\x9e\x8b\xe5\x9b\x9e\xe5\xa4\x8d\xe3\x80\x82\xe6\xb3\xa8\xe6\x84\x8f\xe6\x89\x80\xe6\x9c\x89!\xe5\x9d\x87\xe4\xb8\xba\xe5\x8d\x8a\xe8\xa7\x92\xe7\xac\xa6\xe5\x8f\xb7\xef\xbc\x8c\xe5\x8d\xb3\xe8\x8b\xb1\xe6\x96\x87!\xef\xbc\x89\\\\n\\\\n1.\xe5\xb8\xae\xe5\x8a\xa9\xef\xbc\x88\xe5\x85\xb3\xe4\xba\x8e\xef\xbc\x89,\xe8\xbe\x93\xe5\x85\xa5!about\xef\xbc\x8c\xe6\xa0\xb7\xe4\xbe\x8b\xef\xbc\x9a\\\\n!about\\\\n\\\\n2.\xe6\x99\xba\xe8\x83\xbd\xe9\xb8\xa1\xef\xbc\x9a\xe8\xbe\x93\xe5\x85\xa5!ai (\xe7\xa9\xba\xe6\xa0\xbc)+\xe9\x97\xae\xe9\xa2\x98\xef\xbc\x8c\xe5\xb0\x8f\xe9\xbb\x84\xe9\xb8\xa1\xe8\x87\xaa\xe5\x8a\xa8\xe5\x9b\x9e\xe5\xa4\x8d\xef\xbc\x8c\xe4\xb8\xbe\xe4\xbe\x8b\xef\xbc\x9a\\\\n!ai \xe4\xbd\xa0\xe6\x98\xaf\xe8\xb0\x81\xef\xbc\x9f\\\\n\\\\n3.\xe9\x9a\x8f\xe4\xbb\x8e\xe9\xb8\xa1\xef\xbc\x9a\xe8\xbe\x93\xe5\x85\xa5!follow QQ\xe5\x8f\xb7\xef\xbc\x8c\xe5\xb0\x8f\xe9\xbb\x84\xe9\xb8\xa1\xe4\xbc\x9a\xe9\x87\x8d\xe5\xa4\x8d\xe5\x8f\x91\xe9\x80\x81\xe8\xaf\xa5QQ\xe5\x8f\xb7\xe6\x89\x80\xe6\x9c\x89\xe5\x8f\x91\xe9\x80\x81\xe5\x86\x85\xe5\xae\xb9\xef\xbc\x8c\xe5\xa6\x82\xe5\xaf\xb9\xe8\x87\xaa\xe5\xb7\xb1\xe4\xbd\xbf\xe7\x94\xa8\xe5\x8f\xaf\xe4\xbb\xa5\xe7\x9b\xb4\xe6\x8e\xa5\xe4\xbd\xbf\xe7\x94\xa8!follow me\xef\xbc\x8c\xe4\xb8\xbe\xe4\xbe\x8b\xef\xbc\x9a\\\\n!follow 123456789\\\\n!follow me\\\\n\xe5\x8f\x96\xe6\xb6\x88\xe5\xa4\x8d\xe8\xaf\xbb\xe5\x88\x99\xe8\xbe\x93\xe5\x85\xa5!unfollow QQ(\xe6\x88\x96me),\xe4\xb8\xbe\xe4\xbe\x8b\xef\xbc\x9a\\\\n!unfollow 123456789\\\\n!unfollow me\\\\n\\\\n4.\xe5\xad\xa6\xe4\xb9\xa0\xe9\xb8\xa1\xef\xbc\x9a\xe4\xbd\xbf\xe7\x94\xa8!learn {A}{B}\xe5\x91\xbd\xe4\xbb\xa4\xe8\xae\xa9\xe5\xb0\x8f\xe9\xbb\x84\xe9\xb8\xa1\xe5\xad\xa6\xe4\xb9\xa0\xef\xbc\x8c\xe4\xbb\xa5\xe5\x90\x8e\xe6\x9c\x89\xe4\xba\xba\xe8\xaf\xb4A\xe7\x9a\x84\xe6\x97\xb6\xe5\x80\x99\xe5\xb0\x8f\xe9\xbb\x84\xe9\xb8\xa1\xe4\xbc\x9a\xe8\x87\xaa\xe5\x8a\xa8\xe8\xaf\xb4B\xe3\x80\x82!learn\xe5\x90\x8e\xe9\x9d\xa2\xe6\x9c\x89\xe7\xa9\xba\xe6\xa0\xbc\xef\xbc\x8c\xe5\x85\xa8\xe9\x83\xa8\xe7\xac\xa6\xe5\x8f\xb7\xe5\x9d\x87\xe4\xb8\xba\xe5\x8d\x8a\xe8\xa7\x92\xef\xbc\x88\xe8\x8b\xb1\xe6\x96\x87\xef\xbc\x89\xef\xbc\x8c\xe4\xbe\x8b\xe5\xa6\x82\\\\n!learn {\xe4\xbd\xa0\xe6\x98\xaf\xe8\xb0\x81}{\xe6\x88\x91\xe6\x98\xaf\xe5\xb0\x8f\xe9\xbb\x84\xe9\xb8\xa1}\\\\n\xe5\x88\xa0\xe9\x99\xa4\xe8\xaf\xa5\xe8\xae\xb0\xe5\xbd\x95\xe5\x88\x99\\\\n!delete {\xe4\xbd\xa0\xe6\x98\xaf\xe8\xb0\x81}{\xe6\x88\x91\xe6\x98\xaf\xe5\xb0\x8f\xe9\xbb\x84\xe9\xb8\xa1}\\\\n\xe4\xb8\x80\xe6\xac\xa1\xe5\x88\xa0\xe9\x99\xa4\xe6\x89\x80\xe6\x9c\x89\xe8\xae\xb0\xe5\xbd\x95\xe4\xbd\xbf\xe7\x94\xa8\xef\xbc\x9a\\\\n!deleteall\\\\n\\\\n6.\xe5\xa4\x8d\xe8\xaf\xbb\xe9\xb8\xa1\xef\xbc\x9a\xe5\xbd\x93\xe7\xbe\xa4\xe9\x87\x8c\xe8\xbf\x9e\xe7\x9d\x80\xe4\xb8\xa4\xe6\xac\xa1\xe5\x87\xba\xe7\x8e\xb0\xe5\x90\x8c\xe6\xa0\xb7\xe4\xbf\xa1\xe6\x81\xaf\xe6\x97\xb6\xe5\xa4\x8d\xe8\xaf\xbb\xe4\xb8\x80\xe9\x81\x8d\\\\n\\\\n\\\\n\xe7\xa7\x81\xe6\x88\xb3\xe5\xb0\x8f\xe9\xbb\x84\xe9\xb8\xa1\xe5\x8f\xaf\xe4\xbb\xa5\xe7\xa7\x81\xe8\x81\x8a\xef\xbc\x8c\xe7\xa7\x81\xe8\x81\x8a\xe6\x97\xa0\xe6\xa0\xbc\xe5\xbc\x8f\xef\xbc\x8c\xe5\x85\xa8\xe9\x83\xa8\xe5\xbd\x93\xe6\x99\xba\xe8\x83\xbd\xe9\xb8\xa1\xe6\xa8\xa1\xe5\xbc\x8f\xe5\xa4\x84\xe7\x90\x86\xe3\x80\x82\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":34423,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 16:53:07  QQBot.py[line:577] ERROR [Fail to reply group 507907488]:{"errmsg":"error!!!","retcode":1202}
+
+Tue, 07 Jun 2016 16:53:22  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"!about"],"from_uin":507907488,"group_code":507907488,"msg_id":34293,"msg_type":0,"send_uin":1611425194,"time":1465289598,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:53:22  QQBot.py[line:705] INFO output about info
+Tue, 07 Jun 2016 16:53:22  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":507907488, "face":564,"content":"[\\"\xe5\xb0\x8f\xe9\xbb\x84\xe9\xb8\xa13.3 By Jeffery, \xe6\xba\x90\xe4\xbb\xa3\xe7\xa0\x81\xef\xbc\x9a(github.com/zeruniverse/QQRobot)\\\\n\xe4\xbd\xbf\xe7\x94\xa8\xe8\xaf\xad\xe6\xb3\x95\xef\xbc\x9a \xef\xbc\x88\xe6\x8c\x89\xe4\xbc\x98\xe5\x85\x88\xe7\xba\xa7\xe6\x8e\x92\xe5\xba\x8f\xef\xbc\x8c\xe8\x8b\xa5\xe5\x90\x8c\xe6\x97\xb6\xe8\xa7\xa6\xe5\x8f\x91\xe5\x88\x99\xe5\x8f\xaa\xe6\x8c\x89\xe4\xbc\x98\xe5\x85\x88\xe7\xba\xa7\xe6\x9c\x80\xe9\xab\x98\xe7\x9a\x84\xe7\xb1\xbb\xe5\x9e\x8b\xe5\x9b\x9e\xe5\xa4\x8d\xe3\x80\x82\xe6\xb3\xa8\xe6\x84\x8f\xe6\x89\x80\xe6\x9c\x89!\xe5\x9d\x87\xe4\xb8\xba\xe5\x8d\x8a\xe8\xa7\x92\xe7\xac\xa6\xe5\x8f\xb7\xef\xbc\x8c\xe5\x8d\xb3\xe8\x8b\xb1\xe6\x96\x87!\xef\xbc\x89\\\\n\\\\n1.\xe5\xb8\xae\xe5\x8a\xa9\xef\xbc\x88\xe5\x85\xb3\xe4\xba\x8e\xef\xbc\x89,\xe8\xbe\x93\xe5\x85\xa5!about\xef\xbc\x8c\xe6\xa0\xb7\xe4\xbe\x8b\xef\xbc\x9a\\\\n!about\\\\n\\\\n2.\xe6\x99\xba\xe8\x83\xbd\xe9\xb8\xa1\xef\xbc\x9a\xe8\xbe\x93\xe5\x85\xa5!ai (\xe7\xa9\xba\xe6\xa0\xbc)+\xe9\x97\xae\xe9\xa2\x98\xef\xbc\x8c\xe5\xb0\x8f\xe9\xbb\x84\xe9\xb8\xa1\xe8\x87\xaa\xe5\x8a\xa8\xe5\x9b\x9e\xe5\xa4\x8d\xef\xbc\x8c\xe4\xb8\xbe\xe4\xbe\x8b\xef\xbc\x9a\\\\n!ai \xe4\xbd\xa0\xe6\x98\xaf\xe8\xb0\x81\xef\xbc\x9f\\\\n\\\\n3.\xe9\x9a\x8f\xe4\xbb\x8e\xe9\xb8\xa1\xef\xbc\x9a\xe8\xbe\x93\xe5\x85\xa5!follow QQ\xe5\x8f\xb7\xef\xbc\x8c\xe5\xb0\x8f\xe9\xbb\x84\xe9\xb8\xa1\xe4\xbc\x9a\xe9\x87\x8d\xe5\xa4\x8d\xe5\x8f\x91\xe9\x80\x81\xe8\xaf\xa5QQ\xe5\x8f\xb7\xe6\x89\x80\xe6\x9c\x89\xe5\x8f\x91\xe9\x80\x81\xe5\x86\x85\xe5\xae\xb9\xef\xbc\x8c\xe5\xa6\x82\xe5\xaf\xb9\xe8\x87\xaa\xe5\xb7\xb1\xe4\xbd\xbf\xe7\x94\xa8\xe5\x8f\xaf\xe4\xbb\xa5\xe7\x9b\xb4\xe6\x8e\xa5\xe4\xbd\xbf\xe7\x94\xa8!follow me\xef\xbc\x8c\xe4\xb8\xbe\xe4\xbe\x8b\xef\xbc\x9a\\\\n!follow 123456789\\\\n!follow me\\\\n\xe5\x8f\x96\xe6\xb6\x88\xe5\xa4\x8d\xe8\xaf\xbb\xe5\x88\x99\xe8\xbe\x93\xe5\x85\xa5!unfollow QQ(\xe6\x88\x96me),\xe4\xb8\xbe\xe4\xbe\x8b\xef\xbc\x9a\\\\n!unfollow 123456789\\\\n!unfollow me\\\\n\\\\n4.\xe5\xad\xa6\xe4\xb9\xa0\xe9\xb8\xa1\xef\xbc\x9a\xe4\xbd\xbf\xe7\x94\xa8!learn {A}{B}\xe5\x91\xbd\xe4\xbb\xa4\xe8\xae\xa9\xe5\xb0\x8f\xe9\xbb\x84\xe9\xb8\xa1\xe5\xad\xa6\xe4\xb9\xa0\xef\xbc\x8c\xe4\xbb\xa5\xe5\x90\x8e\xe6\x9c\x89\xe4\xba\xba\xe8\xaf\xb4A\xe7\x9a\x84\xe6\x97\xb6\xe5\x80\x99\xe5\xb0\x8f\xe9\xbb\x84\xe9\xb8\xa1\xe4\xbc\x9a\xe8\x87\xaa\xe5\x8a\xa8\xe8\xaf\xb4B\xe3\x80\x82!learn\xe5\x90\x8e\xe9\x9d\xa2\xe6\x9c\x89\xe7\xa9\xba\xe6\xa0\xbc\xef\xbc\x8c\xe5\x85\xa8\xe9\x83\xa8\xe7\xac\xa6\xe5\x8f\xb7\xe5\x9d\x87\xe4\xb8\xba\xe5\x8d\x8a\xe8\xa7\x92\xef\xbc\x88\xe8\x8b\xb1\xe6\x96\x87\xef\xbc\x89\xef\xbc\x8c\xe4\xbe\x8b\xe5\xa6\x82\\\\n!learn {\xe4\xbd\xa0\xe6\x98\xaf\xe8\xb0\x81}{\xe6\x88\x91\xe6\x98\xaf\xe5\xb0\x8f\xe9\xbb\x84\xe9\xb8\xa1}\\\\n\xe5\x88\xa0\xe9\x99\xa4\xe8\xaf\xa5\xe8\xae\xb0\xe5\xbd\x95\xe5\x88\x99\\\\n!delete {\xe4\xbd\xa0\xe6\x98\xaf\xe8\xb0\x81}{\xe6\x88\x91\xe6\x98\xaf\xe5\xb0\x8f\xe9\xbb\x84\xe9\xb8\xa1}\\\\n\xe4\xb8\x80\xe6\xac\xa1\xe5\x88\xa0\xe9\x99\xa4\xe6\x89\x80\xe6\x9c\x89\xe8\xae\xb0\xe5\xbd\x95\xe4\xbd\xbf\xe7\x94\xa8\xef\xbc\x9a\\\\n!deleteall\\\\n\\\\n6.\xe5\xa4\x8d\xe8\xaf\xbb\xe9\xb8\xa1\xef\xbc\x9a\xe5\xbd\x93\xe7\xbe\xa4\xe9\x87\x8c\xe8\xbf\x9e\xe7\x9d\x80\xe4\xb8\xa4\xe6\xac\xa1\xe5\x87\xba\xe7\x8e\xb0\xe5\x90\x8c\xe6\xa0\xb7\xe4\xbf\xa1\xe6\x81\xaf\xe6\x97\xb6\xe5\xa4\x8d\xe8\xaf\xbb\xe4\xb8\x80\xe9\x81\x8d\\\\n\\\\n\\\\n\xe7\xa7\x81\xe6\x88\xb3\xe5\xb0\x8f\xe9\xbb\x84\xe9\xb8\xa1\xe5\x8f\xaf\xe4\xbb\xa5\xe7\xa7\x81\xe8\x81\x8a\xef\xbc\x8c\xe7\xa7\x81\xe8\x81\x8a\xe6\x97\xa0\xe6\xa0\xbc\xe5\xbc\x8f\xef\xbc\x8c\xe5\x85\xa8\xe9\x83\xa8\xe5\xbd\x93\xe6\x99\xba\xe8\x83\xbd\xe9\xb8\xa1\xe6\xa8\xa1\xe5\xbc\x8f\xe5\xa4\x84\xe7\x90\x86\xe3\x80\x82\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":34423,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 16:53:22  QQBot.py[line:573] INFO [Reply to group 507907488]:小黄鸡3.3 By Jeffery, 源代码：(github.com/zeruniverse/QQRobot)
+使用语法： （按优先级排序，若同时触发则只按优先级最高的类型回复。注意所有!均为半角符号，即英文!）
+
+1.帮助（关于）,输入!about，样例：
+!about
+
+2.智能鸡：输入!ai (空格)+问题，小黄鸡自动回复，举例：
+!ai 你是谁？
+
+3.随从鸡：输入!follow QQ号，小黄鸡会重复发送该QQ号所有发送内容，如对自己使用可以直接使用!follow me，举例：
+!follow 123456789
+!follow me
+取消复读则输入!unfollow QQ(或me),举例：
+!unfollow 123456789
+!unfollow me
+
+4.学习鸡：使用!learn {A}{B}命令让小黄鸡学习，以后有人说A的时候小黄鸡会自动说B。!learn后面有空格，全部符号均为半角（英文），例如
+!learn {你是谁}{我是小黄鸡}
+删除该记录则
+!delete {你是谁}{我是小黄鸡}
+一次删除所有记录使用：
+!deleteall
+
+6.复读鸡：当群里连着两次出现同样信息时复读一遍
+
+
+私戳小黄鸡可以私聊，私聊无格式，全部当智能鸡模式处理。
+Tue, 07 Jun 2016 16:53:38  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"垃圾"],"from_uin":507907488,"group_code":507907488,"msg_id":49739,"msg_type":0,"send_uin":2700935109,"time":1465289614,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:53:38  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:53:47  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"@robot",""," 逗逼"],"from_uin":507907488,"group_code":507907488,"msg_id":49743,"msg_type":0,"send_uin":2700935109,"time":1465289624,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:53:47  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:54:01  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"囍"],"from_uin":507907488,"group_code":507907488,"msg_id":49745,"msg_type":0,"send_uin":2700935109,"time":1465289637,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:54:01  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:54:08  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"快给红包"],"from_uin":507907488,"group_code":507907488,"msg_id":49746,"msg_type":0,"send_uin":2700935109,"time":1465289644,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:54:08  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:54:13  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"!ai 天气"],"from_uin":507907488,"group_code":507907488,"msg_id":34295,"msg_type":0,"send_uin":1611425194,"time":1465289650,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:54:13  QQBot.py[line:680] INFO get info from AI: 天气
+Tue, 07 Jun 2016 16:54:13  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:54:14  QQBot.py[line:685] INFO AI REPLY:{"code":100000,"text":"亲爱的，悄悄地告诉我你在哪个城市？"}
+Tue, 07 Jun 2016 16:54:14  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":507907488, "face":564,"content":"[\\"\xe4\xba\xb2\xe7\x88\xb1\xe7\x9a\x84\xef\xbc\x8c\xe6\x82\x84\xe6\x82\x84\xe5\x9c\xb0\xe5\x91\x8a\xe8\xaf\x89\xe6\x88\x91\xe4\xbd\xa0\xe5\x9c\xa8\xe5\x93\xaa\xe4\xb8\xaa\xe5\x9f\x8e\xe5\xb8\x82\xef\xbc\x9f\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":34423,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 16:54:14  QQBot.py[line:577] ERROR [Fail to reply group 507907488]:{"errmsg":"error!!!","retcode":1202}
+
+Tue, 07 Jun 2016 16:54:16  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"呆逼超快给红包"],"from_uin":507907488,"group_code":507907488,"msg_id":49747,"msg_type":0,"send_uin":2700935109,"time":1465289652,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:54:16  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:54:25  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"@robot",""," 天使"],"from_uin":507907488,"group_code":507907488,"msg_id":49749,"msg_type":0,"send_uin":2700935109,"time":1465289661,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:54:25  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:54:26  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"!ai 天气"],"from_uin":507907488,"group_code":507907488,"msg_id":34296,"msg_type":0,"send_uin":1611425194,"time":1465289662,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:54:26  QQBot.py[line:680] INFO get info from AI: 天气
+Tue, 07 Jun 2016 16:54:26  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:54:26  QQBot.py[line:685] INFO AI REPLY:{"code":100000,"text":"亲爱的，悄悄地告诉我你在哪个城市？"}
+Tue, 07 Jun 2016 16:54:26  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":507907488, "face":564,"content":"[\\"\xe4\xba\xb2\xe7\x88\xb1\xe7\x9a\x84\xef\xbc\x8c\xe6\x82\x84\xe6\x82\x84\xe5\x9c\xb0\xe5\x91\x8a\xe8\xaf\x89\xe6\x88\x91\xe4\xbd\xa0\xe5\x9c\xa8\xe5\x93\xaa\xe4\xb8\xaa\xe5\x9f\x8e\xe5\xb8\x82\xef\xbc\x9f\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":34423,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 16:54:26  QQBot.py[line:573] INFO [Reply to group 507907488]:亲爱的，悄悄地告诉我你在哪个城市？
+Tue, 07 Jun 2016 16:54:42  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"这个机器人智障迟钝吧"],"from_uin":507907488,"group_code":507907488,"msg_id":49751,"msg_type":0,"send_uin":2700935109,"time":1465289678,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:54:42  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:54:47  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"!ai 泰州"],"from_uin":507907488,"group_code":507907488,"msg_id":34297,"msg_type":0,"send_uin":1611425194,"time":1465289683,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:54:47  QQBot.py[line:680] INFO get info from AI: 泰州
+Tue, 07 Jun 2016 16:54:47  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:54:48  QQBot.py[line:685] INFO AI REPLY:{"code":100000,"text":"泰州:06/07 周二,19-26° 24° 阵雨转小雨 东风3-4级;06/08 周三,19-27° 阴 东风3-4级;06/09 周四,20-27° 多云 东风3-4级;06/10 周五,22-29° 阴 南风3-4级;"}
+Tue, 07 Jun 2016 16:54:48  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":507907488, "face":564,"content":"[\\"\xe6\xb3\xb0\xe5\xb7\x9e:06/07 \xe5\x91\xa8\xe4\xba\x8c,19-26\xc2\xb0 24\xc2\xb0 \xe9\x98\xb5\xe9\x9b\xa8\xe8\xbd\xac\xe5\xb0\x8f\xe9\x9b\xa8 \xe4\xb8\x9c\xe9\xa3\x8e3-4\xe7\xba\xa7;06/08 \xe5\x91\xa8\xe4\xb8\x89,19-27\xc2\xb0 \xe9\x98\xb4 \xe4\xb8\x9c\xe9\xa3\x8e3-4\xe7\xba\xa7;06/09 \xe5\x91\xa8\xe5\x9b\x9b,20-27\xc2\xb0 \xe5\xa4\x9a\xe4\xba\x91 \xe4\xb8\x9c\xe9\xa3\x8e3-4\xe7\xba\xa7;06/10 \xe5\x91\xa8\xe4\xba\x94,22-29\xc2\xb0 \xe9\x98\xb4 \xe5\x8d\x97\xe9\xa3\x8e3-4\xe7\xba\xa7;\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":34423,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 16:54:48  QQBot.py[line:573] INFO [Reply to group 507907488]:泰州:06/07 周二,19-26° 24° 阵雨转小雨 东风3-4级;06/08 周三,19-27° 阴 东风3-4级;06/09 周四,20-27° 多云 东风3-4级;06/10 周五,22-29° 阴 南风3-4级;
+Tue, 07 Jun 2016 16:55:47  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"!ai 常州"],"from_uin":507907488,"group_code":507907488,"msg_id":49754,"msg_type":0,"send_uin":2700935109,"time":1465289743,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:55:47  QQBot.py[line:680] INFO get info from AI: 常州
+Tue, 07 Jun 2016 16:55:47  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:55:48  QQBot.py[line:685] INFO AI REPLY:{"code":100000,"text":"常州市位于经济发达的长江三角洲地区，与上海、南京等距相望，常州市与苏州、无锡联扶成片，总面积4375平方公里，人口343.24万人，常州现辖金坛、溧阳两个县级市和武进、新北、天宁、钟楼、戚墅堰五个行政区。常州是一座具有2500多年历史的文化古城，素有“三吴重镇、八邑名都”之称，春秋时称延陵，公元589年隋文帝时定名常州。常州是长江文明和吴文化的发源地之一，也是南朝齐梁故里。常州境内风景名胜、历史古迹较多，有中华恐龙园、嬉戏谷、春秋淹城等主题公园和天目湖、南山、太湖湾等自然风景区。"}
+Tue, 07 Jun 2016 16:55:48  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":507907488, "face":564,"content":"[\\"\xe5\xb8\xb8\xe5\xb7\x9e\xe5\xb8\x82\xe4\xbd\x8d\xe4\xba\x8e\xe7\xbb\x8f\xe6\xb5\x8e\xe5\x8f\x91\xe8\xbe\xbe\xe7\x9a\x84\xe9\x95\xbf\xe6\xb1\x9f\xe4\xb8\x89\xe8\xa7\x92\xe6\xb4\xb2\xe5\x9c\xb0\xe5\x8c\xba\xef\xbc\x8c\xe4\xb8\x8e\xe4\xb8\x8a\xe6\xb5\xb7\xe3\x80\x81\xe5\x8d\x97\xe4\xba\xac\xe7\xad\x89\xe8\xb7\x9d\xe7\x9b\xb8\xe6\x9c\x9b\xef\xbc\x8c\xe5\xb8\xb8\xe5\xb7\x9e\xe5\xb8\x82\xe4\xb8\x8e\xe8\x8b\x8f\xe5\xb7\x9e\xe3\x80\x81\xe6\x97\xa0\xe9\x94\xa1\xe8\x81\x94\xe6\x89\xb6\xe6\x88\x90\xe7\x89\x87\xef\xbc\x8c\xe6\x80\xbb\xe9\x9d\xa2\xe7\xa7\xaf4375\xe5\xb9\xb3\xe6\x96\xb9\xe5\x85\xac\xe9\x87\x8c\xef\xbc\x8c\xe4\xba\xba\xe5\x8f\xa3343.24\xe4\xb8\x87\xe4\xba\xba\xef\xbc\x8c\xe5\xb8\xb8\xe5\xb7\x9e\xe7\x8e\xb0\xe8\xbe\x96\xe9\x87\x91\xe5\x9d\x9b\xe3\x80\x81\xe6\xba\xa7\xe9\x98\xb3\xe4\xb8\xa4\xe4\xb8\xaa\xe5\x8e\xbf\xe7\xba\xa7\xe5\xb8\x82\xe5\x92\x8c\xe6\xad\xa6\xe8\xbf\x9b\xe3\x80\x81\xe6\x96\xb0\xe5\x8c\x97\xe3\x80\x81\xe5\xa4\xa9\xe5\xae\x81\xe3\x80\x81\xe9\x92\x9f\xe6\xa5\xbc\xe3\x80\x81\xe6\x88\x9a\xe5\xa2\x85\xe5\xa0\xb0\xe4\xba\x94\xe4\xb8\xaa\xe8\xa1\x8c\xe6\x94\xbf\xe5\x8c\xba\xe3\x80\x82\xe5\xb8\xb8\xe5\xb7\x9e\xe6\x98\xaf\xe4\xb8\x80\xe5\xba\xa7\xe5\x85\xb7\xe6\x9c\x892500\xe5\xa4\x9a\xe5\xb9\xb4\xe5\x8e\x86\xe5\x8f\xb2\xe7\x9a\x84\xe6\x96\x87\xe5\x8c\x96\xe5\x8f\xa4\xe5\x9f\x8e\xef\xbc\x8c\xe7\xb4\xa0\xe6\x9c\x89\xe2\x80\x9c\xe4\xb8\x89\xe5\x90\xb4\xe9\x87\x8d\xe9\x95\x87\xe3\x80\x81\xe5\x85\xab\xe9\x82\x91\xe5\x90\x8d\xe9\x83\xbd\xe2\x80\x9d\xe4\xb9\x8b\xe7\xa7\xb0\xef\xbc\x8c\xe6\x98\xa5\xe7\xa7\x8b\xe6\x97\xb6\xe7\xa7\xb0\xe5\xbb\xb6\xe9\x99\xb5\xef\xbc\x8c\xe5\x85\xac\xe5\x85\x83589\xe5\xb9\xb4\xe9\x9a\x8b\xe6\x96\x87\xe5\xb8\x9d\xe6\x97\xb6\xe5\xae\x9a\xe5\x90\x8d\xe5\xb8\xb8\xe5\xb7\x9e\xe3\x80\x82\xe5\xb8\xb8\xe5\xb7\x9e\xe6\x98\xaf\xe9\x95\xbf\xe6\xb1\x9f\xe6\x96\x87\xe6\x98\x8e\xe5\x92\x8c\xe5\x90\xb4\xe6\x96\x87\xe5\x8c\x96\xe7\x9a\x84\xe5\x8f\x91\xe6\xba\x90\xe5\x9c\xb0\xe4\xb9\x8b\xe4\xb8\x80\xef\xbc\x8c\xe4\xb9\x9f\xe6\x98\xaf\xe5\x8d\x97\xe6\x9c\x9d\xe9\xbd\x90\xe6\xa2\x81\xe6\x95\x85\xe9\x87\x8c\xe3\x80\x82\xe5\xb8\xb8\xe5\xb7\x9e\xe5\xa2\x83\xe5\x86\x85\xe9\xa3\x8e\xe6\x99\xaf\xe5\x90\x8d\xe8\x83\x9c\xe3\x80\x81\xe5\x8e\x86\xe5\x8f\xb2\xe5\x8f\xa4\xe8\xbf\xb9\xe8\xbe\x83\xe5\xa4\x9a\xef\xbc\x8c\xe6\x9c\x89\xe4\xb8\xad\xe5\x8d\x8e\xe6\x81\x90\xe9\xbe\x99\xe5\x9b\xad\xe3\x80\x81\xe5\xac\x89\xe6\x88\x8f\xe8\xb0\xb7\xe3\x80\x81\xe6\x98\xa5\xe7\xa7\x8b\xe6\xb7\xb9\xe5\x9f\x8e\xe7\xad\x89\xe4\xb8\xbb\xe9\xa2\x98\xe5\x85\xac\xe5\x9b\xad\xe5\x92\x8c\xe5\xa4\xa9\xe7\x9b\xae\xe6\xb9\x96\xe3\x80\x81\xe5\x8d\x97\xe5\xb1\xb1\xe3\x80\x81\xe5\xa4\xaa\xe6\xb9\x96\xe6\xb9\xbe\xe7\xad\x89\xe8\x87\xaa\xe7\x84\xb6\xe9\xa3\x8e\xe6\x99\xaf\xe5\x8c\xba\xe3\x80\x82\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":34423,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 16:55:49  QQBot.py[line:573] INFO [Reply to group 507907488]:常州市位于经济发达的长江三角洲地区，与上海、南京等距相望，常州市与苏州、无锡联扶成片，总面积4375平方公里，人口343.24万人，常州现辖金坛、溧阳两个县级市和武进、新北、天宁、钟楼、戚墅堰五个行政区。常州是一座具有2500多年历史的文化古城，素有“三吴重镇、八邑名都”之称，春秋时称延陵，公元589年隋文帝时定名常州。常州是长江文明和吴文化的发源地之一，也是南朝齐梁故里。常州境内风景名胜、历史古迹较多，有中华恐龙园、嬉戏谷、春秋淹城等主题公园和天目湖、南山、太湖湾等自然风景区。
+Tue, 07 Jun 2016 16:56:06  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"!ai 劳资要天气"],"from_uin":507907488,"group_code":507907488,"msg_id":49755,"msg_type":0,"send_uin":2700935109,"time":1465289762,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:56:06  QQBot.py[line:680] INFO get info from AI: 劳资要天气
+Tue, 07 Jun 2016 16:56:06  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:56:06  QQBot.py[line:685] INFO AI REPLY:{"code":100000,"text":"亲爱的，悄悄地告诉我你在哪个城市？"}
+Tue, 07 Jun 2016 16:56:06  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":507907488, "face":564,"content":"[\\"\xe4\xba\xb2\xe7\x88\xb1\xe7\x9a\x84\xef\xbc\x8c\xe6\x82\x84\xe6\x82\x84\xe5\x9c\xb0\xe5\x91\x8a\xe8\xaf\x89\xe6\x88\x91\xe4\xbd\xa0\xe5\x9c\xa8\xe5\x93\xaa\xe4\xb8\xaa\xe5\x9f\x8e\xe5\xb8\x82\xef\xbc\x9f\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":34423,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 16:56:06  QQBot.py[line:573] INFO [Reply to group 507907488]:亲爱的，悄悄地告诉我你在哪个城市？
+Tue, 07 Jun 2016 16:56:19  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"!ai 傻逼，常州"],"from_uin":507907488,"group_code":507907488,"msg_id":49756,"msg_type":0,"send_uin":2700935109,"time":1465289775,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:56:19  QQBot.py[line:680] INFO get info from AI: 傻逼，常州
+Tue, 07 Jun 2016 16:56:19  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:56:19  QQBot.py[line:685] INFO AI REPLY:{"code":100000,"text":"常州:06/07 周二,21-26° 26° 阴转小雨 东北风微风;06/08 周三,20-27° 阵雨 东北风3-4级;06/09 周四,21-28° 多云 东风3-4级;06/10 周五,22-30° 阴 东南风微风;"}
+Tue, 07 Jun 2016 16:56:19  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":507907488, "face":564,"content":"[\\"\xe5\xb8\xb8\xe5\xb7\x9e:06/07 \xe5\x91\xa8\xe4\xba\x8c,21-26\xc2\xb0 26\xc2\xb0 \xe9\x98\xb4\xe8\xbd\xac\xe5\xb0\x8f\xe9\x9b\xa8 \xe4\xb8\x9c\xe5\x8c\x97\xe9\xa3\x8e\xe5\xbe\xae\xe9\xa3\x8e;06/08 \xe5\x91\xa8\xe4\xb8\x89,20-27\xc2\xb0 \xe9\x98\xb5\xe9\x9b\xa8 \xe4\xb8\x9c\xe5\x8c\x97\xe9\xa3\x8e3-4\xe7\xba\xa7;06/09 \xe5\x91\xa8\xe5\x9b\x9b,21-28\xc2\xb0 \xe5\xa4\x9a\xe4\xba\x91 \xe4\xb8\x9c\xe9\xa3\x8e3-4\xe7\xba\xa7;06/10 \xe5\x91\xa8\xe4\xba\x94,22-30\xc2\xb0 \xe9\x98\xb4 \xe4\xb8\x9c\xe5\x8d\x97\xe9\xa3\x8e\xe5\xbe\xae\xe9\xa3\x8e;\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":34423,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 16:56:20  QQBot.py[line:577] ERROR [Fail to reply group 507907488]:{"errmsg":"error!!!","retcode":1202}
+
+Tue, 07 Jun 2016 16:57:20  QQBot.py[line:448] INFO Check html: {"errmsg":"error!!!","retcode":0}
+
+Tue, 07 Jun 2016 16:58:20  QQBot.py[line:448] INFO Check html: {"errmsg":"error!!!","retcode":0}
+
+Tue, 07 Jun 2016 16:58:37  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"!ai 常州，傻逼"],"from_uin":507907488,"group_code":507907488,"msg_id":49761,"msg_type":0,"send_uin":2700935109,"time":1465289913,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:58:37  QQBot.py[line:680] INFO get info from AI: 常州，傻逼
+Tue, 07 Jun 2016 16:58:37  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:58:37  QQBot.py[line:685] INFO AI REPLY:{"code":100000,"text":"这对于纯洁的我来说实在是 捂脸"}
+Tue, 07 Jun 2016 16:58:37  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":507907488, "face":564,"content":"[\\"\xe8\xbf\x99\xe5\xaf\xb9\xe4\xba\x8e\xe7\xba\xaf\xe6\xb4\x81\xe7\x9a\x84\xe6\x88\x91\xe6\x9d\xa5\xe8\xaf\xb4\xe5\xae\x9e\xe5\x9c\xa8\xe6\x98\xaf \xe6\x8d\x82\xe8\x84\xb8\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":34423,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 16:58:37  QQBot.py[line:573] INFO [Reply to group 507907488]:这对于纯洁的我来说实在是 捂脸
+Tue, 07 Jun 2016 16:58:49  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"!ai 常州？"],"from_uin":507907488,"group_code":507907488,"msg_id":49762,"msg_type":0,"send_uin":2700935109,"time":1465289925,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:58:49  QQBot.py[line:680] INFO get info from AI: 常州？
+Tue, 07 Jun 2016 16:58:49  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:58:49  QQBot.py[line:685] INFO AI REPLY:{"code":100000,"text":"常州市位于经济发达的长江三角洲地区，与上海、南京等距相望，常州市与苏州、无锡联扶成片，总面积4375平方公里，人口343.24万人，常州现辖金坛、溧阳两个县级市和武进、新北、天宁、钟楼、戚墅堰五个行政区。常州是一座具有2500多年历史的文化古城，素有“三吴重镇、八邑名都”之称，春秋时称延陵，公元589年隋文帝时定名常州。常州是长江文明和吴文化的发源地之一，也是南朝齐梁故里。常州境内风景名胜、历史古迹较多，有中华恐龙园、嬉戏谷、春秋淹城等主题公园和天目湖、南山、太湖湾等自然风景区。"}
+Tue, 07 Jun 2016 16:58:49  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":507907488, "face":564,"content":"[\\"\xe5\xb8\xb8\xe5\xb7\x9e\xe5\xb8\x82\xe4\xbd\x8d\xe4\xba\x8e\xe7\xbb\x8f\xe6\xb5\x8e\xe5\x8f\x91\xe8\xbe\xbe\xe7\x9a\x84\xe9\x95\xbf\xe6\xb1\x9f\xe4\xb8\x89\xe8\xa7\x92\xe6\xb4\xb2\xe5\x9c\xb0\xe5\x8c\xba\xef\xbc\x8c\xe4\xb8\x8e\xe4\xb8\x8a\xe6\xb5\xb7\xe3\x80\x81\xe5\x8d\x97\xe4\xba\xac\xe7\xad\x89\xe8\xb7\x9d\xe7\x9b\xb8\xe6\x9c\x9b\xef\xbc\x8c\xe5\xb8\xb8\xe5\xb7\x9e\xe5\xb8\x82\xe4\xb8\x8e\xe8\x8b\x8f\xe5\xb7\x9e\xe3\x80\x81\xe6\x97\xa0\xe9\x94\xa1\xe8\x81\x94\xe6\x89\xb6\xe6\x88\x90\xe7\x89\x87\xef\xbc\x8c\xe6\x80\xbb\xe9\x9d\xa2\xe7\xa7\xaf4375\xe5\xb9\xb3\xe6\x96\xb9\xe5\x85\xac\xe9\x87\x8c\xef\xbc\x8c\xe4\xba\xba\xe5\x8f\xa3343.24\xe4\xb8\x87\xe4\xba\xba\xef\xbc\x8c\xe5\xb8\xb8\xe5\xb7\x9e\xe7\x8e\xb0\xe8\xbe\x96\xe9\x87\x91\xe5\x9d\x9b\xe3\x80\x81\xe6\xba\xa7\xe9\x98\xb3\xe4\xb8\xa4\xe4\xb8\xaa\xe5\x8e\xbf\xe7\xba\xa7\xe5\xb8\x82\xe5\x92\x8c\xe6\xad\xa6\xe8\xbf\x9b\xe3\x80\x81\xe6\x96\xb0\xe5\x8c\x97\xe3\x80\x81\xe5\xa4\xa9\xe5\xae\x81\xe3\x80\x81\xe9\x92\x9f\xe6\xa5\xbc\xe3\x80\x81\xe6\x88\x9a\xe5\xa2\x85\xe5\xa0\xb0\xe4\xba\x94\xe4\xb8\xaa\xe8\xa1\x8c\xe6\x94\xbf\xe5\x8c\xba\xe3\x80\x82\xe5\xb8\xb8\xe5\xb7\x9e\xe6\x98\xaf\xe4\xb8\x80\xe5\xba\xa7\xe5\x85\xb7\xe6\x9c\x892500\xe5\xa4\x9a\xe5\xb9\xb4\xe5\x8e\x86\xe5\x8f\xb2\xe7\x9a\x84\xe6\x96\x87\xe5\x8c\x96\xe5\x8f\xa4\xe5\x9f\x8e\xef\xbc\x8c\xe7\xb4\xa0\xe6\x9c\x89\xe2\x80\x9c\xe4\xb8\x89\xe5\x90\xb4\xe9\x87\x8d\xe9\x95\x87\xe3\x80\x81\xe5\x85\xab\xe9\x82\x91\xe5\x90\x8d\xe9\x83\xbd\xe2\x80\x9d\xe4\xb9\x8b\xe7\xa7\xb0\xef\xbc\x8c\xe6\x98\xa5\xe7\xa7\x8b\xe6\x97\xb6\xe7\xa7\xb0\xe5\xbb\xb6\xe9\x99\xb5\xef\xbc\x8c\xe5\x85\xac\xe5\x85\x83589\xe5\xb9\xb4\xe9\x9a\x8b\xe6\x96\x87\xe5\xb8\x9d\xe6\x97\xb6\xe5\xae\x9a\xe5\x90\x8d\xe5\xb8\xb8\xe5\xb7\x9e\xe3\x80\x82\xe5\xb8\xb8\xe5\xb7\x9e\xe6\x98\xaf\xe9\x95\xbf\xe6\xb1\x9f\xe6\x96\x87\xe6\x98\x8e\xe5\x92\x8c\xe5\x90\xb4\xe6\x96\x87\xe5\x8c\x96\xe7\x9a\x84\xe5\x8f\x91\xe6\xba\x90\xe5\x9c\xb0\xe4\xb9\x8b\xe4\xb8\x80\xef\xbc\x8c\xe4\xb9\x9f\xe6\x98\xaf\xe5\x8d\x97\xe6\x9c\x9d\xe9\xbd\x90\xe6\xa2\x81\xe6\x95\x85\xe9\x87\x8c\xe3\x80\x82\xe5\xb8\xb8\xe5\xb7\x9e\xe5\xa2\x83\xe5\x86\x85\xe9\xa3\x8e\xe6\x99\xaf\xe5\x90\x8d\xe8\x83\x9c\xe3\x80\x81\xe5\x8e\x86\xe5\x8f\xb2\xe5\x8f\xa4\xe8\xbf\xb9\xe8\xbe\x83\xe5\xa4\x9a\xef\xbc\x8c\xe6\x9c\x89\xe4\xb8\xad\xe5\x8d\x8e\xe6\x81\x90\xe9\xbe\x99\xe5\x9b\xad\xe3\x80\x81\xe5\xac\x89\xe6\x88\x8f\xe8\xb0\xb7\xe3\x80\x81\xe6\x98\xa5\xe7\xa7\x8b\xe6\xb7\xb9\xe5\x9f\x8e\xe7\xad\x89\xe4\xb8\xbb\xe9\xa2\x98\xe5\x85\xac\xe5\x9b\xad\xe5\x92\x8c\xe5\xa4\xa9\xe7\x9b\xae\xe6\xb9\x96\xe3\x80\x81\xe5\x8d\x97\xe5\xb1\xb1\xe3\x80\x81\xe5\xa4\xaa\xe6\xb9\x96\xe6\xb9\xbe\xe7\xad\x89\xe8\x87\xaa\xe7\x84\xb6\xe9\xa3\x8e\xe6\x99\xaf\xe5\x8c\xba\xe3\x80\x82\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":34423,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 16:58:49  QQBot.py[line:573] INFO [Reply to group 507907488]:常州市位于经济发达的长江三角洲地区，与上海、南京等距相望，常州市与苏州、无锡联扶成片，总面积4375平方公里，人口343.24万人，常州现辖金坛、溧阳两个县级市和武进、新北、天宁、钟楼、戚墅堰五个行政区。常州是一座具有2500多年历史的文化古城，素有“三吴重镇、八邑名都”之称，春秋时称延陵，公元589年隋文帝时定名常州。常州是长江文明和吴文化的发源地之一，也是南朝齐梁故里。常州境内风景名胜、历史古迹较多，有中华恐龙园、嬉戏谷、春秋淹城等主题公园和天目湖、南山、太湖湾等自然风景区。
+Tue, 07 Jun 2016 16:59:09  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"@月牙天冲",""," 这个ai是智障吧"],"from_uin":507907488,"group_code":507907488,"msg_id":49766,"msg_type":0,"send_uin":2700935109,"time":1465289945,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:59:09  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:59:25  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"网上的"],"from_uin":507907488,"group_code":507907488,"msg_id":34301,"msg_type":0,"send_uin":1611425194,"time":1465289961,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:59:25  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:59:34  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"就这样了"],"from_uin":507907488,"group_code":507907488,"msg_id":34302,"msg_type":0,"send_uin":1611425194,"time":1465289970,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:59:34  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 16:59:58  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"改善下"],"from_uin":507907488,"group_code":507907488,"msg_id":34303,"msg_type":0,"send_uin":1611425194,"time":1465289994,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:59:58  QQBot.py[line:121] INFO Now FriendList:{1611425194: 554330595, 2700935109: 80000000}
+Tue, 07 Jun 2016 17:08:41  QQBot.py[line:279] CRITICAL 正在获取登陆页面
+Tue, 07 Jun 2016 17:08:42  QQBot.py[line:283] CRITICAL 正在获取appid
+Tue, 07 Jun 2016 17:08:42  QQBot.py[line:285] CRITICAL 正在获取login_sig
+Tue, 07 Jun 2016 17:08:42  QQBot.py[line:287] INFO get sign : 
+Tue, 07 Jun 2016 17:08:42  QQBot.py[line:288] CRITICAL 正在获取pt_version
+Tue, 07 Jun 2016 17:08:42  QQBot.py[line:290] INFO get g_pt_version : 10162
+Tue, 07 Jun 2016 17:08:42  QQBot.py[line:291] CRITICAL 正在获取mibao_css
+Tue, 07 Jun 2016 17:08:42  QQBot.py[line:293] INFO get g_mibao_css : 
+Tue, 07 Jun 2016 17:08:42  QQBot.py[line:301] INFO [1] Get QRCode Picture Success.
+Tue, 07 Jun 2016 17:09:01  QQBot.py[line:314] INFO ['ptuiCB(', '0', ',', '0', ',', 'http://ptlogin4.web2.qq.com/check_sig?pttype=1&uin=2634107307&service=ptqrlogin&nodirect=0&ptsigx=83bcb3df953965ecce8b423cb81f993c403341bd9dece978c5680ac0050207f5e19be7573fc3a7ecaa095cbb82b267fd163a0a594e83d9c7efcaa7319a1a0ea4&s_url=http%3A%2F%2Fw.qq.com%2Fproxy.html%3Flogin2qq%3D1%26webqq_type%3D10&f_url=&ptlang=2052&ptredirect=100&aid=501004106&daid=164&j_later=0&low_login_hour=0&regmaster=0&pt_login_type=3&pt_aid=0&pt_aaid=16&pt_light=0&pt_3rd_aid=0', ',', '0', ',', '\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f\xef\xbc\x81', ', ', '\xe7\x9b\x9b\xe5\xa4\x8f\xe5\x85\x89\xe5\xb9\xb4', ');\r\n']
+Tue, 07 Jun 2016 17:09:01  QQBot.py[line:318] CRITICAL 二维码已扫描，正在登陆
+Tue, 07 Jun 2016 17:09:01  QQBot.py[line:92] ERROR Get mibao_res Url Error.
+Tue, 07 Jun 2016 17:09:01  QQBot.py[line:336] INFO PTWebQQ: 48c46440fdcdac4ef9b2733cfdbf5c9ac8d35126d1c9788e1521a78a88a4c57b
+Tue, 07 Jun 2016 17:09:03  QQBot.py[line:346] INFO getvfwebqq html:  {"retcode":0,"result":{"vfwebqq":"ce17e6bc99dac0c970095818e1f3e957edd5f17e51bd534ed5c008732f346bb1dc09880610ddebf0"}}
+Tue, 07 Jun 2016 17:09:03  QQBot.py[line:360] CRITICAL QQ号：2634107307 登陆成功, 用户名：盛夏光年
+Tue, 07 Jun 2016 17:09:03  QQBot.py[line:361] INFO Login success
+Tue, 07 Jun 2016 17:09:03  QQBot.py[line:362] CRITICAL 登陆二维码用时1.339秒
+Tue, 07 Jun 2016 17:09:04  QQBot.py[line:755] INFO 关注:测试
+Tue, 07 Jun 2016 17:09:04  QQBot.py[line:757] ERROR 无法找到群：wuli炉石污污群
+Tue, 07 Jun 2016 17:09:04  QQBot.py[line:757] ERROR 无法找到群：【SOAR】 cosplay社
+Tue, 07 Jun 2016 17:09:15  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"这题目"],"from_uin":3553945683,"group_code":3553945683,"msg_id":16920,"msg_type":0,"send_uin":1408284900,"time":1465290552,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:09:15  QQBot.py[line:196] INFO 3553945683群有动态，但是没有被监控
+Tue, 07 Jun 2016 17:09:20  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"有毒"],"from_uin":3553945683,"group_code":3553945683,"msg_id":16921,"msg_type":0,"send_uin":1408284900,"time":1465290556,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:09:20  QQBot.py[line:196] INFO 3553945683群有动态，但是没有被监控
+Tue, 07 Jun 2016 17:09:53  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"我小号"],"from_uin":3553945683,"group_code":3553945683,"msg_id":34401,"msg_type":0,"send_uin":1611425194,"time":1465290589,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:09:53  QQBot.py[line:196] INFO 3553945683群有动态，但是没有被监控
+Tue, 07 Jun 2016 17:10:08  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"嗯"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38231,"msg_type":0,"send_uin":888072571,"time":1465290604,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:10:08  QQBot.py[line:196] INFO 3553945683群有动态，但是没有被监控
+Tue, 07 Jun 2016 17:10:13  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"全国卷"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38233,"msg_type":0,"send_uin":888072571,"time":1465290609,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:10:13  QQBot.py[line:196] INFO 3553945683群有动态，但是没有被监控
+Tue, 07 Jun 2016 17:10:15  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"一次"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38235,"msg_type":0,"send_uin":888072571,"time":1465290611,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:10:15  QQBot.py[line:196] INFO 3553945683群有动态，但是没有被监控
+Tue, 07 Jun 2016 17:10:23  QQBot.py[line:279] CRITICAL 正在获取登陆页面
+Tue, 07 Jun 2016 17:10:23  QQBot.py[line:283] CRITICAL 正在获取appid
+Tue, 07 Jun 2016 17:10:23  QQBot.py[line:285] CRITICAL 正在获取login_sig
+Tue, 07 Jun 2016 17:10:23  QQBot.py[line:287] INFO get sign : 
+Tue, 07 Jun 2016 17:10:23  QQBot.py[line:288] CRITICAL 正在获取pt_version
+Tue, 07 Jun 2016 17:10:23  QQBot.py[line:290] INFO get g_pt_version : 10162
+Tue, 07 Jun 2016 17:10:23  QQBot.py[line:291] CRITICAL 正在获取mibao_css
+Tue, 07 Jun 2016 17:10:23  QQBot.py[line:293] INFO get g_mibao_css : 
+Tue, 07 Jun 2016 17:10:23  QQBot.py[line:301] INFO [1] Get QRCode Picture Success.
+Tue, 07 Jun 2016 17:10:39  QQBot.py[line:314] INFO ['ptuiCB(', '0', ',', '0', ',', 'http://ptlogin4.web2.qq.com/check_sig?pttype=1&uin=2634107307&service=ptqrlogin&nodirect=0&ptsigx=32ee6bdadc9e20b74cb9251318dfd2366505c38974db5070e2616a65cae7df55666606e5da3cd304af4d9477c15d77aa63a6a0b743916f589bbd527d4d7757d7&s_url=http%3A%2F%2Fw.qq.com%2Fproxy.html%3Flogin2qq%3D1%26webqq_type%3D10&f_url=&ptlang=2052&ptredirect=100&aid=501004106&daid=164&j_later=0&low_login_hour=0&regmaster=0&pt_login_type=3&pt_aid=0&pt_aaid=16&pt_light=0&pt_3rd_aid=0', ',', '0', ',', '\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f\xef\xbc\x81', ', ', '\xe7\x9b\x9b\xe5\xa4\x8f\xe5\x85\x89\xe5\xb9\xb4', ');\r\n']
+Tue, 07 Jun 2016 17:10:39  QQBot.py[line:318] CRITICAL 二维码已扫描，正在登陆
+Tue, 07 Jun 2016 17:10:39  QQBot.py[line:92] ERROR Get mibao_res Url Error.
+Tue, 07 Jun 2016 17:10:39  QQBot.py[line:336] INFO PTWebQQ: 45734fb6830f39538e360a144cae2ef04c4f9b1151ae8a5b193c809d531d3d0e
+Tue, 07 Jun 2016 17:10:40  QQBot.py[line:346] INFO getvfwebqq html:  {"retcode":0,"result":{"vfwebqq":"974c881cad6ff4d5a9ce2c78acbc2e41f522a5e5ab9b65646a66f2533c3898d73c0b07d0b0c62481"}}
+Tue, 07 Jun 2016 17:10:40  QQBot.py[line:360] CRITICAL QQ号：2634107307 登陆成功, 用户名：盛夏光年
+Tue, 07 Jun 2016 17:10:40  QQBot.py[line:361] INFO Login success
+Tue, 07 Jun 2016 17:10:40  QQBot.py[line:362] CRITICAL 登陆二维码用时0.37秒
+Tue, 07 Jun 2016 17:10:45  QQBot.py[line:755] INFO 关注:测试
+Tue, 07 Jun 2016 17:10:45  QQBot.py[line:757] ERROR 无法找到群：wuli炉石污污群
+Tue, 07 Jun 2016 17:10:45  QQBot.py[line:757] ERROR 无法找到群：【SOAR】 cosplay社
+Tue, 07 Jun 2016 17:10:45  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"是"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38239,"msg_type":0,"send_uin":888072571,"time":1465290614,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:10:45  QQBot.py[line:673] INFO 读取存档出错:[Errno 2] No such file or directory: 'database.3553945683.save'
+Tue, 07 Jun 2016 17:10:45  QQBot.py[line:112] INFO Get uin to account info:{u'retcode': 0, u'result': {u'account': 1349277282, u'uin': 888072571, u'uiuin': u''}}
+Tue, 07 Jun 2016 17:10:45  QQBot.py[line:121] INFO Now FriendList:{888072571: 1349277282}
+Tue, 07 Jun 2016 17:10:45  QQBot.py[line:194] INFO 群线程已生成
+Tue, 07 Jun 2016 17:10:45  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"江苏的老师"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38241,"msg_type":0,"send_uin":888072571,"time":1465290617,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:10:45  QQBot.py[line:121] INFO Now FriendList:{888072571: 1349277282}
+Tue, 07 Jun 2016 17:10:45  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"出的"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38243,"msg_type":0,"send_uin":888072571,"time":1465290619,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:10:45  QQBot.py[line:121] INFO Now FriendList:{888072571: 1349277282}
+Tue, 07 Jun 2016 17:10:45  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"我笑了"],"from_uin":3553945683,"group_code":3553945683,"msg_id":32824,"msg_type":0,"send_uin":607605904,"time":1465290619,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:10:45  QQBot.py[line:112] INFO Get uin to account info:{u'retcode': 0, u'result': {u'account': 1904156703, u'uin': 607605904, u'uiuin': u''}}
+Tue, 07 Jun 2016 17:10:45  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 888072571: 1349277282}
+Tue, 07 Jun 2016 17:10:45  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"233333"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38250,"msg_type":0,"send_uin":888072571,"time":1465290635,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:10:45  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 888072571: 1349277282}
+Tue, 07 Jun 2016 17:10:46  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"我没有笑（严肃）"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38252,"msg_type":0,"send_uin":888072571,"time":1465290642,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:10:46  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 888072571: 1349277282}
+Tue, 07 Jun 2016 17:10:57  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"@robot",""," hi"],"from_uin":507907488,"group_code":507907488,"msg_id":34403,"msg_type":0,"send_uin":1611425194,"time":1465290653,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:10:57  QQBot.py[line:673] INFO 读取存档出错:[Errno 2] No such file or directory: 'database.507907488.save'
+Tue, 07 Jun 2016 17:10:57  QQBot.py[line:681] INFO get info from AI: hi
+Tue, 07 Jun 2016 17:10:57  QQBot.py[line:112] INFO Get uin to account info:{u'retcode': 0, u'result': {u'account': 554330595, u'uin': 1611425194, u'uiuin': u''}}
+Tue, 07 Jun 2016 17:10:57  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282}
+Tue, 07 Jun 2016 17:10:57  QQBot.py[line:686] INFO AI REPLY:{"code":100000,"text":"嗨"}
+Tue, 07 Jun 2016 17:10:57  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":507907488, "face":564,"content":"[\\"\xe5\x97\xa8\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":31180,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 17:10:58  QQBot.py[line:577] ERROR [Fail to reply group 507907488]:{"errmsg":"error!!!","retcode":1202}
+
+Tue, 07 Jun 2016 17:10:58  QQBot.py[line:194] INFO 群线程已生成
+Tue, 07 Jun 2016 17:11:06  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"@robot",""," 你大爷"],"from_uin":507907488,"group_code":507907488,"msg_id":34404,"msg_type":0,"send_uin":1611425194,"time":1465290662,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:11:06  QQBot.py[line:681] INFO get info from AI: 你大爷
+Tue, 07 Jun 2016 17:11:06  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282}
+Tue, 07 Jun 2016 17:11:06  QQBot.py[line:686] INFO AI REPLY:{"code":100000,"text":"那你骂我干嘛"}
+Tue, 07 Jun 2016 17:11:06  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":507907488, "face":564,"content":"[\\"\xe9\x82\xa3\xe4\xbd\xa0\xe9\xaa\x82\xe6\x88\x91\xe5\xb9\xb2\xe5\x98\x9b\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":31180,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 17:11:07  QQBot.py[line:573] INFO [Reply to group 507907488]:那你骂我干嘛
+Tue, 07 Jun 2016 17:11:49  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"@robot",""," test"],"from_uin":3553945683,"group_code":3553945683,"msg_id":34429,"msg_type":0,"send_uin":1611425194,"time":1465290705,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:11:49  QQBot.py[line:681] INFO get info from AI: test
+Tue, 07 Jun 2016 17:11:49  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282}
+Tue, 07 Jun 2016 17:11:49  QQBot.py[line:686] INFO AI REPLY:{"code":100000,"text":"测试"}
+Tue, 07 Jun 2016 17:11:49  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":3553945683, "face":564,"content":"[\\"\xe6\xb5\x8b\xe8\xaf\x95\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":31180,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 17:11:50  QQBot.py[line:577] ERROR [Fail to reply group 3553945683]:{"errmsg":"error!!!","retcode":1202}
+
+Tue, 07 Jun 2016 17:11:57  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"噫"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38273,"msg_type":0,"send_uin":888072571,"time":1465290713,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:11:57  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282}
+Tue, 07 Jun 2016 17:11:58  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"@robot test"],"from_uin":3553945683,"group_code":3553945683,"msg_id":34431,"msg_type":0,"send_uin":1611425194,"time":1465290714,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:11:58  QQBot.py[line:681] INFO get info from AI: test
+Tue, 07 Jun 2016 17:11:58  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282}
+Tue, 07 Jun 2016 17:11:59  QQBot.py[line:686] INFO AI REPLY:{"code":100000,"text":"测试"}
+Tue, 07 Jun 2016 17:11:59  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":3553945683, "face":564,"content":"[\\"\xe6\xb5\x8b\xe8\xaf\x95\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":31180,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 17:11:59  QQBot.py[line:577] ERROR [Fail to reply group 3553945683]:{"errmsg":"error!!!","retcode":1202}
+
+Tue, 07 Jun 2016 17:12:05  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"@robot test！"],"from_uin":3553945683,"group_code":3553945683,"msg_id":34433,"msg_type":0,"send_uin":1611425194,"time":1465290721,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:12:05  QQBot.py[line:681] INFO get info from AI: test！
+Tue, 07 Jun 2016 17:12:05  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282}
+Tue, 07 Jun 2016 17:12:06  QQBot.py[line:686] INFO AI REPLY:{"code":100000,"text":"测试"}
+Tue, 07 Jun 2016 17:12:06  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":3553945683, "face":564,"content":"[\\"\xe6\xb5\x8b\xe8\xaf\x95\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":31180,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 17:12:06  QQBot.py[line:573] INFO [Reply to group 3553945683]:测试
+Tue, 07 Jun 2016 17:12:13  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"噫"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38279,"msg_type":0,"send_uin":888072571,"time":1465290729,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:12:13  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282}
+Tue, 07 Jun 2016 17:12:13  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":3553945683, "face":564,"content":"[\\"\xe5\x99\xab\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":31180,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 17:12:13  QQBot.py[line:577] ERROR [Fail to reply group 3553945683]:{"errmsg":"error!!!","retcode":1202}
+
+Tue, 07 Jun 2016 17:12:13  QQBot.py[line:629] INFO 已复读：{噫}
+Tue, 07 Jun 2016 17:12:17  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"qwq"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38281,"msg_type":0,"send_uin":888072571,"time":1465290733,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:12:17  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282}
+Tue, 07 Jun 2016 17:12:25  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"傻狍子"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38283,"msg_type":0,"send_uin":888072571,"time":1465290741,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:12:25  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282}
+Tue, 07 Jun 2016 17:13:15  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"！follow 554330595"],"from_uin":507907488,"group_code":507907488,"msg_id":34436,"msg_type":0,"send_uin":1611425194,"time":1465290791,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:13:15  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282}
+Tue, 07 Jun 2016 17:13:20  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"aaa"],"from_uin":507907488,"group_code":507907488,"msg_id":34437,"msg_type":0,"send_uin":1611425194,"time":1465290796,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:13:20  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282}
+Tue, 07 Jun 2016 17:13:28  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"我特么就说为什么看不懂"],"from_uin":3553945683,"group_code":3553945683,"msg_id":16934,"msg_type":0,"send_uin":1408284900,"time":1465290804,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:13:28  QQBot.py[line:112] INFO Get uin to account info:{u'retcode': 0, u'result': {u'account': 944234931, u'uin': 1408284900, u'uiuin': u''}}
+Tue, 07 Jun 2016 17:13:28  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:13:32  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"看不懂啊啊啊"],"from_uin":3553945683,"group_code":3553945683,"msg_id":16935,"msg_type":0,"send_uin":1408284900,"time":1465290808,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:13:32  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:13:37  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"23333淡定"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38304,"msg_type":0,"send_uin":888072571,"time":1465290813,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:13:37  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:13:45  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"你才看到了江苏的一部分"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38306,"msg_type":0,"send_uin":888072571,"time":1465290821,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:13:45  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:13:48  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"!follow 554330595"],"from_uin":507907488,"group_code":507907488,"msg_id":34438,"msg_type":0,"send_uin":1611425194,"time":1465290824,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:13:48  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":507907488, "face":564,"content":"[\\"\xe6\xad\xa3\xe5\x9c\xa8\xe5\x85\xb3\xe6\xb3\xa8554330595\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":31180,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 17:13:53  QQBot.py[line:573] INFO [Reply to group 507907488]:正在关注554330595
+Tue, 07 Jun 2016 17:13:53  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"冰山一角"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38308,"msg_type":0,"send_uin":888072571,"time":1465290827,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:13:53  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:13:57  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"abcd"],"from_uin":507907488,"group_code":507907488,"msg_id":34439,"msg_type":0,"send_uin":1611425194,"time":1465290833,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:13:57  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:13:57  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":507907488, "face":564,"content":"[\\"abcd\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":31180,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 17:13:57  QQBot.py[line:577] ERROR [Fail to reply group 507907488]:{"errmsg":"error!!!","retcode":1202}
+
+Tue, 07 Jun 2016 17:14:03  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"1234"],"from_uin":507907488,"group_code":507907488,"msg_id":34440,"msg_type":0,"send_uin":1611425194,"time":1465290839,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:14:03  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:14:03  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":507907488, "face":564,"content":"[\\"1234\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":31180,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 17:14:03  QQBot.py[line:577] ERROR [Fail to reply group 507907488]:{"errmsg":"error!!!","retcode":1202}
+
+Tue, 07 Jun 2016 17:14:06  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"不用方"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38317,"msg_type":0,"send_uin":888072571,"time":1465290842,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:14:06  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:14:06  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"456"],"from_uin":507907488,"group_code":507907488,"msg_id":34441,"msg_type":0,"send_uin":1611425194,"time":1465290842,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:14:06  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:14:06  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":507907488, "face":564,"content":"[\\"456\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":31180,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 17:14:06  QQBot.py[line:573] INFO [Reply to group 507907488]:456
+Tue, 07 Jun 2016 17:14:07  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"😂"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38319,"msg_type":0,"send_uin":888072571,"time":1465290843,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:14:07  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:14:20  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"等柠檬回来问问正规的江苏考生"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38321,"msg_type":0,"send_uin":888072571,"time":1465290856,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:14:20  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:14:21  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"😂😂"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38323,"msg_type":0,"send_uin":888072571,"time":1465290857,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:14:21  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:14:21  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"我去尼玛为什么要这么对我们广东考生"],"from_uin":3553945683,"group_code":3553945683,"msg_id":16941,"msg_type":0,"send_uin":1408284900,"time":1465290858,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:14:21  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:14:27  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"!follow 1349277282"],"from_uin":3553945683,"group_code":3553945683,"msg_id":34444,"msg_type":0,"send_uin":1611425194,"time":1465290863,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:14:27  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":3553945683, "face":564,"content":"[\\"\xe6\xad\xa3\xe5\x9c\xa8\xe5\x85\xb3\xe6\xb3\xa81349277282\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":31180,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 17:14:27  QQBot.py[line:577] ERROR [Fail to reply group 3553945683]:{"errmsg":"error!!!","retcode":1202}
+
+Tue, 07 Jun 2016 17:14:33  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"噫"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38325,"msg_type":0,"send_uin":888072571,"time":1465290869,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:14:33  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:14:33  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":3553945683, "face":564,"content":"[\\"\xe5\x99\xab\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":31180,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 17:14:33  QQBot.py[line:573] INFO [Reply to group 3553945683]:噫
+Tue, 07 Jun 2016 17:14:33  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"这才第一次啊啊啊啊啊"],"from_uin":3553945683,"group_code":3553945683,"msg_id":16943,"msg_type":0,"send_uin":1408284900,"time":1465290869,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:14:33  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:14:39  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"233333"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38329,"msg_type":0,"send_uin":888072571,"time":1465290875,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:14:39  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:14:39  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":3553945683, "face":564,"content":"[\\"233333\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":31180,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 17:14:39  QQBot.py[line:577] ERROR [Fail to reply group 3553945683]:{"errmsg":"error!!!","retcode":1202}
+
+Tue, 07 Jun 2016 17:14:44  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"淡定"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38331,"msg_type":0,"send_uin":888072571,"time":1465290880,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:14:44  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:14:44  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":3553945683, "face":564,"content":"[\\"\xe6\xb7\xa1\xe5\xae\x9a\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":31180,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 17:14:44  QQBot.py[line:573] INFO [Reply to group 3553945683]:淡定
+Tue, 07 Jun 2016 17:15:02  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"他为什么和我说一样的话(*・_・)ノ⌒*丢出去"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38333,"msg_type":0,"send_uin":888072571,"time":1465290898,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:15:02  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:15:02  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":3553945683, "face":564,"content":"[\\"\xe4\xbb\x96\xe4\xb8\xba\xe4\xbb\x80\xe4\xb9\x88\xe5\x92\x8c\xe6\x88\x91\xe8\xaf\xb4\xe4\xb8\x80\xe6\xa0\xb7\xe7\x9a\x84\xe8\xaf\x9d(*\xe3\x83\xbb_\xe3\x83\xbb)\xe3\x83\x8e\xe2\x8c\x92*\xe4\xb8\xa2\xe5\x87\xba\xe5\x8e\xbb\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":31180,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 17:15:02  QQBot.py[line:573] INFO [Reply to group 3553945683]:他为什么和我说一样的话(*・_・)ノ⌒*丢出去
+Tue, 07 Jun 2016 17:15:06  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"!unfollow 1349277282"],"from_uin":3553945683,"group_code":3553945683,"msg_id":34446,"msg_type":0,"send_uin":1611425194,"time":1465290902,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:15:06  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":3553945683, "face":564,"content":"[\\"\xe6\x88\x91\xe4\xb8\x8d\xe5\x85\xb3\xe6\xb3\xa81349277282\xe4\xba\x86\xef\xbc\x81\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":31180,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 17:15:06  QQBot.py[line:573] INFO [Reply to group 3553945683]:我不关注1349277282了！
+Tue, 07 Jun 2016 17:15:10  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"\"(º Д º*)"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38335,"msg_type":0,"send_uin":888072571,"time":1465290906,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:15:10  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:15:12  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"哼唧"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38337,"msg_type":0,"send_uin":888072571,"time":1465290908,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:15:12  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:15:20  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"月牙笨蛋"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38340,"msg_type":0,"send_uin":888072571,"time":1465290916,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:15:20  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:15:25  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"影子淡定"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38342,"msg_type":0,"send_uin":888072571,"time":1465290921,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:15:25  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:15:35  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"这只是。。。嗯。。。一个政策"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38344,"msg_type":0,"send_uin":888072571,"time":1465290931,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:15:35  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:15:35  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"....我就是试试"],"from_uin":3553945683,"group_code":3553945683,"msg_id":34448,"msg_type":0,"send_uin":1611425194,"time":1465290931,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:15:35  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:15:35  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":3553945683, "face":564,"content":"[\\"....\xe6\x88\x91\xe5\xb0\xb1\xe6\x98\xaf\xe8\xaf\x95\xe8\xaf\x95\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":31180,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 17:15:36  QQBot.py[line:573] INFO [Reply to group 3553945683]:....我就是试试
+Tue, 07 Jun 2016 17:15:36  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"说好的我们是拥有希望的一届么"],"from_uin":3553945683,"group_code":3553945683,"msg_id":16950,"msg_type":0,"send_uin":1408284900,"time":1465290932,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:15:36  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:15:36  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"😂😂"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38346,"msg_type":0,"send_uin":888072571,"time":1465290932,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:15:36  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:15:42  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"OTZ"],"from_uin":3553945683,"group_code":3553945683,"msg_id":16951,"msg_type":0,"send_uin":1408284900,"time":1465290938,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:15:42  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:15:42  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"!follow 2634107307"],"from_uin":507907488,"group_code":507907488,"msg_id":49777,"msg_type":0,"send_uin":2700935109,"time":1465290938,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:15:42  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":507907488, "face":564,"content":"[\\"\xe6\xad\xa3\xe5\x9c\xa8\xe5\x85\xb3\xe6\xb3\xa82634107307\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":31180,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 17:15:43  QQBot.py[line:573] INFO [Reply to group 507907488]:正在关注2634107307
+Tue, 07 Jun 2016 17:15:43  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"123"],"from_uin":507907488,"group_code":507907488,"msg_id":34449,"msg_type":0,"send_uin":1611425194,"time":1465290939,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:15:43  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:15:43  QQBot.py[line:559] INFO REPLY TOO FAST, ABANDON：123
+Tue, 07 Jun 2016 17:15:49  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"提前给你们做好准备"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38349,"msg_type":0,"send_uin":888072571,"time":1465290945,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:15:49  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:15:57  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"感受江苏卷的有趣"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38352,"msg_type":0,"send_uin":888072571,"time":1465290953,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:15:57  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:16:02  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"感受江苏卷的脸蛋"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38354,"msg_type":0,"send_uin":888072571,"time":1465290958,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:16:02  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:16:05  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"好有趣"],"from_uin":3553945683,"group_code":3553945683,"msg_id":34451,"msg_type":0,"send_uin":1611425194,"time":1465290961,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:16:05  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:16:05  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":3553945683, "face":564,"content":"[\\"\xe5\xa5\xbd\xe6\x9c\x89\xe8\xb6\xa3\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":31180,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 17:16:06  QQBot.py[line:573] INFO [Reply to group 3553945683]:好有趣
+Tue, 07 Jun 2016 17:16:16  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"感受江苏卷的简单"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38357,"msg_type":0,"send_uin":888072571,"time":1465290972,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:16:16  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:16:16  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"55543"],"from_uin":507907488,"group_code":507907488,"msg_id":34454,"msg_type":0,"send_uin":1611425194,"time":1465290972,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:16:16  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:16:16  QQBot.py[line:568] INFO Reply package: (('r', '{"group_uin":507907488, "face":564,"content":"[\\"55543\\",[\\"font\\",{\\"name\\":\\"Arial\\",\\"size\\":\\"10\\",\\"style\\":[0,0,0],\\"color\\":\\"000000\\"}]]","clientid":53999199,"msg_id":31180,"psessionid":"8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857"}'), ('clientid', 53999199), ('psessionid', u'8368046764001d636f6e6e7365727665725f77656271714031302e3133332e34312e383400001ad00000066b026e040015808a206d0000000a406172314338344a69526d0000002859185d94e66218548d1ecb1a12513c86126b3afb97a3c2955b1070324790733ddb059ab166de6857'))
+Tue, 07 Jun 2016 17:16:16  QQBot.py[line:573] INFO [Reply to group 507907488]:55543
+Tue, 07 Jun 2016 17:16:18  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"明了"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38359,"msg_type":0,"send_uin":888072571,"time":1465290974,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:16:18  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:16:26  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"粗暴"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38361,"msg_type":0,"send_uin":888072571,"time":1465290982,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:16:26  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931}
+Tue, 07 Jun 2016 17:16:45  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"565566"],"from_uin":507907488,"group_code":507907488,"msg_id":49780,"msg_type":0,"send_uin":2700935109,"time":1465291001,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:16:45  QQBot.py[line:112] INFO Get uin to account info:{u'retcode': 0, u'result': {u'account': 80000000, u'uin': 2700935109, u'uiuin': u''}}
+Tue, 07 Jun 2016 17:16:45  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931, 2700935109: 80000000}
+Tue, 07 Jun 2016 17:16:47  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"哦摩西罗伊"],"from_uin":3553945683,"group_code":3553945683,"msg_id":16955,"msg_type":0,"send_uin":1408284900,"time":1465291003,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:16:47  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931, 2700935109: 80000000}
+Tue, 07 Jun 2016 17:17:06  QQBot.py[line:448] INFO Check html: {"result":[{"poll_type":"group_message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"扣起分来不留手"],"from_uin":3553945683,"group_code":3553945683,"msg_id":38380,"msg_type":0,"send_uin":888072571,"time":1465291022,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 17:17:06  QQBot.py[line:121] INFO Now FriendList:{607605904: 1904156703, 1611425194: 554330595, 888072571: 1349277282, 1408284900: 944234931, 2700935109: 80000000}

@@ -1,0 +1,37 @@
+Tue, 07 Jun 2016 16:19:19  QQBot.py[line:489] CRITICAL 正在获取登陆页面
+Tue, 07 Jun 2016 16:19:20  QQBot.py[line:493] CRITICAL 正在获取appid
+Tue, 07 Jun 2016 16:19:20  QQBot.py[line:495] CRITICAL 正在获取login_sig
+Tue, 07 Jun 2016 16:19:20  QQBot.py[line:497] INFO get sign : 
+Tue, 07 Jun 2016 16:19:20  QQBot.py[line:498] CRITICAL 正在获取pt_version
+Tue, 07 Jun 2016 16:19:20  QQBot.py[line:500] INFO get g_pt_version : 10162
+Tue, 07 Jun 2016 16:19:20  QQBot.py[line:501] CRITICAL 正在获取mibao_css
+Tue, 07 Jun 2016 16:19:20  QQBot.py[line:503] INFO get g_mibao_css : 
+Tue, 07 Jun 2016 16:19:20  QQBot.py[line:511] INFO [1] Get QRCode Picture Success.
+Tue, 07 Jun 2016 16:20:01  QQBot.py[line:524] INFO ['ptuiCB(', '0', ',', '0', ',', 'http://ptlogin4.web2.qq.com/check_sig?pttype=1&uin=2634107307&service=ptqrlogin&nodirect=0&ptsigx=d92a23b9060008fc74dde612622d8b5f4bed48e9f5e50c0662a05b299a947e314c0364b4e851929fcd0f1fdcad3a0c82b2c9acd039d9dfff928d737c32a7271e&s_url=http%3A%2F%2Fw.qq.com%2Fproxy.html%3Flogin2qq%3D1%26webqq_type%3D10&f_url=&ptlang=2052&ptredirect=100&aid=501004106&daid=164&j_later=0&low_login_hour=0&regmaster=0&pt_login_type=3&pt_aid=0&pt_aaid=16&pt_light=0&pt_3rd_aid=0', ',', '0', ',', '\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f\xef\xbc\x81', ', ', '\xe7\x9b\x9b\xe5\xa4\x8f\xe5\x85\x89\xe5\xb9\xb4', ');\r\n']
+Tue, 07 Jun 2016 16:20:01  QQBot.py[line:528] CRITICAL 二维码已扫描，正在登陆
+Tue, 07 Jun 2016 16:20:01  QQBot.py[line:111] ERROR Get mibao_res Url Error.
+Tue, 07 Jun 2016 16:20:01  QQBot.py[line:546] INFO PTWebQQ: cc7b29959f32eafa06eaa94d878ed8bf4d2fc3781dbe42084595f1373c5e3d0a
+Tue, 07 Jun 2016 16:20:01  QQBot.py[line:556] INFO getvfwebqq html:  {"retcode":0,"result":{"vfwebqq":"50fc41e6cfcb2f45a2e7b68e740d6c547979e4370c96cee3cc27d556080dc1207daa756d99ede8b4"}}
+Tue, 07 Jun 2016 16:20:01  QQBot.py[line:570] CRITICAL QQ号：2634107307 登陆成功, 用户名：盛夏光年
+Tue, 07 Jun 2016 16:20:01  QQBot.py[line:571] INFO Login success
+Tue, 07 Jun 2016 16:20:01  QQBot.py[line:573] CRITICAL 登陆二维码用时0.305秒
+Tue, 07 Jun 2016 16:20:41  QQBot.py[line:674] INFO Check html: {"result":[{"poll_type":"message","value":{"content":[["font",{"color":"000000","name":"微软雅黑","size":10,"style":[0,0,0]}],"111"],"from_uin":1611425194,"msg_id":32560,"msg_type":0,"time":1465287637,"to_uin":2634107307}}],"retcode":0}
+
+Tue, 07 Jun 2016 16:20:41  QQBot.py[line:149] INFO Get uin to account info:{u'retcode': 0, u'result': {u'account': 554330595, u'uin': 1611425194, u'uiuin': u''}}
+Tue, 07 Jun 2016 16:20:41  QQBot.py[line:158] INFO Now FriendList:{1611425194: 554330595}
+Tue, 07 Jun 2016 16:20:41  QQBot.py[line:158] INFO Now FriendList:{1611425194: 554330595}
+Tue, 07 Jun 2016 16:20:41  QQBot.py[line:710] INFO 私聊线程生成，私聊对象：554330595
+Tue, 07 Jun 2016 16:20:41  QQBot.py[line:158] INFO Now FriendList:{1611425194: 554330595}
+Tue, 07 Jun 2016 16:20:41  QQBot.py[line:201] INFO add thread <pmchat_thread(Thread-2, started daemon 140361064310528)> for qq1611425194 554330595
+Tue, 07 Jun 2016 16:20:43  QQBot.py[line:726] INFO Reply to 554330595:最近需要认真学习，不上QQ,有事请邮件联系。接下来由小黄鸡代我与您聊天！在聊天时输入【record】可以开始给我留言，(英文单词: record），输入此命令并在收到提示后输入留言内容即可.record前面不能有空格（r需为该消息的第一个字符），举例:
+record
+
+(系统提示消息)
+
+（留言内容）
+
+(系统提示：留言已记录)
+Tue, 07 Jun 2016 16:20:43  QQBot.py[line:783] INFO PM get info from AI: 111
+Tue, 07 Jun 2016 16:20:43  QQBot.py[line:786] INFO AI REPLY:{"code":40001,"text":"亲爱的，key不对哦。"}
+Tue, 07 Jun 2016 16:20:45  QQBot.py[line:726] INFO Reply to 554330595:我今天累了，不聊了
+Tue, 07 Jun 2016 16:20:45  QQBot.py[line:790] WARNING Reach max AI call

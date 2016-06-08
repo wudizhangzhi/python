@@ -24,7 +24,7 @@ msgId = 0
 FriendList = {}
 ThreadList = []
 GroupThreadList = []
-GroupWatchList = ['192795735', '507907488', '3553945683']
+GroupWatchList = ['192795735', '507907488', '3553945683', '391457999']
 GroupNameList = {}
 PSessionID = ''
 Referer = 'http://d1.web2.qq.com/proxy.html?v=20151105001&callback=1&id=2'

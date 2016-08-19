@@ -19,7 +19,19 @@ if __name__ == '__main__':
 '''TODO 待实现功能
 1.自动关注含有关键字的问题
 2.问题的关注度（关注人数上升速度，关注总数等）
+
+
+
+
+流程:
+1.urlthread 采集地址url
+爬取跟进采集地址
+
+2.peoplethread 采集人信息
+获取url_people队列采集信息
+
+
+3.datathread 采集人数据
+根据数据库nexttime 判断是否采集人数据
+
 '''
-
-
-

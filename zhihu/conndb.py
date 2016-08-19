@@ -15,4 +15,3 @@ db = torndb.Connection(mysql_host, mysql_db, user=mysql_user, password=mysql_pas
 pool = redis.ConnectionPool(host='127.0.0.1', port=6379)
 
 redis_cache = redis.Redis(connection_pool=pool)
-

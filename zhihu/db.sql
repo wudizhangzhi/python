@@ -9,7 +9,7 @@ create table `zhihu_question`(
     `num_answer` int comment'回答数量',
     `num_follow` int comment'关注人数',
     `num_watch` int default null comment'浏览人数',
-    key `idx_qestion_id` (`question_id`) 
+    key `idx_qestion_id` (`question_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 drop table if exists `zhihu_answer`;
@@ -46,7 +46,8 @@ create table `zhihu_user`(
     `business` varchar(30) comment'行业',
     `gender` int comment'性别0:女，1:男,2:未知',
     `employment` varchar(60) comment'职业',
-    `education` varchar(60) comment'教育'
+    `education` varchar(60) comment'教育',
+    `nexttime` datetime comment'下次采集时间'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 drop table if exists `zhihu_user_data`;

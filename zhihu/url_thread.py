@@ -49,8 +49,8 @@ class Url():
     def run(self, url_start):
         r = self._get(url_start)
         if r.status_code == requests.codes.OK:
-            print '跟进地址:%s ; status_code:%s' % (url_start,str(r.status_code)) 
-            # 
+            print '跟进地址:%s ; status_code:%s' % (url_start,str(r.status_code))
+            #
             sql = 'insert into zhihu_url_crawled(url) values("%s")'
             db.execute(sql, url_start)
 
@@ -67,7 +67,7 @@ class Url():
                     ret = db.query(sql, int(q))
                     if not ret:
                         # question_save.append(q)
-                        pipe.sadd('zhihu_url_question', q)                    
+                        pipe.sadd('zhihu_url_question', q)
 
 
 
@@ -95,19 +95,19 @@ class Url():
             #判断是否存在
             #sismember zhihu_url_people value1
             #spop key
-            #TODO 跟进url，继续匹配
-            r = redis_cache.spop('zhihu_url_follow')
-            if r:
-                url = 'https://www.zhihu.com/people/%s' % r
-                self.run(url)
+            # #TODO 跟进url，继续匹配
+            # r = redis_cache.spop('zhihu_url_follow')
+            # if r:
+            #     url = 'https://www.zhihu.com/people/%s' % r
+            #     self.run(url)
 
-        else:
-            print '跟进地址:%s ; status_code:%s' % (url_start,r.status_code) 
-            r = redis_cache.spop('zhihu_url_follow')
-            if r:
-                url = 'https://www.zhihu.com/people/%s' % str(r)
-                self.run(url)
-            
+        # else:
+        #     print '跟进地址:%s ; status_code:%s' % (url_start,r.status_code)
+        #     r = redis_cache.spop('zhihu_url_follow')
+        #     if r:
+        #         url = 'https://www.zhihu.com/people/%s' % str(r)
+        #         self.run(url)
+
 
     def find_question_url(self, soup):
         '''
@@ -136,7 +136,18 @@ class Url():
         return r
 
 
-if __name__ == '__main__':
-    url = Url('https://www.zhihu.com/question/19977199')    
-    url.run()
+def main():
+    url = Url()
+    while True:
+        urltemp = redis_cache.spop('zhihu_url_follow')
+        if urltemp:
+            sql = 'select * from zhihu_url_crawled where `url`=%s'
+            ret = db.query(sql, urltemp)
+            if not ret:
+                urltemp = 'https://www.zhihu.com/people/%s' % urltemp
+                url.run(urltemp)
+            else:
+                print '采集过:%s' % urltemp
 
+if __name__ == '__main__':
+    main()

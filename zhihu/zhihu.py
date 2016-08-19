@@ -88,8 +88,8 @@ class zhihu():
 # 一些设置
 url_login_get = 'https://www.zhihu.com/#signin'
 url_login_post = 'https://www.zhihu.com/login/email'
-email = 'wudizhangzhi@163.com'
-password = 'zzc549527'
+email = ''
+password = ''
 verify = False
 header = {
     'Accept': '*/*',
@@ -267,7 +267,7 @@ class ZhiHu():
 
 
         # 用户数据
-        self._user_data(soup, urlname)
+        # self._user_data(soup, urlname)
 
         avatar = soup.find('img', class_='Avatar').get('src')
 
@@ -282,11 +282,12 @@ class ZhiHu():
             gender = 2
         # education = soup.find('span', class_='education').get('title')
 
-        #TODO 保存数据
-        params = [name,sign,avatar,gender]
+
+        # params = [name,sign,avatar,gender]
         # for i in params:
         #     print str(i)
         try:
+            #保存数据
             sql = 'insert into zhihu_user(name,urlname,sign,avatar,gender) values(%s,%s,%s,%s,%s)'
             db.execute(sql, name, urlname, sign, avatar, gender)
         except Exception,e:
@@ -327,16 +328,25 @@ class ZhiHu():
         db.execute(sql, *params)
 
     def user(self, urlname):
-        url = 'https://www.zhihu.com/people/%s' % urlname
-        # print '用户地址:%s' % url
-        r = self.get(url)
-        if r.status_code==200:
-            print '采集用户:%s ;status_code:%s' % (urlname, r.status_code)
-            soup = BeautifulSoup(r.content, 'lxml')
-            # 登录 or 未登录
-            self._user(soup, urlname)
-        else:
-            print '采集用户:%s ;status_code:%s' % (urlname, r.status_code)
+        try:
+            #判断是否采集过
+            sql = 'select * from zhihu_user where urlname=%s'
+            ret = db.query(sql, urlname)
+            if not ret:
+                url = 'https://www.zhihu.com/people/%s' % urlname
+                # print '用户地址:%s' % url
+                r = self.get(url)
+                if r.status_code==200:
+                    # print '采集用户:%s ;status_code:%s' % (urlname, r.status_code)
+                    soup = BeautifulSoup(r.content, 'lxml')
+                    # 登录 or 未登录
+                    self._user(soup, urlname)
+                else:
+                    print '采集用户:%s ;status_code:%s' % (urlname, r.status_code)
+            else:
+                print '已经采集过:%s' % urlname
+        except Exception,e:
+            print e
 
     def find_question_url(self, soup):
         '''
@@ -404,21 +414,33 @@ https://zhihu-web-analytics.zhihu.com/collect
 {"v":1,"cid":"17cfc08a-d1f0-4131-94b9-01d8a12cd687","uid":"31256813240320","t":"event","ni":false,"dp":"/question/25311180","ts":"1459826455399","sr":"1920x1080","vp":"1518x488","ul":"en-US","ua":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:44.0) Gecko/20100101 Firefox/44.0","dl":"https://www.zhihu.com/question/25311180","dr":"https://www.zhihu.com/","de":"UTF-8","dt":"(18 条消息) 博士生们都在干什么？ - 知乎","sd":24,"ea":"click_follow_question","ec":"question_answer","el":"question_follow_question"}
 '''
 
-if __name__ == '__main__':
-    zhihu = ZhiHu()
-    zhihu.login()
-    r = zhihu.get('https://www.zhihu.com/question/42057335')
 
-    #_xsrf = re.findall('xsrf(.*)',r.text)[0][8:42]
-    soup = BeautifulSoup(r.content, 'lxml')
-<<<<<<< HEAD
-    zhihu.follow_question(soup, 42057335 )
-=======
-    zhihu.follow_question(soup, 41658681)
-    print zhihu.session.cookies['cap_id']
-    print zhihu.session.cookies['__utmc']
->>>>>>> c2d17a62b04df47cc555984c90883eb6e6783f4a
+def user_scapy():
+    '''
+    用户信息采集
+    '''
+    client = ZhiHu()
+    client.login()
+    while True:
+        ret = redis_cache.spop('zhihu_url_people')
+        if ret:
+            client.user(ret)
+            print '采集用户:%s' % ret
+        time.sleep(1)
+
+
+if __name__ == '__main__':
+    user_scapy()
+    # zhihu = ZhiHu()
+    # zhihu.login()
+    # r = zhihu.get('https://www.zhihu.com/question/42057335')
+    #
+    # #_xsrf = re.findall('xsrf(.*)',r.text)[0][8:42]
+    # soup = BeautifulSoup(r.content, 'lxml')
+    # zhihu.follow_question(soup, 42057335 )
+#     zhihu.follow_question(soup, 41658681)
+#     print zhihu.session.cookies['cap_id']
+#     print zhihu.session.cookies['__utmc']
     #print zhihu.find_people_url(soup)
     # zhihu.user('lu-pu-tao-21')
     # zhihu.question()
-

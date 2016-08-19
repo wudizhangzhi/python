@@ -39,8 +39,8 @@ from conndb import *
 # r = s.get(url_target, verify=False)
 # _xsrf = re.findall('xsrf(.*)',r.text)[0][8:42]
 # data = {
-#    'email':r'wudizhangzhi@163.com',
-#    'password':'zzc549527',
+#    'email':r'',
+#    'password':'',
 #    '_xsrf':_xsrf,
 #    'remember_me':'true'
 #        }
